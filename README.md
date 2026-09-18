@@ -54,7 +54,7 @@ Raw CSV
 ## Dashboard
 
 Live Demo:
-[Open Streamlit Dashboard](YOUR_STREAMLIT_URL)
+[Open Streamlit Dashboard]((https://quick-commerce-analytics.streamlit.app/))
 
 ## Project Documentation
 
