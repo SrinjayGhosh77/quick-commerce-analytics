@@ -1,0 +1,1501 @@
+product_id,product_name,category,mrp,selling_price,brand,unit,discount_percent,price_status
+30001,Officiis 1L,Pet Supplies,712.43,544.59,Manne Inc,Kg,23.56,Normal
+30002,Perspiciatis 1L,Baby Care,346.05,304.08,Ray Group,ml,12.13,Normal
+30003,Alias Box,Snacks,795.81,601.26,Mangal-Khosla,ml,24.45,Normal
+30004,Culpa Pack,Beverages,559.52,520.65,"Mistry, Kar and Salvi",Kg,6.95,Normal
+30005,Delectus 1L,Personal Care,813.37,673.0,Unknown,g,17.26,Normal
+30006,Dicta Combo,Household,1087.65,966.84,Goda-Bahri,L,11.11,Normal
+30007,Quos 1L,Personal Care,952.19,883.81,"Sandhu, Behl and Kamdar",ml,7.18,Normal
+30008,Aperiam Jar,Beverages,156.78,127.15,Rajagopalan-Sani,ml,18.9,Normal
+30009,Quidem Box,Bakery,598.17,554.52,Kata-Pall,g,7.3,Normal
+30010,Explicabo Combo,Baby Care,447.51,343.66,Vala Inc,Kg,23.21,Normal
+30011,Consequuntur Combo,Bakery,580.16,494.06,Gupta-Gala,ml,14.84,Normal
+30012,Molestias Combo,Household,53.55,45.26,"Seshadri, Sunder and Comar",L,15.48,Normal
+30013,Eius Box,Dairy & Breakfast,282.11,268.77,Sandhu PLC,Kg,4.73,Normal
+30014,Nobis Pack,Instant Food,501.94,499.49,Unknown,g,0.49,Normal
+30015,Maxime Combo,Dairy & Breakfast,610.26,600.47,"Gera, Dube and Sachdeva",Kg,1.6,Normal
+30016,Maxime Combo,Snacks,35.04,33.72,"Vasa, Walia and Balasubramanian",ml,3.77,Normal
+30017,Aliquid Box,Snacks,234.35,195.01,Raval Inc,PC,16.79,Normal
+30018,Vel Jar,Fruits & Vegetables,816.14,725.69,Balan-Lall,PC,11.08,Normal
+30019,Dolorem Combo,Atta Rice & Dal,772.22,621.95,"Kota, Babu and Kadakia",PC,19.46,Normal
+30020,Earum Box,Meat & Seafood,807.18,679.92,Vohra Group,PC,15.77,Normal
+30021,Vero Jar,Personal Care,489.09,384.22,Seth-Munshi,PC,21.44,Normal
+30022,Officiis Jar,Bakery,559.78,515.28,Handa-Sanghvi,PC,7.95,Normal
+30023,Sequi Box,Pet Supplies,971.31,720.01,Lata Ltd,ml,25.87,Normal
+30024,Dolores 500g,Personal Care,373.91,326.17,Reddy Ltd,Kg,12.77,Normal
+30025,Fugiat Box,Instant Food,594.22,592.5,Goyal LLC,g,0.29,Normal
+30026,Reprehenderit 500g,Pet Supplies,834.63,707.15,Kara LLC,ml,15.27,Normal
+30027,Cumque Box,Dairy & Breakfast,454.97,334.68,"Iyengar, Kala and Swamy",PC,26.44,Normal
+30028,Praesentium Box,Snacks,474.91,391.8,"Mangat, Anne and Mital",PC,17.5,Normal
+30029,Tenetur Jar,Household,957.13,719.75,Sathe Inc,ml,24.8,Normal
+30030,Hic Box,Instant Food,1056.85,941.7,"Setty, Sani and Pandit",Kg,10.9,Normal
+30031,Deleniti 500g,Baby Care,139.35,110.69,Kohli-Shroff,ml,20.57,Normal
+30032,Nulla Pack,Fruits & Vegetables,201.71,159.5,Pal Inc,g,20.93,Normal
+30033,Tempora Combo,Bakery,111.37,92.95,Rama Group,g,16.54,Normal
+30034,Nihil Jar,Fruits & Vegetables,1141.61,1054.3,Suri LLC,ml,7.65,Normal
+30035,Quaerat 1L,Instant Food,118.24,116.31,Kala Group,PC,1.63,Normal
+30036,Dolorum 500g,Bakery,666.37,663.81,"Bhatnagar, Luthra and Bava",PC,0.38,Normal
+30037,Vitae Combo,Dairy & Breakfast,387.57,293.16,"Bose, Kalita and Ramachandran",Kg,24.36,Normal
+30038,Veniam Combo,Atta Rice & Dal,940.92,869.34,Unknown,g,7.61,Normal
+30039,Debitis 1L,Dairy & Breakfast,224.18,195.19,Sankaran Ltd,g,12.93,Normal
+30040,Ipsam 500g,Meat & Seafood,175.68,164.66,Das-Shenoy,Kg,6.27,Normal
+30041,Fuga 500g,Bakery,567.42,435.89,"Kota, Grewal and Arya",ml,23.18,Normal
+30042,Mollitia 500g,Beverages,887.5,786.33,"Shanker, Oommen and Pal",Kg,11.4,Normal
+30043,Natus 500g,Fruits & Vegetables,968.15,725.69,Goel Ltd,Kg,25.04,Normal
+30044,Laudantium Pack,Atta Rice & Dal,683.89,539.51,Sibal-Deshmukh,PC,21.11,Normal
+30045,Natus 500g,Dairy & Breakfast,976.75,825.17,Sachdev Ltd,Kg,15.52,Normal
+30046,Autem 500g,Baby Care,1050.63,810.52,Sandhu-Kohli,Kg,22.85,Normal
+30047,Doloremque 500g,Fruits & Vegetables,89.47,65.01,Saran Ltd,PC,27.34,Normal
+30048,Fugiat Jar,Snacks,839.7,796.12,"Sanghvi, Khanna and Chaudhry",L,5.19,Normal
+30049,Quo Combo,Atta Rice & Dal,234.9,165.91,"Patla, Anne and Prabhakar",g,29.37,Normal
+30050,Placeat 500g,Household,1074.08,1043.72,Tara-Sengupta,Kg,2.83,Normal
+30051,Consequatur 1L,Household,536.55,426.96,Sankar LLC,PC,20.42,Normal
+30052,Fuga 500g,Snacks,587.93,549.59,"Sharaf, Seth and Nagar",PC,6.52,Normal
+30053,Doloremque 1L,Fruits & Vegetables,418.1,400.69,Doctor-Baria,PC,4.16,Normal
+30054,Ipsum Combo,Household,1056.02,1026.61,Mohanty-Malhotra,ml,2.78,Normal
+30055,Magnam Pack,Beverages,760.32,692.03,Majumdar and Sons,Kg,8.98,Normal
+30056,Maiores Jar,Personal Care,28.79,25.26,Chhabra-Kaur,PC,12.26,Normal
+30057,Minus Pack,Dairy & Breakfast,1116.23,1008.66,Unknown,g,9.64,Normal
+30058,Ipsum Combo,Atta Rice & Dal,407.53,293.19,Unknown,PC,28.06,Normal
+30059,Id Pack,Beverages,162.01,117.82,"Chaudry, Puri and Karan",Kg,27.28,Normal
+30060,Distinctio Pack,Beverages,715.97,531.56,"Grover, Kaul and Chopra",Kg,25.76,Normal
+30061,Autem Pack,Meat & Seafood,391.44,308.41,Unknown,Kg,21.21,Normal
+30062,Ad 500g,Meat & Seafood,264.29,192.29,"Sawhney, Parsa and Viswanathan",Kg,27.24,Normal
+30063,Aperiam Box,Dairy & Breakfast,151.42,128.09,Unknown,L,15.41,Normal
+30064,Sequi 1L,Instant Food,1183.71,916.27,Varughese and Sons,ml,22.59,Normal
+30065,Consectetur Jar,Beverages,846.82,785.7,Dugar LLC,L,7.22,Normal
+30066,Harum Jar,Snacks,784.74,646.72,Gole PLC,PC,17.59,Normal
+30067,Quaerat 1L,Household,1090.32,772.56,Unknown,ml,29.14,Normal
+30068,Recusandae Combo,Snacks,513.55,475.38,Unknown,Kg,7.43,Normal
+30069,Deserunt 1L,Bakery,280.65,216.54,Unknown,ml,22.84,Normal
+30070,Iste Box,Instant Food,607.88,578.65,"Kannan, Kapadia and Ramakrishnan",PC,4.81,Normal
+30071,Id Combo,Baby Care,1046.72,895.68,"Kulkarni, Nagarajan and Kant",L,14.43,Normal
+30072,Qui Combo,Pet Supplies,84.38,76.37,Sandal-Chad,ml,9.49,Normal
+30073,Ratione Jar,Pet Supplies,88.06,74.61,Sathe-Patil,ml,15.27,Normal
+30074,Asperiores Combo,Dairy & Breakfast,1068.25,1052.54,Mitter and Sons,PC,1.47,Normal
+30075,Ut 500g,Household,852.41,703.62,Palan Inc,g,17.46,Normal
+30076,Modi 500g,Dairy & Breakfast,629.93,464.37,"Bava, Nigam and Lal",PC,26.28,Normal
+30077,Debitis Jar,Dairy & Breakfast,341.64,328.42,"Vig, Bhardwaj and Dhillon",L,3.87,Normal
+30078,Eius Combo,Pet Supplies,678.98,561.76,Dugal Ltd,Kg,17.26,Normal
+30079,At Jar,Instant Food,543.93,381.08,Dar and Sons,PC,29.94,Normal
+30080,Sunt Combo,Meat & Seafood,127.09,113.06,Sanghvi Ltd,Kg,11.04,Normal
+30081,Fugiat 1L,Baby Care,492.33,489.83,Hayer-Magar,ml,0.51,Normal
+30082,Pariatur Jar,Fruits & Vegetables,607.63,460.06,"Murthy, Ravi and Lad",g,24.29,Normal
+30083,Earum Jar,Meat & Seafood,646.77,454.51,Purohit PLC,PC,29.73,Normal
+30084,Nostrum Pack,Bakery,476.24,400.13,Hora-Subramaniam,g,15.98,Normal
+30085,Laudantium Combo,Instant Food,754.4,730.51,Savant-Edwin,PC,3.17,Normal
+30086,Fuga 500g,Meat & Seafood,390.28,316.6,Sethi-Sachdev,PC,18.88,Normal
+30087,Iusto Box,Bakery,940.31,784.77,Mody PLC,Kg,16.54,Normal
+30088,Cum Box,Household,1029.7,809.17,"Ramaswamy, Rege and Mohanty",L,21.42,Normal
+30089,Accusamus Combo,Meat & Seafood,1115.39,951.07,Natarajan PLC,PC,14.73,Normal
+30090,Molestias Pack,Meat & Seafood,522.39,456.64,"Ganesan, Bobal and Devi",PC,12.59,Normal
+30091,Aperiam Jar,Personal Care,215.58,183.21,"Guha, Barad and Srivastava",PC,15.02,Normal
+30092,Enim Combo,Pet Supplies,452.93,390.09,Tara Group,PC,13.87,Normal
+30093,Doloremque 500g,Dairy & Breakfast,119.07,109.9,"Desai, Borah and Varty",g,7.7,Normal
+30094,Eligendi 500g,Beverages,109.7,107.89,Hayre-Kaul,PC,1.65,Normal
+30095,Dolores 500g,Bakery,567.99,544.22,Bajwa-Sharma,L,4.18,Normal
+30096,Voluptatem 1L,Pet Supplies,586.32,470.75,"Pall, Mane and Mishra",Kg,19.71,Normal
+30097,Aspernatur 1L,Instant Food,1064.49,791.98,"Balakrishnan, Manne and Verma",g,25.6,Normal
+30098,Similique 500g,Instant Food,551.84,437.49,"Bail, Ramanathan and Apte",g,20.72,Normal
+30099,Eligendi Box,Pet Supplies,347.3,316.6,Yadav-Sur,PC,8.84,Normal
+30100,Labore Box,Personal Care,1039.44,1036.06,"Dhillon, Wali and Bose",Kg,0.33,Normal
+30101,Eos Jar,Fruits & Vegetables,932.54,791.88,Golla-Ganesan,PC,15.08,Normal
+30102,Blanditiis 1L,Baby Care,394.92,356.68,"Handa, Mangal and Koshy",Kg,9.68,Normal
+30103,Autem 500g,Atta Rice & Dal,1013.71,918.25,Unknown,g,9.42,Normal
+30104,Odio 1L,Baby Care,800.44,775.28,Tank-Mohanty,PC,3.14,Normal
+30105,Maiores 500g,Household,680.01,531.29,"Shah, Bandi and Mallick",Kg,21.87,Normal
+30106,Animi Combo,Fruits & Vegetables,10.68,8.42,Bhalla-Mani,L,21.16,Normal
+30107,Soluta Combo,Baby Care,258.2,208.33,Singhal-Mukherjee,L,19.31,Normal
+30108,Facilis Box,Pet Supplies,521.04,436.88,Pathak Group,ml,16.15,Normal
+30109,Neque Box,Baby Care,1130.91,1022.94,"Patel, Misra and Date",PC,9.55,Normal
+30110,Esse Jar,Atta Rice & Dal,20.28,17.44,Kumer and Sons,PC,14.0,Normal
+30111,Quis Pack,Fruits & Vegetables,879.1,867.44,Mallick-Rama,Kg,1.33,Normal
+30112,Rem Combo,Atta Rice & Dal,638.18,575.83,"Hayre, Hari and Wali",Kg,9.77,Normal
+30113,Ea 500g,Dairy & Breakfast,1197.25,1128.84,"Sarkar, Manda and Venkataraman",Kg,5.71,Normal
+30114,Et Combo,Instant Food,638.78,517.05,"Chokshi, Dave and Deshpande",g,19.06,Normal
+30115,Est Pack,Household,185.47,165.74,"Bajaj, Basu and Lall",PC,10.64,Normal
+30116,Amet 1L,Baby Care,1145.07,863.68,"Vora, Chawla and Patel",PC,24.57,Normal
+30117,Facere Jar,Atta Rice & Dal,516.92,445.94,"Loke, Sethi and Krishnamurthy",L,13.73,Normal
+30118,Culpa Pack,Instant Food,259.42,221.95,"Sahota, Varty and Prasad",PC,14.44,Normal
+30119,Aperiam Pack,Instant Food,876.47,680.08,Subramaniam Inc,PC,22.41,Normal
+30120,Iusto 500g,Pet Supplies,129.94,98.55,"Bansal, Manda and Khare",g,24.16,Normal
+30121,Repudiandae Combo,Bakery,233.0,171.51,"Brahmbhatt, Rajagopalan and Koshy",Kg,26.39,Normal
+30122,Officia 500g,Fruits & Vegetables,594.71,493.31,"Bora, Vohra and Chahal",L,17.05,Normal
+30123,Explicabo Jar,Fruits & Vegetables,160.58,116.89,Kakar LLC,g,27.21,Normal
+30124,Id Jar,Fruits & Vegetables,699.27,490.52,Saran and Sons,PC,29.85,Normal
+30125,Voluptatem 1L,Dairy & Breakfast,1116.81,1025.58,Morar-Bhatnagar,L,8.17,Normal
+30126,Quia Pack,Personal Care,360.15,307.77,Ratti-Mammen,Kg,14.54,Normal
+30127,In Combo,Pet Supplies,152.28,108.81,Apte-Dutt,PC,28.55,Normal
+30128,Numquam Pack,Instant Food,25.64,19.66,Choudhary-Gokhale,PC,23.32,Normal
+30129,Minima 1L,Baby Care,146.92,111.76,Hegde Inc,ml,23.93,Normal
+30130,Fuga 1L,Household,1000.86,904.7,Swamy-Arora,Kg,9.61,Normal
+30131,Distinctio Pack,Pet Supplies,1147.21,863.54,Varty and Sons,L,24.73,Normal
+30132,Vero 1L,Fruits & Vegetables,165.21,138.82,Saran-Kakar,L,15.97,Normal
+30133,Amet 500g,Pet Supplies,809.73,610.09,"Wable, Kota and Bhagat",g,24.66,Normal
+30134,Quia Pack,Pet Supplies,130.53,104.42,"Keer, Parekh and Majumdar",g,20.0,Normal
+30135,Distinctio Pack,Bakery,1035.49,851.78,Kaur PLC,g,17.74,Normal
+30136,Maiores 1L,Household,690.86,531.44,Batra-Parsa,PC,23.08,Normal
+30137,Facere Combo,Pet Supplies,277.31,258.24,Wagle Group,PC,6.88,Normal
+30138,Ipsam Jar,Household,627.74,611.09,Sehgal-Saini,L,2.65,Normal
+30139,Fuga Combo,Snacks,1073.52,803.08,"Gulati, Modi and Yogi",PC,25.19,Normal
+30140,Ipsum 500g,Instant Food,172.28,126.02,Morar-Dhawan,PC,26.85,Normal
+30141,Doloribus Jar,Bakery,605.48,457.08,Pai Inc,Kg,24.51,Normal
+30142,Odit Box,Fruits & Vegetables,215.35,213.54,"Dutta, Wagle and Kar",ml,0.84,Normal
+30143,Sint Combo,Pet Supplies,689.4,541.37,Keer-Ramanathan,PC,21.47,Normal
+30144,Odio 1L,Instant Food,697.46,599.03,Kamdar Inc,ml,14.11,Normal
+30145,Tempora Combo,Baby Care,802.8,730.42,Bava-Nayar,ml,9.02,Normal
+30146,Tempora Box,Fruits & Vegetables,531.59,492.98,Tata-Morar,PC,7.26,Normal
+30147,Incidunt 1L,Dairy & Breakfast,315.16,279.47,Kaur-Roy,L,11.32,Normal
+30148,Necessitatibus Jar,Atta Rice & Dal,967.31,900.02,Andra-Goyal,PC,6.96,Normal
+30149,Eum Jar,Household,947.74,776.4,"Nadkarni, Nadkarni and Hayer",PC,18.08,Normal
+30150,Iusto 1L,Meat & Seafood,596.35,518.11,Sabharwal Group,Kg,13.12,Normal
+30151,Magni 500g,Meat & Seafood,1085.86,1043.35,"Chanda, Badami and Sabharwal",PC,3.91,Normal
+30152,Veniam Box,Snacks,170.31,140.5,Warrior-Khurana,PC,17.5,Normal
+30153,Molestias 1L,Pet Supplies,819.68,618.44,"Kuruvilla, Gill and Tara",PC,24.55,Normal
+30154,Iste Pack,Beverages,468.43,403.89,"Tella, Borra and Bhakta",L,13.78,Normal
+30155,Doloribus Pack,Instant Food,647.69,532.8,Unknown,PC,17.74,Normal
+30156,Necessitatibus Jar,Snacks,321.96,244.21,Khurana and Sons,g,24.15,Normal
+30157,Porro Jar,Bakery,67.32,56.18,Halder LLC,PC,16.55,Normal
+30158,Error Jar,Beverages,957.63,746.93,"Bedi, Mitra and Garg",Kg,22.0,Normal
+30159,Laudantium 500g,Personal Care,920.04,740.55,"Boase, Tata and Patla",L,19.51,Normal
+30160,Molestiae Box,Household,1102.76,1095.8,"Dhingra, Hora and Sami",Kg,0.63,Normal
+30161,Impedit Box,Personal Care,423.37,335.66,Karnik PLC,Kg,20.72,Normal
+30162,Laboriosam 1L,Atta Rice & Dal,334.6,284.18,Sur-Saxena,Kg,15.07,Normal
+30163,Libero 500g,Dairy & Breakfast,921.63,827.74,"Subramanian, Pillay and Naik",Kg,10.19,Normal
+30164,Praesentium Box,Snacks,1121.06,932.85,Dey-Seshadri,PC,16.79,Normal
+30165,Doloribus Combo,Bakery,189.97,165.28,Baral-Narayan,g,13.0,Normal
+30166,Ducimus Box,Fruits & Vegetables,397.71,287.44,"Sha, Pandit and Pillai",ml,27.73,Normal
+30167,Quasi Combo,Household,705.83,703.53,Raghavan LLC,PC,0.33,Normal
+30168,Corporis Pack,Baby Care,885.02,762.72,Sanghvi LLC,L,13.82,Normal
+30169,Odio 1L,Beverages,118.98,97.99,Unknown,g,17.64,Normal
+30170,Sed Pack,Meat & Seafood,651.59,542.12,Prabhakar Ltd,Kg,16.8,Normal
+30171,Voluptatum Box,Baby Care,145.77,128.73,"Lalla, Balan and Yogi",PC,11.69,Normal
+30172,Modi 1L,Household,78.18,75.75,Bala-Sandhu,Kg,3.11,Normal
+30173,Corporis 1L,Atta Rice & Dal,701.09,668.65,Mitter Ltd,ml,4.63,Normal
+30174,Possimus Pack,Snacks,107.28,106.47,Shah Group,PC,0.76,Normal
+30175,Sunt Jar,Snacks,457.72,330.33,Prasad-Sachdev,PC,27.83,Normal
+30176,Ea Box,Meat & Seafood,842.98,740.83,Unknown,PC,12.12,Normal
+30177,Deleniti 500g,Personal Care,278.88,237.0,Konda-Khosla,L,15.02,Normal
+30178,Odio 500g,Household,995.42,794.52,Unknown,L,20.18,Normal
+30179,Possimus Box,Meat & Seafood,15.15,11.39,"Sridhar, Andra and Barman",g,24.82,Normal
+30180,Quam Box,Dairy & Breakfast,1163.93,967.54,Unknown,Kg,16.87,Normal
+30181,Eveniet Pack,Snacks,838.04,620.67,Ghose-Vyas,Kg,25.94,Normal
+30182,Itaque Pack,Household,329.49,291.98,"Grover, Bhagat and Shere",Kg,11.38,Normal
+30183,A 500g,Personal Care,115.69,114.28,Agate-Venkataraman,Kg,1.22,Normal
+30184,Aliquam Box,Personal Care,165.04,164.14,Balakrishnan-Yadav,g,0.55,Normal
+30185,Labore Jar,Pet Supplies,363.71,318.32,Bhasin-Lad,L,12.48,Normal
+30186,Sint Jar,Atta Rice & Dal,135.03,112.35,Yohannan Ltd,Kg,16.8,Normal
+30187,Qui Combo,Instant Food,78.23,73.89,Dara-Saxena,PC,5.55,Normal
+30188,Repudiandae Pack,Household,500.96,413.52,Issac Ltd,PC,17.45,Normal
+30189,Tempore Jar,Meat & Seafood,586.21,510.1,Unknown,Kg,12.98,Normal
+30190,Saepe Combo,Baby Care,306.59,255.3,Choudhury PLC,ml,16.73,Normal
+30191,Totam Pack,Snacks,641.38,504.95,Dani-Cheema,PC,21.27,Normal
+30192,Tenetur 1L,Dairy & Breakfast,811.71,660.83,"Mand, Rattan and Dutt",PC,18.59,Normal
+30193,Voluptatum Combo,Atta Rice & Dal,420.67,330.03,Gade-Warrior,ml,21.55,Normal
+30194,Ab 500g,Instant Food,848.03,744.11,Unknown,L,12.25,Normal
+30195,Molestias Box,Beverages,488.21,412.28,"Barad, Lanka and Bose",PC,15.55,Normal
+30196,Quidem 500g,Household,618.41,585.69,Warrior Inc,PC,5.29,Normal
+30197,Beatae Box,Atta Rice & Dal,64.41,59.26,Unknown,L,8.0,Normal
+30198,Perspiciatis Jar,Beverages,623.8,504.05,Manne-Bahri,PC,19.2,Normal
+30199,Tempore Box,Instant Food,1313.54,1063.22,Choudhry-Talwar,Kg,19.06,Normal
+30200,A 500g,Beverages,151.6,118.38,"Yogi, Mangat and Gour",Kg,21.91,Normal
+30201,Est 500g,Instant Food,583.31,478.6,Mittal-Koshy,ml,17.95,Normal
+30202,Fugit 1L,Household,368.76,277.75,Ganguly-Jhaveri,PC,24.68,Normal
+30203,Facere Jar,Meat & Seafood,393.18,371.22,Dave Inc,Kg,5.59,Normal
+30204,Quas 500g,Baby Care,1192.75,893.79,Unknown,ml,25.06,Normal
+30205,Unde Box,Baby Care,193.49,173.4,"Atwal, Kar and Dar",g,10.38,Normal
+30206,Est Box,Bakery,965.39,855.22,Shah-Sidhu,L,11.41,Normal
+30207,Cupiditate 1L,Bakery,416.64,347.72,"Sagar, Toor and Rege",ml,16.54,Normal
+30208,Tempore 1L,Beverages,1019.86,955.77,Borde LLC,Kg,6.28,Normal
+30209,Veniam 500g,Instant Food,101.39,72.5,Desai Ltd,ml,28.49,Normal
+30210,Adipisci Pack,Pet Supplies,65.32,61.4,Unknown,L,6.0,Normal
+30211,Ex Box,Dairy & Breakfast,1018.13,883.44,"Dhar, Purohit and Yadav",PC,13.23,Normal
+30212,Ea 1L,Instant Food,312.8,225.93,Chanda-Mangat,g,27.77,Normal
+30213,Optio 1L,Dairy & Breakfast,559.8,432.58,"Mann, Hari and Bala",L,22.73,Normal
+30214,Nam Jar,Meat & Seafood,748.39,661.67,Patla Inc,ml,11.59,Normal
+30215,Magni Combo,Baby Care,667.89,634.75,"Kumer, Trivedi and Tella",PC,4.96,Normal
+30216,Deleniti 500g,Fruits & Vegetables,856.22,710.24,Jhaveri-Natt,PC,17.05,Normal
+30217,Dolorum Jar,Snacks,171.98,151.22,Yohannan-Kala,ml,12.07,Normal
+30218,Distinctio 1L,Baby Care,235.47,233.19,Devan-Borah,ml,0.97,Normal
+30219,Laboriosam Pack,Bakery,1122.07,931.74,Radhakrishnan-Chand,PC,16.96,Normal
+30220,Veniam Jar,Beverages,1033.16,735.66,"Khare, Madan and Raj",g,28.8,Normal
+30221,Nulla 1L,Snacks,135.29,95.02,Rege-Edwin,PC,29.77,Normal
+30222,Libero 500g,Fruits & Vegetables,361.54,350.32,Chanda-Zachariah,L,3.1,Normal
+30223,Dignissimos Jar,Snacks,1014.4,756.82,Thakur-Narang,PC,25.39,Normal
+30224,Aspernatur 500g,Personal Care,467.47,458.81,"Balay, Nagarajan and Bobal",Kg,1.85,Normal
+30225,Iste Jar,Household,797.54,596.08,Vala PLC,ml,25.26,Normal
+30226,Blanditiis 500g,Snacks,81.58,67.03,Pathak Inc,Kg,17.84,Normal
+30227,Quos Pack,Snacks,1036.69,857.77,Saraf-Dutta,Kg,17.26,Normal
+30228,Aperiam Box,Personal Care,639.53,615.7,"Krishnamurthy, Trivedi and Chopra",ml,3.73,Normal
+30229,Voluptatem Combo,Fruits & Vegetables,1146.83,834.9,Sathe PLC,L,27.2,Normal
+30230,Sint Jar,Personal Care,479.17,351.86,Upadhyay Inc,Kg,26.57,Normal
+30231,Molestias Combo,Household,357.05,292.59,"Din, Iyengar and Dhillon",L,18.05,Normal
+30232,Exercitationem Combo,Household,905.3,822.12,Karpe-Sani,Kg,9.19,Normal
+30233,Laudantium 1L,Personal Care,791.88,785.17,Mody and Sons,L,0.85,Normal
+30234,Maiores 500g,Baby Care,846.86,692.71,Batra-Patel,L,18.2,Normal
+30235,Sunt 500g,Snacks,605.79,503.12,Agrawal-Parmer,L,16.95,Normal
+30236,Nisi 1L,Atta Rice & Dal,986.88,893.92,"Rai, Natt and Ratta",PC,9.42,Normal
+30237,Excepturi Jar,Household,246.44,204.68,Vala Ltd,Kg,16.95,Normal
+30238,Voluptatum Combo,Personal Care,811.98,753.73,"Nadig, Morar and Hora",ml,7.17,Normal
+30239,Temporibus Box,Instant Food,168.25,133.66,"Krishnamurthy, Raju and Salvi",ml,20.56,Normal
+30240,Dicta Pack,Meat & Seafood,262.18,217.67,"Deshmukh, Taneja and Warrior",Kg,16.98,Normal
+30241,Dolorem Box,Bakery,949.83,850.52,Tak Group,PC,10.46,Normal
+30242,Eos Jar,Personal Care,321.1,269.97,Unknown,ml,15.92,Normal
+30243,Dignissimos Pack,Instant Food,337.34,273.05,"Tara, Bobal and Golla",g,19.06,Normal
+30244,Non 1L,Personal Care,701.51,595.45,Sarin LLC,g,15.12,Normal
+30245,Culpa 1L,Personal Care,110.48,78.32,"Walia, Sehgal and Narula",ml,29.11,Normal
+30246,Placeat 1L,Dairy & Breakfast,785.55,654.13,Ravel-Wable,g,16.73,Normal
+30247,Sint Box,Dairy & Breakfast,90.11,74.15,Sur-Sandal,g,17.71,Normal
+30248,Saepe 500g,Personal Care,537.84,461.75,Pandit LLC,Kg,14.15,Normal
+30249,Voluptates Box,Household,713.81,589.21,Padmanabhan Ltd,PC,17.46,Normal
+30250,Placeat 1L,Household,1095.49,924.95,Iyer Group,L,15.57,Normal
+30251,Sed Box,Bakery,479.6,448.66,"Bail, Chauhan and Hans",Kg,6.45,Normal
+30252,Doloremque Box,Baby Care,925.2,703.61,"Dugar, Wason and Mahal",PC,23.95,Normal
+30253,Incidunt 500g,Household,116.38,96.07,"Sandhu, Divan and Mahajan",Kg,17.45,Normal
+30254,Tempora Combo,Atta Rice & Dal,667.24,526.14,"Sundaram, Patel and Warrior",g,21.15,Normal
+30255,Voluptatum 1L,Atta Rice & Dal,747.63,607.04,"Kade, Pal and Comar",PC,18.8,Normal
+30256,Rem Box,Beverages,779.33,575.25,Lal Group,L,26.19,Normal
+30257,Blanditiis Combo,Fruits & Vegetables,66.43,62.23,Varughese-Thaman,g,6.32,Normal
+30258,Quia Combo,Bakery,1098.11,950.33,"Ramakrishnan, Varma and Dara",Kg,13.46,Normal
+30259,Blanditiis Jar,Dairy & Breakfast,741.31,712.45,Lad-Bala,ml,3.89,Normal
+30260,Recusandae Pack,Bakery,319.47,235.08,Kalla Group,Kg,26.42,Normal
+30261,Vitae Combo,Fruits & Vegetables,990.17,963.38,"Saxena, Vasa and Kala",L,2.71,Normal
+30262,Tenetur 1L,Atta Rice & Dal,46.52,45.36,Unknown,g,2.49,Normal
+30263,Asperiores 1L,Bakery,572.44,418.6,"Krishnamurthy, Chaudhry and Raman",PC,26.87,Normal
+30264,Officia 1L,Bakery,562.03,554.06,Rau-Shankar,Kg,1.42,Normal
+30265,Beatae Pack,Pet Supplies,1074.94,1002.06,"Divan, Padmanabhan and Agarwal",PC,6.78,Normal
+30266,Reiciendis 1L,Atta Rice & Dal,651.58,648.74,"Wagle, Bir and Parekh",PC,0.44,Normal
+30267,Nihil Box,Beverages,1021.62,865.68,Lanka LLC,PC,15.26,Normal
+30268,Voluptas Pack,Snacks,676.48,582.11,"Korpal, Deshpande and Pradhan",Kg,13.95,Normal
+30269,Nemo 1L,Instant Food,438.74,369.09,"Sinha, Rajan and Bajaj",ml,15.88,Normal
+30270,Asperiores Box,Atta Rice & Dal,732.72,582.13,"Bhardwaj, Gala and Tata",L,20.55,Normal
+30271,Consectetur Pack,Bakery,432.9,400.24,Dugar-Chatterjee,Kg,7.54,Normal
+30272,Magni Jar,Household,929.28,790.08,Sharma Ltd,PC,14.98,Normal
+30273,Rerum Box,Snacks,1058.49,867.14,Trivedi-Singhal,Kg,18.08,Normal
+30274,Sint Jar,Baby Care,996.33,705.13,Dada-Divan,PC,29.23,Normal
+30275,Atque 1L,Fruits & Vegetables,433.64,352.6,Thakkar-Kanda,PC,18.69,Normal
+30276,Quae Combo,Baby Care,718.04,521.48,Unknown,Kg,27.37,Normal
+30277,Veritatis Combo,Pet Supplies,916.8,800.72,Mane-Bera,Kg,12.66,Normal
+30278,Labore Combo,Baby Care,1094.09,970.25,Dara-Bhavsar,PC,11.32,Normal
+30279,Cumque Box,Dairy & Breakfast,357.5,287.22,"Dhingra, Sharaf and Mukherjee",L,19.66,Normal
+30280,Dolore Box,Meat & Seafood,1182.4,1006.7,Lad-Babu,ml,14.86,Normal
+30281,Aperiam Box,Pet Supplies,833.29,706.02,Rattan LLC,L,15.27,Normal
+30282,Reprehenderit Box,Beverages,892.74,687.06,Unknown,g,23.04,Normal
+30283,Inventore 1L,Instant Food,40.09,30.73,Sharma Ltd,L,23.35,Normal
+30284,Neque 1L,Instant Food,1071.66,959.69,"Narula, Dubey and Goel",PC,10.45,Normal
+30285,Aliquam 1L,Beverages,514.36,436.27,Garg and Sons,L,15.18,Normal
+30286,Earum Jar,Baby Care,759.24,598.87,Dasgupta Ltd,g,21.12,Normal
+30287,Ratione Box,Fruits & Vegetables,322.78,269.11,"Bora, Balay and Murty",Kg,16.63,Normal
+30288,Similique 500g,Atta Rice & Dal,788.95,595.42,"Prabhakar, Parsa and De",Kg,24.53,Normal
+30289,Explicabo 500g,Instant Food,1199.21,1070.63,Saxena-Walia,Kg,10.72,Normal
+30290,Nemo 500g,Pet Supplies,943.82,799.66,"Chad, Bera and Zacharia",Kg,15.27,Normal
+30291,Eveniet 1L,Atta Rice & Dal,322.58,264.87,"Mandal, Vasa and Mukhopadhyay",L,17.89,Normal
+30292,Minus 500g,Bakery,1152.64,882.94,Parmar-Chauhan,Kg,23.4,Normal
+30293,Laborum 500g,Dairy & Breakfast,312.85,271.8,Bhatt-Sama,PC,13.12,Normal
+30294,Suscipit 500g,Pet Supplies,643.02,465.15,"Dara, Chana and Pant",L,27.66,Normal
+30295,Beatae 500g,Baby Care,619.51,474.75,"Kohli, Luthra and Pai",Kg,23.37,Normal
+30296,Repellat 500g,Pet Supplies,139.94,117.69,Sane-Nath,L,15.9,Normal
+30297,Veniam Box,Fruits & Vegetables,429.69,306.29,Sharma LLC,Kg,28.72,Normal
+30298,Quam Pack,Household,603.94,573.62,Bir LLC,PC,5.02,Normal
+30299,Laudantium 1L,Meat & Seafood,408.37,349.65,Basak PLC,ml,14.38,Normal
+30300,Voluptas Combo,Baby Care,145.5,106.14,"Tailor, Mohanty and Srinivas",PC,27.05,Normal
+30301,Ullam Box,Pet Supplies,550.83,534.01,Randhawa-Sha,PC,3.05,Normal
+30302,Sed Combo,Instant Food,1052.34,1004.17,Balan LLC,Kg,4.58,Normal
+30303,Recusandae 1L,Pet Supplies,619.45,468.31,"Chopra, Chowdhury and Pandit",Kg,24.4,Normal
+30304,Aliquam Combo,Personal Care,1143.39,1120.85,"Khalsa, Bhardwaj and Sinha",L,1.97,Normal
+30305,Itaque Combo,Instant Food,1042.58,1041.84,"Shetty, Soman and Jha",PC,0.07,Normal
+30306,Aliquid Box,Meat & Seafood,76.79,54.26,Sankar-Jain,PC,29.34,Normal
+30307,Similique Pack,Household,1060.78,1021.85,Chaudry PLC,Kg,3.67,Normal
+30308,Repellat Combo,Fruits & Vegetables,281.47,208.24,Zachariah and Sons,Kg,26.02,Normal
+30309,Ducimus Jar,Snacks,950.93,803.77,Unknown,Kg,15.48,Normal
+30310,Corporis 500g,Household,1130.82,986.31,Tak-Chacko,g,12.78,Normal
+30311,Id Jar,Meat & Seafood,587.61,422.48,"Halder, Gala and Shan",Kg,28.1,Normal
+30312,Porro 1L,Dairy & Breakfast,689.85,600.63,Sule-Mall,Kg,12.93,Normal
+30313,Eaque Jar,Pet Supplies,1117.03,953.41,Shroff-Edwin,Kg,14.65,Normal
+30314,Ducimus Jar,Meat & Seafood,499.35,424.51,"Shukla, Ramaswamy and Kala",PC,14.99,Normal
+30315,Ea 1L,Pet Supplies,885.27,723.52,"Rai, Mallick and Dara",Kg,18.27,Normal
+30316,Deserunt Jar,Snacks,835.55,612.49,Gola PLC,Kg,26.7,Normal
+30317,Sit 500g,Meat & Seafood,83.97,63.97,"Borra, Sekhon and Lad",g,23.82,Normal
+30318,Explicabo Combo,Snacks,631.72,472.12,Ganesh PLC,ml,25.26,Normal
+30319,Blanditiis Combo,Instant Food,1177.58,851.17,Rout-More,Kg,27.72,Normal
+30320,Incidunt 500g,Dairy & Breakfast,753.77,630.36,Desai-Kala,Kg,16.37,Normal
+30321,Porro Pack,Pet Supplies,783.2,656.34,Dalal and Sons,ml,16.2,Normal
+30322,Voluptates 1L,Baby Care,479.47,438.27,Unknown,PC,8.59,Normal
+30323,Impedit Combo,Atta Rice & Dal,772.93,760.37,Kothari-Kumar,g,1.62,Normal
+30324,Saepe 1L,Household,972.82,966.66,Edwin Ltd,g,0.63,Normal
+30325,Ad Box,Atta Rice & Dal,220.56,167.83,"Deo, Mani and De",PC,23.91,Normal
+30326,Accusantium 1L,Household,500.69,351.7,Unknown,L,29.76,Normal
+30327,Ducimus Pack,Snacks,51.34,38.46,Pau-Solanki,Kg,25.09,Normal
+30328,Similique Box,Personal Care,772.29,617.2,"Ahuja, Krishna and Murty",PC,20.08,Normal
+30329,Veniam Pack,Household,686.55,566.71,Borra-Sen,Kg,17.46,Normal
+30330,Minus Combo,Dairy & Breakfast,762.0,685.47,Samra and Sons,Kg,10.04,Normal
+30331,Perspiciatis Combo,Fruits & Vegetables,794.9,659.38,Venkataraman Group,Kg,17.05,Normal
+30332,Eos Box,Snacks,346.58,266.93,Chowdhury and Sons,PC,22.98,Normal
+30333,Similique 1L,Household,608.63,453.67,Goyal-Sant,PC,25.46,Normal
+30334,Itaque Jar,Snacks,941.94,825.26,"Sanghvi, Goel and Bal",PC,12.39,Normal
+30335,Sit Jar,Pet Supplies,120.17,92.25,Randhawa-Modi,PC,23.23,Normal
+30336,Dicta Pack,Pet Supplies,1019.32,863.63,Mani Group,Kg,15.27,Normal
+30337,Nemo Jar,Bakery,1055.09,784.16,Goswami-Sidhu,PC,25.68,Normal
+30338,Occaecati 500g,Pet Supplies,706.64,502.91,"Mane, Karnik and Apte",g,28.83,Normal
+30339,Facilis Pack,Snacks,35.13,25.92,Vasa Inc,g,26.22,Normal
+30340,Minima Pack,Snacks,1011.51,878.84,Gade Inc,Kg,13.12,Normal
+30341,Hic Combo,Dairy & Breakfast,377.8,377.78,Sachdev-Malhotra,g,0.01,Normal
+30342,Sapiente 1L,Fruits & Vegetables,993.22,755.7,Joshi-Krishna,g,23.91,Normal
+30343,Repellat Box,Beverages,1036.02,752.42,Prabhu Inc,ml,27.37,Normal
+30344,Molestiae Jar,Fruits & Vegetables,983.47,707.14,Unknown,L,28.1,Normal
+30345,Neque 1L,Snacks,737.8,550.41,Nadig-Kunda,PC,25.4,Normal
+30346,Non Box,Pet Supplies,534.47,380.04,Srinivas-Raj,PC,28.89,Normal
+30347,Doloremque Jar,Beverages,664.36,562.95,Dey-Kunda,L,15.26,Normal
+30348,Natus 500g,Pet Supplies,761.1,741.24,Sarkar-Mane,ml,2.61,Normal
+30349,Doloremque 500g,Personal Care,527.54,473.28,"Dhillon, Memon and Gupta",PC,10.29,Normal
+30350,Fugit Pack,Fruits & Vegetables,818.9,765.81,Sharaf Ltd,L,6.48,Normal
+30351,Officiis Pack,Bakery,589.68,538.62,"Prashad, Goel and Boase",g,8.66,Normal
+30352,Alias Pack,Household,179.59,167.54,"Bhattacharyya, Mohan and Deo",PC,6.71,Normal
+30353,Consequuntur Box,Bakery,34.01,30.09,Bhatnagar-Chana,Kg,11.53,Normal
+30354,Voluptates 1L,Bakery,293.83,209.44,D’Alia and Sons,PC,28.72,Normal
+30355,Culpa Pack,Atta Rice & Dal,448.41,445.61,Jayaraman and Sons,PC,0.62,Normal
+30356,Rem Pack,Bakery,1146.68,1092.92,Luthra-Dash,L,4.69,Normal
+30357,Voluptates Pack,Household,870.37,649.8,"Sankaran, Mannan and Jani",Kg,25.34,Normal
+30358,Dignissimos Pack,Pet Supplies,606.75,602.33,Prashad Inc,g,0.73,Normal
+30359,Consectetur Pack,Pet Supplies,86.3,66.32,Mandal-Bobal,PC,23.15,Normal
+30360,Recusandae Jar,Snacks,211.69,155.64,Tara-Mody,ml,26.48,Normal
+30361,Impedit Jar,Fruits & Vegetables,557.57,408.84,Rau and Sons,PC,26.67,Normal
+30362,Molestias 1L,Fruits & Vegetables,979.18,862.1,"Kakar, Mittal and Swaminathan",ml,11.96,Normal
+30363,Dolores Box,Dairy & Breakfast,830.33,772.74,Dewan Group,g,6.94,Normal
+30364,Magni Jar,Household,19.5,14.06,Handa-Bandi,Kg,27.9,Normal
+30365,Architecto Box,Personal Care,299.59,289.55,Narayanan-Tella,Kg,3.35,Normal
+30366,Tempore Jar,Household,794.77,656.04,Unknown,PC,17.46,Normal
+30367,Hic Jar,Fruits & Vegetables,989.9,821.13,Choudhury LLC,Kg,17.05,Normal
+30368,Repudiandae Pack,Baby Care,252.96,241.91,"Rama, Manne and Srinivas",Kg,4.37,Normal
+30369,Perferendis 1L,Pet Supplies,1114.76,857.21,Unknown,Kg,23.1,Normal
+30370,Recusandae Jar,Pet Supplies,248.91,221.69,"Din, Mannan and Sethi",PC,10.94,Normal
+30371,Deserunt Combo,Personal Care,771.12,598.4,Rajagopal Ltd,L,22.4,Normal
+30372,Labore 500g,Beverages,171.68,145.48,De Ltd,PC,15.26,Normal
+30373,Ullam Pack,Fruits & Vegetables,912.81,748.17,Bhatti-Hayer,ml,18.04,Normal
+30374,Debitis Jar,Pet Supplies,561.46,394.12,"Sen, Pillai and Raman",Kg,29.8,Normal
+30375,Pariatur Box,Bakery,678.52,647.09,Prabhu-Contractor,g,4.63,Normal
+30376,Quo Box,Dairy & Breakfast,573.66,426.34,Ravi LLC,Kg,25.68,Normal
+30377,Voluptas Jar,Meat & Seafood,800.77,623.97,Mukhopadhyay Inc,ml,22.08,Normal
+30378,Eum Jar,Atta Rice & Dal,628.25,605.66,"Joshi, Ahluwalia and Grewal",ml,3.6,Normal
+30379,Error Combo,Instant Food,961.92,703.62,"Rai, Kala and Baria",Kg,26.85,Normal
+30380,Beatae Jar,Bakery,768.72,604.7,Ramachandran PLC,Kg,21.34,Normal
+30381,Eligendi 1L,Baby Care,596.03,447.9,"Nazareth, Lad and Bath",PC,24.85,Normal
+30382,Ducimus Box,Instant Food,160.79,129.66,"Pai, Natt and Bala",PC,19.36,Normal
+30383,Deleniti 500g,Fruits & Vegetables,573.04,459.29,Babu-Dyal,PC,19.85,Normal
+30384,Vel Pack,Fruits & Vegetables,448.64,353.61,Jha PLC,Kg,21.18,Normal
+30385,Nemo Jar,Snacks,1154.87,836.14,Dar Group,Kg,27.6,Normal
+30386,Corrupti 500g,Meat & Seafood,716.1,697.18,Rajagopalan LLC,g,2.64,Normal
+30387,Voluptatibus Jar,Instant Food,1125.03,1039.52,"Varma, Bhatia and Vaidya",PC,7.6,Normal
+30388,Ea 1L,Fruits & Vegetables,927.07,716.62,Dua and Sons,g,22.7,Normal
+30389,Suscipit 500g,Atta Rice & Dal,441.48,334.21,Keer-Dara,ml,24.3,Normal
+30390,Praesentium Pack,Beverages,672.33,565.4,Borah-Shankar,L,15.9,Normal
+30391,Fugit 500g,Beverages,859.81,740.02,Rattan and Sons,ml,13.93,Normal
+30392,Placeat Combo,Instant Food,1022.81,718.17,"Suri, Sha and Koshy",ml,29.78,Normal
+30393,Mollitia Jar,Bakery,783.25,554.31,Pillai-Barman,PC,29.23,Normal
+30394,Libero Jar,Bakery,863.07,801.49,Shenoy-Dube,PC,7.13,Normal
+30395,Odio Box,Bakery,340.53,287.35,Bhat Group,g,15.62,Normal
+30396,Voluptas Combo,Instant Food,704.94,523.78,"Pandya, Srivastava and Misra",L,25.7,Normal
+30397,Id Combo,Beverages,709.16,558.79,Unknown,Kg,21.2,Normal
+30398,Inventore Combo,Personal Care,138.54,105.76,Bava-Oak,L,23.66,Normal
+30399,Illum 500g,Atta Rice & Dal,909.73,834.1,Oza-Bedi,PC,8.31,Normal
+30400,Illo Combo,Atta Rice & Dal,920.9,680.54,Chopra-Kibe,PC,26.1,Normal
+30401,Officiis Pack,Bakery,784.88,677.86,"Parmer, Acharya and Tella",PC,13.64,Normal
+30402,Vitae Jar,Snacks,385.29,378.47,"Desai, Nayar and Lanka",Kg,1.77,Normal
+30403,Quod Pack,Bakery,952.23,908.67,Kata Ltd,PC,4.57,Normal
+30404,Quam 1L,Household,1149.87,949.16,"Randhawa, Kakar and Roy",Kg,17.46,Normal
+30405,Quasi Box,Bakery,474.66,381.95,Kurian Ltd,PC,19.53,Normal
+30406,Quae 1L,Atta Rice & Dal,419.06,355.91,Wable-Dayal,L,15.07,Normal
+30407,Ipsa Jar,Fruits & Vegetables,387.16,305.2,"Sachdev, Bail and Dora",g,21.17,Normal
+30408,Distinctio 1L,Meat & Seafood,579.18,493.12,Mani-Dhingra,Kg,14.86,Normal
+30409,Consectetur Box,Bakery,1131.32,922.74,Kamdar and Sons,Kg,18.44,Normal
+30410,Ut Jar,Instant Food,61.27,55.6,Shah and Sons,Kg,9.25,Normal
+30411,Nihil Pack,Beverages,1066.9,792.81,"Konda, Sharma and Ram",ml,25.69,Normal
+30412,Et 1L,Beverages,1036.11,851.38,"Rajagopalan, Sengupta and Narasimhan",L,17.83,Normal
+30413,Numquam 500g,Dairy & Breakfast,1160.39,1156.86,Subramanian LLC,L,0.3,Normal
+30414,Nesciunt Jar,Snacks,230.29,218.32,"Chandran, Nayar and Vala",L,5.2,Normal
+30415,Doloribus Box,Fruits & Vegetables,671.98,527.09,Bahri-Dhawan,ml,21.56,Normal
+30416,Ad 1L,Bakery,1047.54,968.63,Handa-Kant,PC,7.53,Normal
+30417,Assumenda Jar,Household,711.87,560.15,"Saraf, Boase and Dua",ml,21.31,Normal
+30418,Amet Combo,Pet Supplies,554.28,489.0,"Pal, Arya and Agate",g,11.78,Normal
+30419,Minus Box,Atta Rice & Dal,214.62,191.35,"Shan, Devi and Chowdhury",L,10.84,Normal
+30420,Suscipit Box,Dairy & Breakfast,354.72,252.74,"Kohli, Parmar and Lad",Kg,28.75,Normal
+30421,Dolores Combo,Meat & Seafood,577.78,440.83,"Buch, Sodhi and Mann",L,23.7,Normal
+30422,At Jar,Fruits & Vegetables,1372.75,1138.71,Dugal-Venkataraman,L,17.05,Normal
+30423,Quibusdam Box,Pet Supplies,389.84,330.3,Yohannan Inc,Kg,15.27,Normal
+30424,Totam Box,Pet Supplies,945.53,920.89,Bava Inc,L,2.61,Normal
+30425,At Combo,Baby Care,954.44,844.72,Tank PLC,g,11.5,Normal
+30426,Cupiditate 1L,Meat & Seafood,432.79,347.02,"Nigam, Keer and Basak",Kg,19.82,Normal
+30427,Pariatur Jar,Meat & Seafood,274.78,274.04,"Bawa, Chana and Dass",PC,0.27,Normal
+30428,Esse 1L,Atta Rice & Dal,170.95,135.77,Prasad Ltd,PC,20.58,Normal
+30429,Alias Jar,Household,884.78,730.34,"Rastogi, Sani and Lalla",PC,17.46,Normal
+30430,Sit Pack,Atta Rice & Dal,914.81,805.73,Ganesan Inc,g,11.92,Normal
+30431,Cumque Box,Baby Care,94.68,78.84,Bala-Sachdeva,Kg,16.73,Normal
+30432,Laudantium Box,Atta Rice & Dal,1049.03,767.17,Dar-Chacko,PC,26.87,Normal
+30433,Soluta Pack,Beverages,1199.91,1016.76,Hayre-Sankaran,Kg,15.26,Normal
+30434,Tempore Combo,Beverages,398.23,287.58,"Kara, Date and Mandal",PC,27.79,Normal
+30435,Cum Jar,Snacks,574.23,492.54,Goyal Inc,L,14.23,Normal
+30436,Quo Combo,Beverages,613.81,466.42,"Venkatesh, Vasa and Cheema",PC,24.01,Normal
+30437,Nobis Box,Meat & Seafood,18.65,14.07,Balay-Rana,L,24.56,Normal
+30438,Voluptatum Combo,Meat & Seafood,690.56,515.96,Bora-Solanki,ml,25.28,Normal
+30439,Quibusdam Jar,Baby Care,546.87,504.0,Prabhu Inc,Kg,7.84,Normal
+30440,At Combo,Bakery,620.06,517.5,Loyal-Dhillon,Kg,16.54,Normal
+30441,Nulla Combo,Pet Supplies,252.97,214.33,Mohan Ltd,ml,15.27,Normal
+30442,Maiores 1L,Atta Rice & Dal,680.42,509.98,"Kanda, Ranganathan and Dey",PC,25.05,Normal
+30443,Animi Combo,Atta Rice & Dal,612.07,469.04,"Sharaf, Warrior and Ben",Kg,23.37,Normal
+30444,Odio Jar,Instant Food,778.78,573.45,"Parmar, Bera and Narayanan",Kg,26.37,Normal
+30445,Similique Jar,Atta Rice & Dal,120.57,85.72,"Bora, Wason and Narain",ml,28.9,Normal
+30446,Velit 500g,Fruits & Vegetables,190.77,159.88,Raj Inc,PC,16.19,Normal
+30447,Quod 1L,Bakery,938.59,783.34,Karnik and Sons,L,16.54,Normal
+30448,Aut Box,Meat & Seafood,471.69,384.03,Sanghvi LLC,Kg,18.58,Normal
+30449,Saepe Pack,Bakery,209.53,157.34,Rai Inc,Kg,24.91,Normal
+30450,Commodi Jar,Baby Care,792.37,619.81,Oza Group,ml,21.78,Normal
+30451,Non 1L,Snacks,371.89,309.16,"Chada, Kapur and Bhagat",Kg,16.87,Normal
+30452,Temporibus Combo,Snacks,1010.15,778.73,Cherian-Sheth,L,22.91,Normal
+30453,Culpa Jar,Pet Supplies,649.85,616.82,"Date, Singhal and Madan",PC,5.08,Normal
+30454,Quos Box,Fruits & Vegetables,432.03,381.18,Agate and Sons,PC,11.77,Normal
+30455,Iste 1L,Bakery,1125.6,851.07,Goyal-Choudhry,g,24.39,Normal
+30456,Accusantium Pack,Bakery,923.64,727.46,"Savant, Nadig and Varughese",PC,21.24,Normal
+30457,Tempore 500g,Beverages,834.91,695.74,Goyal Ltd,Kg,16.67,Normal
+30458,Odio Pack,Baby Care,15.97,13.89,Bobal Ltd,Kg,13.02,Normal
+30459,Dignissimos 500g,Beverages,862.86,779.58,"Balay, Oommen and Mall",L,9.65,Normal
+30460,Aut 500g,Meat & Seafood,396.39,369.91,"Barad, Koshy and Mangat",PC,6.68,Normal
+30461,Voluptates Box,Beverages,551.42,461.27,"Jha, Ram and Bajaj",ml,16.35,Normal
+30462,Maxime 500g,Snacks,753.49,595.36,Shere-Narayanan,PC,20.99,Normal
+30463,Odit 1L,Household,40.82,39.82,Mallick-Agate,ml,2.45,Normal
+30464,Amet Pack,Instant Food,307.29,233.29,Vohra and Sons,Kg,24.08,Normal
+30465,Deleniti Box,Snacks,234.74,174.93,"Gupta, Chanda and Nadkarni",ml,25.48,Normal
+30466,Necessitatibus 500g,Pet Supplies,258.09,250.11,Dugar-Varghese,PC,3.09,Normal
+30467,Provident 1L,Bakery,546.85,456.4,Lanka and Sons,ml,16.54,Normal
+30468,Debitis Jar,Meat & Seafood,523.02,419.29,Merchant-Narain,PC,19.83,Normal
+30469,Laborum Jar,Instant Food,283.77,282.22,Grewal-Randhawa,ml,0.55,Normal
+30470,Praesentium 500g,Fruits & Vegetables,49.66,47.48,Dhar Group,g,4.39,Normal
+30471,Eligendi Box,Pet Supplies,25.05,17.54,"Sathe, Tailor and Manne",PC,29.98,Normal
+30472,Doloribus Combo,Baby Care,139.29,112.45,Unknown,ml,19.27,Normal
+30473,Nam Pack,Atta Rice & Dal,895.56,800.09,Rajagopalan-Thaman,L,10.66,Normal
+30474,Facilis 1L,Personal Care,1192.87,966.81,Rai Inc,ml,18.95,Normal
+30475,Atque 500g,Bakery,191.48,158.41,Bobal-Malhotra,Kg,17.27,Normal
+30476,Ut Jar,Atta Rice & Dal,1107.49,949.16,Chada-Samra,PC,14.3,Normal
+30477,Suscipit 500g,Personal Care,15.11,12.23,"Bhat, Bumb and Garg",Kg,19.06,Normal
+30478,Error Box,Atta Rice & Dal,88.65,64.29,Ghosh-Kunda,Kg,27.48,Normal
+30479,Consequatur 1L,Meat & Seafood,89.21,78.59,Sandhu LLC,L,11.9,Normal
+30480,Eius Jar,Atta Rice & Dal,776.64,736.36,"Zachariah, Kulkarni and Bhattacharyya",PC,5.19,Normal
+30481,Similique Box,Household,183.11,168.8,"Bala, Aggarwal and Buch",PC,7.81,Normal
+30482,Facilis Combo,Fruits & Vegetables,805.28,667.77,Vasa PLC,Kg,17.08,Normal
+30483,Perferendis Jar,Atta Rice & Dal,948.73,855.12,Taneja Inc,PC,9.87,Normal
+30484,Repudiandae Box,Atta Rice & Dal,182.79,148.08,Naik-Ahluwalia,PC,18.99,Normal
+30485,Ipsam 1L,Baby Care,623.56,452.58,Thaker-Din,PC,27.42,Normal
+30486,Sequi Pack,Beverages,968.85,920.97,"Chada, Tailor and Sur",Kg,4.94,Normal
+30487,Alias 1L,Snacks,1006.05,902.51,Thaker-Mutti,Kg,10.29,Normal
+30488,Sit 1L,Pet Supplies,393.8,277.62,Sengupta Group,ml,29.5,Normal
+30489,Illo Box,Household,36.01,34.8,Wason PLC,Kg,3.36,Normal
+30490,Nesciunt 500g,Fruits & Vegetables,695.0,546.5,"Bali, Badal and Thaker",PC,21.37,Normal
+30491,Unde Combo,Household,1000.19,728.84,Kar Group,PC,27.13,Normal
+30492,Eveniet 1L,Snacks,45.88,35.25,"Swaminathan, Mukherjee and Char",ml,23.17,Normal
+30493,Fugit Pack,Bakery,662.25,499.87,Bumb Inc,Kg,24.52,Normal
+30494,Adipisci Combo,Pet Supplies,1069.38,1039.55,"Balasubramanian, Grewal and Anne",PC,2.79,Normal
+30495,Nulla Box,Pet Supplies,957.66,847.43,Loke-Dash,PC,11.51,Normal
+30496,Laudantium Jar,Baby Care,760.79,566.94,Deol LLC,PC,25.48,Normal
+30497,Eius 500g,Pet Supplies,55.94,48.72,"Kaul, Jaggi and Verma",PC,12.91,Normal
+30498,Quibusdam Combo,Pet Supplies,994.26,763.26,"Lanka, Kothari and Sundaram",PC,23.23,Normal
+30499,Ad Box,Bakery,415.55,409.28,Puri and Sons,g,1.51,Normal
+30500,Impedit Box,Pet Supplies,511.87,491.64,"Nayak, Nagi and Chacko",g,3.95,Normal
+30501,Quisquam 500g,Atta Rice & Dal,15.33,14.19,Dada-Murty,g,7.44,Normal
+30502,Similique Box,Household,439.86,426.65,Mann PLC,Kg,3.0,Normal
+30503,Ipsa 1L,Baby Care,997.45,816.49,Narasimhan-Manda,g,18.14,Normal
+30504,Sunt Combo,Household,128.37,103.5,Bhatnagar PLC,L,19.37,Normal
+30505,Ipsum Jar,Beverages,161.65,158.96,"Bumb, Rastogi and Manne",PC,1.66,Normal
+30506,Porro Box,Bakery,244.28,203.87,Badal-Nanda,Kg,16.54,Normal
+30507,Cum Box,Personal Care,937.99,748.25,Goel-Bandi,PC,20.23,Normal
+30508,Harum 500g,Dairy & Breakfast,120.29,116.34,Swaminathan-Oza,g,3.28,Normal
+30509,In Box,Fruits & Vegetables,882.06,682.12,"Dhillon, Patil and Sridhar",PC,22.67,Normal
+30510,Neque Jar,Atta Rice & Dal,282.9,262.82,"Dhawan, Sane and Raju",Kg,7.1,Normal
+30511,Ad 1L,Personal Care,358.18,276.04,Sarraf-Dhar,Kg,22.93,Normal
+30512,Delectus Combo,Baby Care,248.16,245.1,"Chander, Atwal and Agrawal",Kg,1.23,Normal
+30513,Architecto 1L,Instant Food,346.47,272.21,Oza-Nagar,Kg,21.43,Normal
+30514,Repellendus Jar,Beverages,877.08,844.22,Radhakrishnan and Sons,L,3.75,Normal
+30515,Iusto Combo,Fruits & Vegetables,229.55,190.41,Pathak and Sons,Kg,17.05,Normal
+30516,Odio Pack,Personal Care,818.15,788.54,Rama Group,Kg,3.62,Normal
+30517,Voluptatem 500g,Dairy & Breakfast,25.64,21.8,Baral PLC,L,14.98,Normal
+30518,Vero Pack,Atta Rice & Dal,1011.4,893.59,"Barad, Patel and Jhaveri",L,11.65,Normal
+30519,Numquam Jar,Personal Care,75.06,73.98,"Hans, Sethi and Bajwa",g,1.44,Normal
+30520,Debitis Jar,Household,368.0,293.19,Mohan Group,PC,20.33,Normal
+30521,Autem 500g,Baby Care,849.89,837.67,"Kanda, Sibal and Balakrishnan",g,1.44,Normal
+30522,Autem Box,Meat & Seafood,518.83,403.52,Menon-Dugar,PC,22.23,Normal
+30523,Laboriosam 500g,Bakery,445.51,335.9,Unknown,PC,24.6,Normal
+30524,Repudiandae Jar,Atta Rice & Dal,28.0,22.91,"Ben, Raval and Nigam",Kg,18.18,Normal
+30525,Occaecati Jar,Pet Supplies,822.31,620.67,"Kari, Ram and Krishnan",Kg,24.52,Normal
+30526,Alias Combo,Baby Care,665.98,571.8,Chaudhary-Rattan,PC,14.14,Normal
+30527,Beatae 1L,Household,583.71,426.74,Raman Inc,PC,26.89,Normal
+30528,Dolorem 1L,Snacks,559.6,530.26,Barad Ltd,Kg,5.24,Normal
+30529,Aliquam Pack,Household,21.25,15.45,Pai-Chadha,Kg,27.29,Normal
+30530,Officia Jar,Beverages,690.83,508.82,Raja Group,PC,26.35,Normal
+30531,Aut 1L,Pet Supplies,52.32,41.38,"Nair, Gulati and Pradhan",L,20.91,Normal
+30532,Recusandae 500g,Instant Food,700.89,585.84,Mander PLC,Kg,16.41,Normal
+30533,Libero Jar,Instant Food,719.09,567.3,Subramaniam-Hans,Kg,21.11,Normal
+30534,Illo Pack,Pet Supplies,1131.83,986.99,Sinha-Goda,g,12.8,Normal
+30535,Cum 500g,Bakery,643.14,530.36,Sathe-Shanker,ml,17.54,Normal
+30536,Ab 500g,Baby Care,81.63,72.85,Unknown,ml,10.76,Normal
+30537,Amet Box,Pet Supplies,483.51,476.78,"Mall, Walia and Agate",PC,1.39,Normal
+30538,Distinctio 1L,Fruits & Vegetables,10.89,10.41,Ray LLC,Kg,4.41,Normal
+30539,Accusamus 500g,Fruits & Vegetables,734.44,632.58,"Agarwal, Bajaj and Shah",Kg,13.87,Normal
+30540,Dolore 1L,Baby Care,713.2,551.6,Patla Ltd,Kg,22.66,Normal
+30541,Modi 500g,Baby Care,714.91,545.21,Balasubramanian-Chandra,PC,23.74,Normal
+30542,Id Jar,Bakery,167.05,126.79,Unknown,Kg,24.1,Normal
+30543,Sed Combo,Dairy & Breakfast,845.02,763.58,Khosla-Golla,Kg,9.64,Normal
+30544,Cupiditate Pack,Meat & Seafood,696.45,620.21,"Ben, Bajaj and Jha",ml,10.95,Normal
+30545,Odit Box,Fruits & Vegetables,754.06,598.82,Hora-Parmer,L,20.59,Normal
+30546,Sed Box,Instant Food,1149.87,989.04,Rajagopalan LLC,PC,13.99,Normal
+30547,Blanditiis 1L,Beverages,19.5,14.9,Upadhyay Group,PC,23.59,Normal
+30548,Aspernatur Box,Snacks,1093.73,882.57,Sule-Venkataraman,PC,19.31,Normal
+30549,Odio Jar,Snacks,260.13,192.72,Boase LLC,ml,25.91,Normal
+30550,Consequuntur Box,Bakery,119.35,95.16,Borah-Vora,ml,20.27,Normal
+30551,Commodi Jar,Bakery,543.95,460.06,"Sidhu, Thakur and Rana",L,15.42,Normal
+30552,Tempore Jar,Atta Rice & Dal,471.21,386.59,"Korpal, Kota and Bhavsar",ml,17.96,Normal
+30553,Nihil Combo,Dairy & Breakfast,1021.59,904.17,"Kapadia, Walia and Sawhney",PC,11.49,Normal
+30554,Debitis 500g,Bakery,1078.6,876.88,Unknown,ml,18.7,Normal
+30555,Perferendis Combo,Household,368.54,339.08,Bansal PLC,PC,7.99,Normal
+30556,Est 1L,Instant Food,1066.18,1018.05,Rama LLC,ml,4.51,Normal
+30557,Vitae Pack,Bakery,389.78,325.31,"Shere, Sundaram and Majumdar",ml,16.54,Normal
+30558,Commodi Pack,Instant Food,747.97,547.63,Unknown,Kg,26.78,Normal
+30559,Veritatis 500g,Household,470.12,330.21,"Khanna, Pillai and Dass",Kg,29.76,Normal
+30560,Molestias 1L,Atta Rice & Dal,771.75,675.61,Sachdeva LLC,Kg,12.46,Normal
+30561,Veritatis Jar,Beverages,1132.19,975.49,Gole-Srinivasan,PC,13.84,Normal
+30562,Reprehenderit 1L,Pet Supplies,797.13,589.53,Bains PLC,PC,26.04,Normal
+30563,Reiciendis Pack,Fruits & Vegetables,1176.93,1046.2,"Yogi, Chaudhari and Kar",g,11.11,Normal
+30564,Ratione Jar,Pet Supplies,582.99,538.79,"Minhas, Kaul and Deo",ml,7.58,Normal
+30565,Facilis 1L,Baby Care,179.91,140.1,"Hora, Wason and Madan",g,22.13,Normal
+30566,Doloribus 500g,Meat & Seafood,359.76,306.3,"Sahota, Suri and Bajaj",PC,14.86,Normal
+30567,Similique Pack,Fruits & Vegetables,236.06,233.01,Oak PLC,Kg,1.29,Normal
+30568,Magnam Box,Instant Food,153.42,140.42,Choudhry and Sons,PC,8.47,Normal
+30569,Quod Box,Fruits & Vegetables,528.5,501.24,"Bora, Chand and Kurian",ml,5.16,Normal
+30570,Corporis Pack,Atta Rice & Dal,467.44,400.9,Singhal-Rajan,g,14.23,Normal
+30571,Perferendis Box,Beverages,279.66,245.67,"Jain, Brahmbhatt and Pandit",PC,12.15,Normal
+30572,Assumenda Jar,Personal Care,581.07,464.49,"Varty, Chauhan and Zachariah",PC,20.06,Normal
+30573,Vel Jar,Beverages,344.43,292.97,"Pradhan, Savant and Sharaf",Kg,14.94,Normal
+30574,Eos Pack,Atta Rice & Dal,711.11,544.64,Comar-Talwar,g,23.41,Normal
+30575,Veniam Combo,Meat & Seafood,175.37,140.08,Dada-Nair,Kg,20.12,Normal
+30576,Nemo Jar,Beverages,183.19,148.79,Ramaswamy-Mishra,PC,18.78,Normal
+30577,Praesentium 500g,Household,314.24,272.08,"Ganesan, Natarajan and Dara",PC,13.42,Normal
+30578,Quam Combo,Bakery,440.47,415.57,"Patil, Grover and Babu",Kg,5.65,Normal
+30579,Ea Box,Pet Supplies,112.29,108.97,Unknown,Kg,2.96,Normal
+30580,Consequatur Box,Fruits & Vegetables,123.08,118.06,Solanki and Sons,ml,4.08,Normal
+30581,Ipsum Combo,Household,90.84,81.07,"Gola, Cherian and Banik",L,10.76,Normal
+30582,Illum Jar,Baby Care,77.88,68.29,Pillai Inc,ml,12.31,Normal
+30583,Laboriosam Box,Instant Food,246.92,245.78,Grewal PLC,PC,0.46,Normal
+30584,Nam Pack,Pet Supplies,461.07,454.21,Oak PLC,ml,1.49,Normal
+30585,Repellendus 500g,Fruits & Vegetables,553.22,392.71,Deep Ltd,g,29.01,Normal
+30586,Fuga Pack,Household,1105.15,775.22,Gole LLC,Kg,29.85,Normal
+30587,Itaque Pack,Instant Food,313.1,307.93,Munshi Group,PC,1.65,Normal
+30588,Ipsum Box,Atta Rice & Dal,511.62,437.46,"Bhandari, Randhawa and Bhat",ml,14.5,Normal
+30589,Veniam Box,Beverages,226.44,172.99,Chanda-Chacko,PC,23.6,Normal
+30590,Quis 500g,Bakery,589.53,435.51,Chacko-Maharaj,Kg,26.13,Normal
+30591,Dolor Box,Fruits & Vegetables,38.94,30.62,"Choudhry, Kari and Bajwa",ml,21.37,Normal
+30592,Sequi 1L,Fruits & Vegetables,344.82,306.51,Nagy-Wadhwa,Kg,11.11,Normal
+30593,Iure Pack,Pet Supplies,1014.66,859.68,"Devi, Grewal and D’Alia",Kg,15.27,Normal
+30594,Fugiat Combo,Snacks,624.78,506.35,Khatri-Menon,g,18.96,Normal
+30595,Laudantium 500g,Dairy & Breakfast,975.26,743.78,Chahal LLC,ml,23.74,Normal
+30596,Ratione Pack,Meat & Seafood,103.49,87.81,"Dhar, Wagle and Sarraf",PC,15.15,Normal
+30597,Facilis Box,Beverages,564.67,444.8,Ramesh-Chopra,PC,21.23,Normal
+30598,Deleniti Box,Meat & Seafood,539.6,525.23,"Prashad, Sen and Nadig",Kg,2.66,Normal
+30599,Cum Combo,Snacks,1045.91,744.34,"Shetty, Barad and Brahmbhatt",PC,28.83,Normal
+30600,Ea 500g,Beverages,1181.42,1101.49,"Gola, Choudhury and Raju",ml,6.77,Normal
+30601,Illo Box,Meat & Seafood,359.22,305.84,"Cherian, Mahajan and Verma",Kg,14.86,Normal
+30602,Iste Box,Meat & Seafood,635.3,560.29,Kadakia-Dara,Kg,11.81,Normal
+30603,Sequi 1L,Household,956.62,730.07,Merchant-Ramesh,PC,23.68,Normal
+30604,Amet Combo,Fruits & Vegetables,336.83,306.51,Pandit PLC,g,9.0,Normal
+30605,Quisquam Jar,Baby Care,703.72,581.62,Modi-Bala,L,17.35,Normal
+30606,Optio 500g,Fruits & Vegetables,433.74,407.64,"Kalla, Patla and Devan",ml,6.02,Normal
+30607,Voluptatum 500g,Snacks,31.8,31.09,"Sharaf, Kata and Batra",L,2.23,Normal
+30608,Dolorum Combo,Dairy & Breakfast,741.6,627.26,Kohli LLC,ml,15.42,Normal
+30609,Culpa Box,Personal Care,82.66,68.31,"Thakur, Grewal and Swaminathan",Kg,17.36,Normal
+30610,Vero 1L,Snacks,569.22,473.66,"Tiwari, Agate and Kapadia",L,16.79,Normal
+30611,In Pack,Snacks,638.43,598.77,"Tailor, Kunda and Kapadia",L,6.21,Normal
+30612,Vitae 500g,Beverages,733.51,529.6,Saha-Vala,g,27.8,Normal
+30613,Illo Combo,Dairy & Breakfast,270.09,200.92,Lall and Sons,PC,25.61,Normal
+30614,Ad Jar,Baby Care,116.23,96.79,"Edwin, Sani and Arya",Kg,16.73,Normal
+30615,Itaque Combo,Pet Supplies,634.3,494.87,Prasad-Sampath,g,21.98,Normal
+30616,A Combo,Fruits & Vegetables,107.35,96.13,Kaul-Bora,PC,10.45,Normal
+30617,Perferendis Combo,Personal Care,1030.44,729.11,Nigam-Tank,PC,29.24,Normal
+30618,Distinctio Combo,Baby Care,801.09,678.01,Unknown,Kg,15.36,Normal
+30619,Autem Combo,Baby Care,1079.22,786.58,Memon Inc,g,27.12,Normal
+30620,A 500g,Atta Rice & Dal,581.19,410.77,"Hegde, Mallick and Thaker",PC,29.32,Normal
+30621,Quos 1L,Instant Food,965.49,850.04,Mishra and Sons,L,11.96,Normal
+30622,Optio Combo,Personal Care,372.58,300.85,Sehgal Ltd,L,19.25,Normal
+30623,Ratione Combo,Beverages,760.49,717.96,Unknown,L,5.59,Normal
+30624,Quia 500g,Dairy & Breakfast,887.77,681.88,Virk-Desai,g,23.19,Normal
+30625,Corporis 1L,Atta Rice & Dal,354.22,278.43,Suresh Group,PC,21.4,Normal
+30626,Quisquam 500g,Bakery,1105.85,1013.62,Anand-Dhar,PC,8.34,Normal
+30627,Hic 500g,Household,872.32,720.05,Sachdeva-Ramaswamy,L,17.46,Normal
+30628,Animi Jar,Baby Care,1038.49,769.61,"Koshy, Bhatti and Andra",PC,25.89,Normal
+30629,Deleniti 1L,Atta Rice & Dal,585.76,537.91,Divan Inc,Kg,8.17,Normal
+30630,Sint 500g,Fruits & Vegetables,1050.01,806.12,Hayer-Prakash,PC,23.23,Normal
+30631,Illum 1L,Baby Care,1150.44,1031.41,Contractor-Morar,L,10.35,Normal
+30632,Illo 500g,Instant Food,588.76,476.57,"Muni, Kalita and Pandit",PC,19.06,Normal
+30633,Quis Jar,Snacks,110.47,98.6,Unknown,Kg,10.74,Normal
+30634,Tenetur Combo,Baby Care,1090.74,1046.66,Yadav-Apte,L,4.04,Normal
+30635,Eveniet Box,Baby Care,747.02,723.84,"Sehgal, Choudhry and Sant",PC,3.1,Normal
+30636,Ad Pack,Dairy & Breakfast,1170.86,1153.79,Sahota Group,g,1.46,Normal
+30637,Expedita Pack,Atta Rice & Dal,735.78,595.74,Anand Group,L,19.03,Normal
+30638,Dolorem Box,Meat & Seafood,600.65,426.78,Bhargava-Suri,PC,28.95,Normal
+30639,Minus Combo,Baby Care,105.6,104.1,"Taneja, Chokshi and Raj",ml,1.42,Normal
+30640,Laborum Box,Snacks,706.03,694.84,Sekhon Group,ml,1.58,Normal
+30641,Id Pack,Instant Food,905.54,787.22,"Muni, Saini and Dada",PC,13.07,Normal
+30642,Omnis Pack,Instant Food,859.71,857.33,Barad PLC,L,0.28,Normal
+30643,Nihil 1L,Snacks,228.26,189.94,"Nair, Mammen and Rajan",g,16.79,Normal
+30644,Ad 500g,Baby Care,847.71,831.75,Baral Group,g,1.88,Normal
+30645,Ratione Jar,Beverages,414.2,388.51,Bhatti PLC,Kg,6.2,Normal
+30646,Dolore Box,Snacks,235.09,186.58,Keer-Kannan,L,20.63,Normal
+30647,Rem Combo,Bakery,427.94,324.41,Unknown,L,24.19,Normal
+30648,Omnis Pack,Household,1026.63,774.42,Zachariah-Kothari,PC,24.57,Normal
+30649,Harum 500g,Baby Care,144.12,120.01,"Sarin, Nazareth and Johal",PC,16.73,Normal
+30650,Quisquam 500g,Bakery,162.87,143.19,"Bora, Lanka and Verma",g,12.08,Normal
+30651,Impedit Jar,Pet Supplies,658.01,517.27,"Ratta, Dutta and Nazareth",ml,21.39,Normal
+30652,Culpa 500g,Pet Supplies,510.74,357.75,"Chhabra, Narula and Babu",g,29.95,Normal
+30653,Aut 500g,Baby Care,85.45,75.25,Naik-Kar,PC,11.94,Normal
+30654,Impedit Combo,Atta Rice & Dal,63.09,46.38,"Khanna, Wadhwa and Guha",ml,26.49,Normal
+30655,Maiores Jar,Dairy & Breakfast,293.16,275.82,"Varghese, Garde and Jani",Kg,5.91,Normal
+30656,Quibusdam 1L,Dairy & Breakfast,71.84,66.97,Dhillon Ltd,L,6.78,Normal
+30657,Temporibus 500g,Snacks,1033.86,878.02,Kunda Ltd,g,15.07,Normal
+30658,Cupiditate Pack,Beverages,779.35,622.83,Ghose-Goyal,L,20.08,Normal
+30659,Amet 1L,Meat & Seafood,1027.87,950.58,"Devan, Bora and Hayer",PC,7.52,Normal
+30660,Hic Box,Meat & Seafood,513.16,384.61,Bal-Sandhu,ml,25.05,Normal
+30661,Possimus Box,Pet Supplies,148.78,145.65,Walla Ltd,ml,2.1,Normal
+30662,Assumenda Box,Dairy & Breakfast,1142.02,1026.13,"Nayak, Dutt and Mistry",Kg,10.15,Normal
+30663,Ab 1L,Beverages,49.4,35.92,Mahajan Inc,g,27.29,Normal
+30664,Consequuntur 500g,Atta Rice & Dal,576.04,437.55,Sankar-Prakash,ml,24.04,Normal
+30665,Praesentium 500g,Bakery,995.16,700.91,Samra-Pal,g,29.57,Normal
+30666,Veniam Pack,Atta Rice & Dal,114.43,97.19,"Natarajan, Jha and Sarna",PC,15.07,Normal
+30667,Qui Combo,Baby Care,155.3,130.96,Nazareth Group,Kg,15.67,Normal
+30668,Doloremque Combo,Snacks,51.56,44.31,"Agate, Pingle and Chandran",PC,14.06,Normal
+30669,Nesciunt 500g,Bakery,843.21,710.11,Unknown,g,15.78,Normal
+30670,Necessitatibus Combo,Fruits & Vegetables,1132.46,805.85,Das-Upadhyay,Kg,28.84,Normal
+30671,Soluta Box,Beverages,397.46,318.94,Viswanathan LLC,PC,19.76,Normal
+30672,Velit Jar,Beverages,618.57,504.04,Luthra PLC,L,18.52,Normal
+30673,A Combo,Bakery,246.16,196.02,"Das, Devan and Date",Kg,20.37,Normal
+30674,Commodi Pack,Beverages,52.15,44.19,Bansal-Bhattacharyya,L,15.26,Normal
+30675,Consequuntur Pack,Pet Supplies,634.73,606.01,Virk Group,g,4.52,Normal
+30676,Distinctio 500g,Meat & Seafood,690.98,588.3,Sawhney-Bedi,L,14.86,Normal
+30677,Vero Combo,Snacks,962.49,800.9,"Karnik, Toor and Vora",g,16.79,Normal
+30678,Consequatur 500g,Dairy & Breakfast,339.55,323.35,Rajagopal Ltd,PC,4.77,Normal
+30679,Ipsum Box,Fruits & Vegetables,1151.95,955.55,Saraf Ltd,Kg,17.05,Normal
+30680,Quia Combo,Personal Care,739.66,687.68,Bali-Sengupta,ml,7.03,Normal
+30681,Fugiat 1L,Beverages,1111.0,941.42,Gade-Gola,g,15.26,Normal
+30682,Optio Pack,Dairy & Breakfast,136.62,123.78,Kamdar-Kashyap,g,9.4,Normal
+30683,Laborum Pack,Snacks,62.42,61.58,Wali-Sankaran,g,1.35,Normal
+30684,Perferendis 1L,Instant Food,612.18,529.05,Bedi and Sons,PC,13.58,Normal
+30685,Commodi Combo,Instant Food,655.9,521.39,Jain Group,ml,20.51,Normal
+30686,Dolorum 500g,Pet Supplies,926.34,871.98,"Jaggi, Barad and Vaidya",L,5.87,Normal
+30687,Quis 500g,Meat & Seafood,1021.02,853.35,Apte-Gulati,L,16.42,Normal
+30688,Dolor 500g,Instant Food,528.13,427.49,"Bhattacharyya, Brahmbhatt and Vasa",PC,19.06,Normal
+30689,Nihil Combo,Baby Care,700.84,546.36,Subramanian-Mand,Kg,22.04,Normal
+30690,Labore Combo,Snacks,1172.38,839.07,Arya Inc,PC,28.43,Normal
+30691,Laboriosam Combo,Household,489.14,484.25,Unknown,PC,1.0,Normal
+30692,Aliquam Combo,Household,966.98,766.01,Unknown,Kg,20.78,Normal
+30693,Omnis Box,Meat & Seafood,402.2,310.45,Dara-Bansal,Kg,22.81,Normal
+30694,Possimus Box,Beverages,1081.63,837.34,Kulkarni LLC,L,22.59,Normal
+30695,Ducimus Combo,Household,1122.52,898.31,Jain PLC,PC,19.97,Normal
+30696,Non Jar,Household,1166.63,1136.36,"Sami, Purohit and Subramanian",PC,2.59,Normal
+30697,In 1L,Beverages,395.85,376.92,Handa Group,Kg,4.78,Normal
+30698,Iste Jar,Instant Food,1050.2,810.39,Reddy PLC,L,22.83,Normal
+30699,Rerum Jar,Snacks,14.11,13.93,Baral PLC,g,1.28,Normal
+30700,Fuga 500g,Pet Supplies,458.7,371.9,Raghavan Group,PC,18.92,Normal
+30701,Consectetur Box,Snacks,745.96,596.14,Chaudhuri Ltd,Kg,20.08,Normal
+30702,Reiciendis 500g,Instant Food,27.51,26.34,"Sethi, Shenoy and Sahni",Kg,4.25,Normal
+30703,Quidem Pack,Meat & Seafood,453.84,402.01,"Bhargava, Doshi and Kale",PC,11.42,Normal
+30704,Beatae Jar,Personal Care,696.54,540.59,"Sandal, Ram and Bhalla",Kg,22.39,Normal
+30705,Consequuntur Box,Personal Care,890.99,745.28,"Dave, Ratti and Rao",Kg,16.35,Normal
+30706,Aut Box,Bakery,132.17,130.02,Viswanathan Group,PC,1.63,Normal
+30707,Mollitia 1L,Beverages,864.55,629.43,"Sha, Gopal and Barman",ml,27.2,Normal
+30708,Assumenda 1L,Meat & Seafood,500.61,496.94,"Rege, Kala and Mukherjee",Kg,0.73,Normal
+30709,Neque 1L,Bakery,785.76,763.92,Unknown,PC,2.78,Normal
+30710,Odio Box,Meat & Seafood,969.07,877.11,Bakshi LLC,ml,9.49,Normal
+30711,Quaerat 1L,Household,782.17,579.12,Bora-Bakshi,Kg,25.96,Normal
+30712,Voluptatum 500g,Snacks,603.55,455.26,Sarin LLC,g,24.57,Normal
+30713,Blanditiis Pack,Meat & Seafood,499.23,350.57,Rao and Sons,g,29.78,Normal
+30714,Maxime 500g,Personal Care,1022.71,1016.31,Srinivas PLC,Kg,0.63,Normal
+30715,Recusandae 500g,Meat & Seafood,178.89,151.35,Bajwa Group,PC,15.39,Normal
+30716,Praesentium 500g,Meat & Seafood,28.58,22.87,Pradhan PLC,PC,19.98,Normal
+30717,A Jar,Household,624.87,590.96,Deshmukh-Sarin,g,5.43,Normal
+30718,Perspiciatis 500g,Snacks,798.49,591.38,Misra-Soni,g,25.94,Normal
+30719,Inventore 1L,Beverages,387.0,329.94,"Dora, Basu and Dalal",Kg,14.74,Normal
+30720,Sunt 500g,Atta Rice & Dal,1012.57,915.41,Unknown,g,9.6,Normal
+30721,Inventore Pack,Personal Care,941.64,885.46,Raghavan Group,L,5.97,Normal
+30722,Exercitationem Jar,Snacks,924.05,881.36,Unknown,Kg,4.62,Normal
+30723,Corporis Box,Instant Food,1095.7,830.66,Sheth-Sant,Kg,24.19,Normal
+30724,Magnam 1L,Bakery,709.77,608.39,Bobal LLC,L,14.28,Normal
+30725,Odit Pack,Household,1177.13,830.13,"Yohannan, Memon and Dhillon",ml,29.48,Normal
+30726,Aliquid Box,Fruits & Vegetables,258.64,192.74,Pandya Inc,PC,25.48,Normal
+30727,Dolorum Jar,Baby Care,180.88,133.85,Bansal and Sons,L,26.0,Normal
+30728,Ratione 1L,Instant Food,756.28,602.13,Chand-Acharya,PC,20.38,Normal
+30729,Iusto Combo,Personal Care,732.46,664.25,Kant Ltd,Kg,9.31,Normal
+30730,Et 1L,Fruits & Vegetables,641.36,462.79,Ray PLC,ml,27.84,Normal
+30731,Corporis 1L,Dairy & Breakfast,272.17,222.89,Parmer Ltd,L,18.11,Normal
+30732,Dolorum Box,Baby Care,1040.17,798.33,"Bera, Raval and Kashyap",PC,23.25,Normal
+30733,Laborum 500g,Baby Care,280.96,277.19,Unknown,PC,1.34,Normal
+30734,Optio 1L,Baby Care,131.28,93.09,Unknown,ml,29.09,Normal
+30735,Dolorem Combo,Baby Care,521.98,444.92,Unknown,ml,14.76,Normal
+30736,Autem 500g,Beverages,662.53,600.53,Singh-Manne,Kg,9.36,Normal
+30737,Quo 1L,Atta Rice & Dal,824.7,619.04,Sinha-Kari,L,24.94,Normal
+30738,Temporibus Jar,Beverages,613.18,600.78,Sama-Naidu,g,2.02,Normal
+30739,Quaerat Box,Dairy & Breakfast,1014.2,968.92,Mohan Group,g,4.46,Normal
+30740,Ipsam 500g,Atta Rice & Dal,770.16,587.98,Devi-Viswanathan,PC,23.65,Normal
+30741,Exercitationem 1L,Meat & Seafood,587.79,563.04,Balan PLC,Kg,4.21,Normal
+30742,Vitae Jar,Bakery,355.59,296.77,Natt-Korpal,Kg,16.54,Normal
+30743,Reiciendis Pack,Meat & Seafood,258.45,218.72,"Din, Mittal and Narang",ml,15.37,Normal
+30744,Fugiat Pack,Baby Care,172.34,161.66,Kashyap-Mand,ml,6.2,Normal
+30745,Reiciendis 1L,Instant Food,333.47,269.85,Nayak and Sons,Kg,19.08,Normal
+30746,Earum 1L,Baby Care,397.37,314.19,Modi Group,Kg,20.93,Normal
+30747,Doloribus Pack,Baby Care,215.24,193.93,Chander-Natarajan,g,9.9,Normal
+30748,Nemo Combo,Baby Care,39.76,29.27,Balasubramanian-Mallick,Kg,26.38,Normal
+30749,Placeat 500g,Household,796.19,701.57,Shere Inc,L,11.88,Normal
+30750,Similique Pack,Instant Food,1122.24,811.37,Unknown,Kg,27.7,Normal
+30751,Cum Box,Instant Food,158.15,153.81,Sem PLC,Kg,2.74,Normal
+30752,Earum Box,Bakery,1141.89,953.12,Savant Inc,Kg,16.53,Normal
+30753,Excepturi 500g,Fruits & Vegetables,1142.41,965.77,Shukla and Sons,PC,15.46,Normal
+30754,Pariatur Box,Snacks,1190.17,1118.79,"Kamdar, Kata and Gill",Kg,6.0,Normal
+30755,Ratione 500g,Meat & Seafood,862.35,815.59,"Tata, Sethi and Acharya",ml,5.42,Normal
+30756,Molestiae Pack,Fruits & Vegetables,481.67,457.38,Unknown,ml,5.04,Normal
+30757,Veniam Combo,Personal Care,310.96,264.26,"Gupta, Chana and Vyas",L,15.02,Normal
+30758,Enim Jar,Fruits & Vegetables,113.62,92.27,Bava-Mall,PC,18.79,Normal
+30759,Reprehenderit Box,Baby Care,929.85,920.19,Saha Ltd,L,1.04,Normal
+30760,Totam Pack,Atta Rice & Dal,446.78,388.6,"Chadha, Nadig and Bajwa",ml,13.02,Normal
+30761,Fugit 1L,Dairy & Breakfast,614.24,466.78,"Varty, Patla and Dayal",g,24.01,Normal
+30762,Accusantium 1L,Dairy & Breakfast,326.95,301.3,"Krishnamurthy, Zachariah and Upadhyay",g,7.85,Normal
+30763,Numquam 500g,Instant Food,515.22,366.72,"Sampath, Din and Hans",ml,28.82,Normal
+30764,Fugiat Jar,Meat & Seafood,686.23,577.78,Dyal-Goyal,PC,15.8,Normal
+30765,Repellat Jar,Beverages,808.56,746.17,"Jain, Sridhar and Choudhary",PC,7.72,Normal
+30766,Iste Combo,Household,448.37,410.72,"Padmanabhan, Basak and Dutt",PC,8.4,Normal
+30767,Error 1L,Instant Food,972.06,715.58,Ramesh-Khatri,PC,26.39,Normal
+30768,Possimus Pack,Fruits & Vegetables,170.02,127.36,Agrawal Inc,ml,25.09,Normal
+30769,Assumenda Combo,Snacks,808.84,774.74,Dora-Murthy,Kg,4.22,Normal
+30770,Odit Jar,Beverages,1186.64,1117.32,Khanna-Natt,g,5.84,Normal
+30771,Illum Jar,Baby Care,759.24,559.93,"Bala, Uppal and Choudhry",L,26.25,Normal
+30772,Quidem Pack,Dairy & Breakfast,488.18,395.94,Jaggi Inc,L,18.89,Normal
+30773,Autem Pack,Personal Care,725.09,616.21,Bhatnagar-Shukla,Kg,15.02,Normal
+30774,Repellat Box,Dairy & Breakfast,973.08,848.14,Chokshi-Oommen,Kg,12.84,Normal
+30775,Quis Combo,Household,741.41,604.46,"Bhasin, Kata and Sharma",Kg,18.47,Normal
+30776,Recusandae 1L,Meat & Seafood,340.81,327.28,Padmanabhan-Bansal,PC,3.97,Normal
+30777,Perferendis Combo,Meat & Seafood,46.63,38.98,Gala and Sons,PC,16.41,Normal
+30778,Vitae Combo,Household,25.37,19.76,"Maharaj, Chadha and Swamy",Kg,22.11,Normal
+30779,Error Jar,Atta Rice & Dal,447.24,373.28,"Jha, Subramanian and Morar",Kg,16.54,Normal
+30780,Magni 1L,Fruits & Vegetables,818.7,639.68,Peri-Dua,L,21.87,Normal
+30781,Quod 500g,Fruits & Vegetables,934.18,745.47,Oommen-Hari,g,20.2,Normal
+30782,Officia Box,Household,348.05,277.68,Bala Group,Kg,20.22,Normal
+30783,Exercitationem Combo,Household,316.93,298.22,Chaudhari Group,ml,5.9,Normal
+30784,Officiis 1L,Pet Supplies,467.22,457.83,Soni LLC,PC,2.01,Normal
+30785,Delectus Pack,Fruits & Vegetables,967.67,683.34,Kohli Ltd,PC,29.38,Normal
+30786,Architecto 500g,Meat & Seafood,255.11,238.14,"Tripathi, Dugar and Dhar",L,6.65,Normal
+30787,Atque Combo,Fruits & Vegetables,339.63,256.7,Unknown,g,24.42,Normal
+30788,Illo Jar,Beverages,988.53,834.58,"Devi, Prabhakar and Banerjee",ml,15.57,Normal
+30789,Rem Pack,Beverages,179.33,149.12,Kumar-Dugal,ml,16.85,Normal
+30790,A Pack,Fruits & Vegetables,199.85,151.62,Hari Group,ml,24.13,Normal
+30791,Porro Box,Beverages,903.93,867.5,Karan PLC,ml,4.03,Normal
+30792,Corrupti Box,Snacks,256.98,237.85,"Zacharia, Dixit and Sura",Kg,7.44,Normal
+30793,Sint Combo,Bakery,282.13,200.26,Bandi and Sons,PC,29.02,Normal
+30794,Quibusdam 1L,Instant Food,17.88,13.63,Pradhan Group,g,23.77,Normal
+30795,Corrupti Combo,Bakery,106.12,88.57,Dara LLC,Kg,16.54,Normal
+30796,Quod Box,Meat & Seafood,132.96,120.28,Yadav-Dhawan,Kg,9.54,Normal
+30797,Quis 1L,Beverages,327.63,315.25,"Brahmbhatt, Kala and Kulkarni",Kg,3.78,Normal
+30798,Blanditiis Box,Personal Care,242.84,182.79,"Sharaf, Dewan and Trivedi",PC,24.73,Normal
+30799,Non Pack,Personal Care,505.99,414.34,Sarin Inc,L,18.11,Normal
+30800,Quam 1L,Atta Rice & Dal,820.12,677.9,Savant-Dhingra,Kg,17.34,Normal
+30801,Accusantium Jar,Beverages,137.68,117.41,"Prashad, Sama and Kadakia",L,14.72,Normal
+30802,Qui Combo,Household,815.61,730.11,Dora and Sons,g,10.48,Normal
+30803,Voluptates 1L,Fruits & Vegetables,805.16,589.49,"Chandran, Bumb and Johal",PC,26.79,Normal
+30804,Commodi Combo,Meat & Seafood,897.92,643.84,"Thakur, Modi and Hayer",Kg,28.3,Normal
+30805,Atque Jar,Fruits & Vegetables,51.18,49.1,Sem-Khare,g,4.06,Normal
+30806,Doloribus Jar,Personal Care,1100.36,995.14,"Kalita, Lata and Bandi",Kg,9.56,Normal
+30807,Accusamus Combo,Fruits & Vegetables,1096.0,1027.5,Keer-Dhingra,PC,6.25,Normal
+30808,Dolore Pack,Atta Rice & Dal,645.49,520.75,"Chakraborty, Chandra and Batta",ml,19.32,Normal
+30809,Excepturi Box,Bakery,656.57,613.96,"Ramachandran, De and Barman",L,6.49,Normal
+30810,Aliquam 1L,Household,411.33,344.82,Bali-Sem,PC,16.17,Normal
+30811,Nulla Pack,Bakery,648.13,475.06,"Vig, Jani and Minhas",Kg,26.7,Normal
+30812,Harum 1L,Pet Supplies,555.57,429.0,Rastogi-Saha,L,22.78,Normal
+30813,Odit Jar,Instant Food,442.58,433.0,"Wali, Peri and Nazareth",ml,2.16,Normal
+30814,Saepe 500g,Instant Food,705.43,691.59,"Sarkar, Mital and Mandal",g,1.96,Normal
+30815,Eos 500g,Instant Food,580.7,484.31,Om-Shan,Kg,16.6,Normal
+30816,Aliquid 1L,Beverages,1104.08,860.34,Suresh-Shenoy,ml,22.08,Normal
+30817,Provident Box,Fruits & Vegetables,1213.23,1006.39,"Rattan, Mittal and Gulati",Kg,17.05,Normal
+30818,Deleniti Combo,Snacks,652.94,478.94,Unknown,ml,26.65,Normal
+30819,Deserunt 1L,Fruits & Vegetables,654.61,543.01,"Chaudhry, Parmar and Morar",ml,17.05,Normal
+30820,Modi Jar,Snacks,791.22,674.36,"Kant, Nigam and Chad",g,14.77,Normal
+30821,Error 500g,Baby Care,973.5,810.64,Mannan Inc,ml,16.73,Normal
+30822,Quisquam Pack,Pet Supplies,1003.84,704.25,Rao LLC,PC,29.84,Normal
+30823,Suscipit Box,Bakery,926.62,891.38,Guha PLC,Kg,3.8,Normal
+30824,Aliquam 1L,Baby Care,828.4,621.56,Agrawal Inc,Kg,24.97,Normal
+30825,Perferendis Combo,Fruits & Vegetables,561.04,399.63,"Dua, Bhargava and Andra",PC,28.77,Normal
+30826,Unde 500g,Dairy & Breakfast,388.36,327.86,Tata-Kala,Kg,15.58,Normal
+30827,Consequuntur Combo,Fruits & Vegetables,101.73,100.36,"Magar, Cheema and Shan",Kg,1.35,Normal
+30828,Amet Jar,Dairy & Breakfast,609.23,579.8,Unknown,PC,4.83,Normal
+30829,Rem Pack,Fruits & Vegetables,386.58,376.98,"Pal, Vaidya and Swaminathan",PC,2.48,Normal
+30830,Impedit Combo,Pet Supplies,700.72,517.16,"Rajagopal, Sen and Badal",PC,26.2,Normal
+30831,Quas Pack,Bakery,601.52,541.92,"Banik, Vyas and Savant",Kg,9.91,Normal
+30832,Sint Box,Fruits & Vegetables,1213.15,1006.32,Gara-Sengupta,L,17.05,Normal
+30833,Nisi 1L,Snacks,384.32,275.67,Raghavan-Chada,PC,28.27,Normal
+30834,Pariatur 500g,Dairy & Breakfast,1179.06,1076.7,Natt-Boase,g,8.68,Normal
+30835,Laudantium 500g,Fruits & Vegetables,1095.49,1075.19,Thaker PLC,PC,1.85,Normal
+30836,Deleniti 1L,Fruits & Vegetables,484.13,410.91,"Memon, Chander and Thakkar",L,15.12,Normal
+30837,Quam Box,Snacks,80.06,72.13,"Majumdar, Mammen and Vasa",Kg,9.91,Normal
+30838,Doloribus Box,Pet Supplies,714.11,605.04,Bir PLC,Kg,15.27,Normal
+30839,Culpa 500g,Baby Care,963.62,740.41,Nagarajan-Randhawa,Kg,23.16,Normal
+30840,Iure Jar,Household,80.59,66.14,"Gopal, Soman and Master",Kg,17.93,Normal
+30841,Excepturi Box,Fruits & Vegetables,567.03,450.09,Talwar Inc,L,20.62,Normal
+30842,Ad Combo,Fruits & Vegetables,946.44,922.16,Gulati-Choudhry,g,2.57,Normal
+30843,Mollitia Pack,Bakery,424.93,302.04,"Kamdar, Goda and Divan",L,28.92,Normal
+30844,Deleniti Pack,Instant Food,130.84,96.87,Soni Ltd,g,25.96,Normal
+30845,Ipsam Box,Meat & Seafood,121.06,94.96,"Atwal, Kala and Verma",L,21.56,Normal
+30846,Ipsam Jar,Atta Rice & Dal,1191.14,1050.29,Iyer-Mutti,ml,11.82,Normal
+30847,Pariatur Combo,Beverages,936.83,753.0,Karpe PLC,L,19.62,Normal
+30848,Maiores Jar,Atta Rice & Dal,315.76,268.18,Manne LLC,L,15.07,Normal
+30849,Nostrum Combo,Snacks,419.92,381.63,Unknown,PC,9.12,Normal
+30850,Explicabo Jar,Snacks,744.0,638.84,Kibe-Barad,Kg,14.13,Normal
+30851,Tempora 500g,Instant Food,1158.42,878.56,"Pandya, Sarraf and Dara",Kg,24.16,Normal
+30852,Odit 1L,Meat & Seafood,208.12,203.01,Nadkarni and Sons,PC,2.46,Normal
+30853,Molestiae Box,Meat & Seafood,630.96,626.7,Unknown,g,0.68,Normal
+30854,Maxime Combo,Pet Supplies,65.31,46.37,Nagarajan-Sidhu,PC,29.0,Normal
+30855,Nisi Combo,Household,312.95,299.97,Chokshi Group,Kg,4.15,Normal
+30856,Velit Jar,Instant Food,403.64,313.87,Bala Inc,PC,22.24,Normal
+30857,Iure 1L,Snacks,189.64,178.83,"Sagar, Bhakta and Barad",g,5.7,Normal
+30858,Totam Combo,Instant Food,633.54,472.2,Basak LLC,ml,25.47,Normal
+30859,Pariatur Combo,Dairy & Breakfast,251.6,208.73,Nadig-Dora,PC,17.04,Normal
+30860,Aperiam 1L,Pet Supplies,563.87,443.22,Misra PLC,PC,21.4,Normal
+30861,Ipsam Jar,Meat & Seafood,610.91,476.18,Pandit-Virk,g,22.05,Normal
+30862,Non Pack,Beverages,495.45,452.97,Dhingra-Bhalla,PC,8.57,Normal
+30863,Ducimus Combo,Meat & Seafood,844.25,660.86,Chawla-Chatterjee,Kg,21.72,Normal
+30864,Et 500g,Instant Food,807.22,670.15,Swaminathan-Goyal,ml,16.98,Normal
+30865,Eius 500g,Snacks,967.33,740.38,Ray Ltd,PC,23.46,Normal
+30866,Id Pack,Beverages,474.88,425.55,Malhotra-Krishnan,g,10.39,Normal
+30867,Officiis 1L,Meat & Seafood,129.06,113.85,Nigam-Sane,PC,11.79,Normal
+30868,Voluptatum Jar,Household,1065.99,879.92,Vyas Inc,Kg,17.46,Normal
+30869,Doloribus Combo,Baby Care,1079.98,855.1,Golla-Manda,Kg,20.82,Normal
+30870,Porro 500g,Baby Care,258.93,218.3,Sur Ltd,g,15.69,Normal
+30871,Odit Jar,Meat & Seafood,988.43,946.96,Bail PLC,Kg,4.2,Normal
+30872,Qui Jar,Meat & Seafood,781.85,635.47,Chaudhry-Pau,g,18.72,Normal
+30873,Amet Box,Snacks,80.76,68.13,Roy and Sons,PC,15.64,Normal
+30874,Culpa 1L,Personal Care,500.98,393.03,"Das, Sridhar and Balasubramanian",L,21.55,Normal
+30875,Repellat Jar,Fruits & Vegetables,69.05,62.03,Luthra-Pandit,Kg,10.17,Normal
+30876,Molestiae Box,Meat & Seafood,1151.98,1138.34,Ahuja-Jain,Kg,1.18,Normal
+30877,Aspernatur 1L,Instant Food,557.52,408.42,Bansal-Salvi,L,26.74,Normal
+30878,Quibusdam Pack,Snacks,1142.53,910.21,Kala-Kara,L,20.33,Normal
+30879,Vero Pack,Meat & Seafood,790.37,781.05,Thakur-Ramachandran,Kg,1.18,Normal
+30880,Ipsum Box,Pet Supplies,846.35,680.65,"Brar, Kadakia and Shetty",PC,19.58,Normal
+30881,Laborum 1L,Personal Care,855.04,681.51,Wason Ltd,L,20.29,Normal
+30882,Est 1L,Meat & Seafood,264.67,250.52,"Chaudhary, Deshpande and Rama",PC,5.35,Normal
+30883,Ducimus Box,Bakery,163.19,129.29,"Bal, Nair and Sarin",g,20.77,Normal
+30884,Placeat 1L,Baby Care,213.48,157.47,Nagy Inc,L,26.24,Normal
+30885,Consequatur 500g,Dairy & Breakfast,617.09,527.51,"Krishnamurthy, Bora and Pau",g,14.52,Normal
+30886,Ratione 1L,Bakery,785.02,701.14,Kata-Randhawa,Kg,10.69,Normal
+30887,Dignissimos Jar,Bakery,589.6,492.08,Venkataraman-Chadha,PC,16.54,Normal
+30888,Tempora Jar,Atta Rice & Dal,132.91,123.53,Rajagopal Inc,Kg,7.06,Normal
+30889,Nostrum 1L,Atta Rice & Dal,981.08,793.48,Bhargava-Wagle,Kg,19.12,Normal
+30890,Blanditiis Jar,Instant Food,372.47,301.49,Menon-Bansal,PC,19.06,Normal
+30891,Fuga Jar,Instant Food,997.74,706.89,Unknown,Kg,29.15,Normal
+30892,Dignissimos 500g,Dairy & Breakfast,380.41,373.44,Vaidya Group,PC,1.83,Normal
+30893,Quasi 500g,Beverages,1119.09,948.28,Contractor Inc,Kg,15.26,Normal
+30894,Dignissimos Jar,Dairy & Breakfast,708.64,666.17,Loke-Basak,PC,5.99,Normal
+30895,Ratione Pack,Atta Rice & Dal,312.2,279.92,Unknown,g,10.34,Normal
+30896,Ab 500g,Instant Food,100.07,71.44,Brar-Mani,Kg,28.61,Normal
+30897,Itaque 500g,Atta Rice & Dal,1084.49,909.72,Samra-Sen,L,16.12,Normal
+30898,Sint 500g,Personal Care,266.15,219.18,Gera-Garde,L,17.65,Normal
+30899,Tempora 500g,Pet Supplies,174.42,169.19,"Tara, Ben and Bose",g,3.0,Normal
+30900,Sed 1L,Dairy & Breakfast,119.73,104.9,Johal-Chahal,PC,12.39,Normal
+30901,Vero Box,Household,738.24,692.2,Unknown,L,6.24,Normal
+30902,Nam 500g,Snacks,823.4,649.81,"Sundaram, Thakur and Narang",Kg,21.08,Normal
+30903,Architecto 1L,Personal Care,803.07,767.81,Minhas-Tandon,PC,4.39,Normal
+30904,Iste Combo,Baby Care,367.22,288.11,"Srivastava, Baria and Merchant",PC,21.54,Normal
+30905,A Pack,Atta Rice & Dal,936.59,757.83,Bhargava-Dasgupta,ml,19.09,Normal
+30906,Velit Box,Fruits & Vegetables,1079.71,860.68,Mani LLC,ml,20.29,Normal
+30907,Amet Box,Instant Food,345.09,330.49,"Mane, Bose and Vaidya",PC,4.23,Normal
+30908,Facere Pack,Bakery,394.82,296.46,"Mahal, Kalla and Sekhon",PC,24.91,Normal
+30909,Aliquam Box,Personal Care,462.15,375.58,Thaker-Chand,ml,18.73,Normal
+30910,Pariatur Pack,Instant Food,91.07,73.58,Bora and Sons,PC,19.21,Normal
+30911,Tenetur Combo,Personal Care,558.52,527.36,Bava-Nagi,ml,5.58,Normal
+30912,Quas Jar,Baby Care,1130.21,1126.2,Ramanathan PLC,ml,0.35,Normal
+30913,Unde 500g,Atta Rice & Dal,1027.79,1010.68,Jha-Batra,PC,1.66,Normal
+30914,Minima 500g,Beverages,52.43,51.03,Unknown,g,2.67,Normal
+30915,Laboriosam Jar,Bakery,555.46,404.63,"Mishra, Kamdar and Kapur",Kg,27.15,Normal
+30916,Labore Pack,Snacks,279.52,252.05,Bhakta Ltd,Kg,9.83,Normal
+30917,Atque Jar,Household,1019.99,976.43,Dayal Group,g,4.27,Normal
+30918,Nulla 500g,Beverages,967.42,679.11,"Batra, Ganesan and Dhingra",Kg,29.8,Normal
+30919,Quod 1L,Household,1070.66,883.77,"Purohit, Chanda and Raman",ml,17.46,Normal
+30920,Inventore 1L,Personal Care,239.25,231.48,"Chakrabarti, Varkey and Bhakta",Kg,3.25,Normal
+30921,Asperiores 1L,Personal Care,727.63,592.66,"Puri, Bhatnagar and Kaul",Kg,18.55,Normal
+30922,Autem Pack,Snacks,669.73,654.81,Sathe-Wagle,Kg,2.23,Normal
+30923,Nesciunt 1L,Fruits & Vegetables,914.86,884.38,Bajaj and Sons,PC,3.33,Normal
+30924,Quo 1L,Bakery,996.18,901.8,Bains-Krishnamurthy,PC,9.47,Normal
+30925,Voluptate 500g,Dairy & Breakfast,700.4,618.91,Kalla and Sons,PC,11.63,Normal
+30926,Consectetur Box,Household,1192.92,907.58,"Kashyap, Salvi and Rajan",g,23.92,Normal
+30927,Reprehenderit 500g,Beverages,237.44,181.51,Gaba-Zacharia,Kg,23.56,Normal
+30928,Eum 1L,Beverages,77.22,61.55,Trivedi PLC,Kg,20.29,Normal
+30929,Eum Jar,Instant Food,922.58,759.67,Kala and Sons,PC,17.66,Normal
+30930,Amet 1L,Snacks,828.6,621.34,"Kumar, Kothari and Nadig",Kg,25.01,Normal
+30931,Veniam Combo,Baby Care,711.08,639.4,"Walia, Dhillon and Edwin",PC,10.08,Normal
+30932,Expedita Jar,Snacks,796.2,717.99,Varkey LLC,Kg,9.82,Normal
+30933,Nesciunt 500g,Fruits & Vegetables,1019.52,923.88,Prashad-Suresh,PC,9.38,Normal
+30934,Aspernatur Pack,Baby Care,1198.15,874.7,Modi and Sons,PC,27.0,Normal
+30935,Ducimus 1L,Atta Rice & Dal,846.89,746.12,"Chopra, Mahal and Vohra",Kg,11.9,Normal
+30936,Error 500g,Bakery,366.22,309.61,"Pandey, Mukherjee and Lad",L,15.46,Normal
+30937,Harum Pack,Fruits & Vegetables,1055.94,811.31,Kapoor Inc,PC,23.17,Normal
+30938,Dignissimos Box,Snacks,407.74,390.32,Ganguly-Shankar,PC,4.27,Normal
+30939,Voluptate Combo,Snacks,1111.08,889.44,"Bawa, Tailor and Comar",Kg,19.95,Normal
+30940,Iusto 500g,Dairy & Breakfast,86.2,80.93,Mandal LLC,PC,6.11,Normal
+30941,Quia Combo,Atta Rice & Dal,125.78,112.23,"Chada, Savant and Konda",Kg,10.77,Normal
+30942,Architecto 500g,Household,1194.55,904.27,"Kapadia, Golla and Sen",L,24.3,Normal
+30943,Ab Combo,Personal Care,724.96,674.56,"Prasad, Dada and Subramaniam",L,6.95,Normal
+30944,Velit Jar,Baby Care,784.42,751.15,Rajagopalan and Sons,Kg,4.24,Normal
+30945,Modi 1L,Personal Care,533.72,504.69,"Srinivas, Singhal and Chopra",Kg,5.44,Normal
+30946,Provident Jar,Atta Rice & Dal,1008.6,856.62,Ganguly-Sahota,Kg,15.07,Normal
+30947,Soluta Jar,Household,1022.87,834.86,Kumar Group,PC,18.38,Normal
+30948,Eos 500g,Pet Supplies,899.62,682.16,"Tank, Dora and Dyal",Kg,24.17,Normal
+30949,Non 500g,Bakery,525.18,438.31,Saha-Merchant,L,16.54,Normal
+30950,Sit Jar,Snacks,785.51,760.56,"Sahota, Bhardwaj and Parekh",PC,3.18,Normal
+30951,Accusantium Box,Beverages,437.31,309.08,"Banik, Deshmukh and Dhaliwal",g,29.32,Normal
+30952,Laudantium Box,Atta Rice & Dal,1100.61,934.77,"Kant, Brar and Baria",ml,15.07,Normal
+30953,Cumque 500g,Meat & Seafood,933.2,860.29,"Balakrishnan, Bajaj and Khare",L,7.81,Normal
+30954,Suscipit 500g,Pet Supplies,1189.43,1106.08,Madan Ltd,PC,7.01,Normal
+30955,Minima Pack,Atta Rice & Dal,578.11,423.8,Pathak LLC,PC,26.69,Normal
+30956,Neque Jar,Instant Food,14.38,11.72,"Saraf, Kamdar and Chahal",ml,18.5,Normal
+30957,Optio Jar,Meat & Seafood,651.82,557.52,"Atwal, Om and Bal",g,14.47,Normal
+30958,Quisquam Box,Household,177.97,140.19,"Rau, Dewan and Sridhar",PC,21.23,Normal
+30959,Maxime 500g,Bakery,461.06,336.97,Chatterjee-Shankar,ml,26.91,Normal
+30960,Aliquam Box,Personal Care,815.6,578.78,Unknown,Kg,29.04,Normal
+30961,Fuga Box,Personal Care,1199.45,1195.1,Sha PLC,g,0.36,Normal
+30962,Aspernatur Box,Meat & Seafood,178.29,139.82,Lal Ltd,PC,21.58,Normal
+30963,Optio Jar,Dairy & Breakfast,385.5,295.01,"Saini, Memon and Joshi",Kg,23.47,Normal
+30964,Pariatur Jar,Meat & Seafood,586.6,557.32,"Thakkar, Mallick and Bhatti",ml,4.99,Normal
+30965,Repellendus 1L,Atta Rice & Dal,822.53,705.66,Kapoor Inc,g,14.21,Normal
+30966,Ea Jar,Dairy & Breakfast,41.23,30.01,Grewal-Minhas,g,27.21,Normal
+30967,Qui Box,Beverages,316.1,267.85,Tiwari-Taneja,g,15.26,Normal
+30968,Iste Jar,Dairy & Breakfast,264.45,206.64,Krishnan-Chauhan,g,21.86,Normal
+30969,Aliquid Pack,Snacks,1062.3,883.96,Bose-Bera,ml,16.79,Normal
+30970,Laboriosam Box,Household,678.16,531.32,Rana-Kanda,g,21.65,Normal
+30971,Ea Box,Atta Rice & Dal,190.5,187.51,Mody-Ramaswamy,Kg,1.57,Normal
+30972,Voluptates Pack,Household,919.82,759.26,"Dayal, Kibe and Ganguly",Kg,17.46,Normal
+30973,Illum Box,Bakery,809.63,691.25,Talwar-Bava,Kg,14.62,Normal
+30974,Magni 500g,Dairy & Breakfast,663.01,620.92,Mallick and Sons,Kg,6.35,Normal
+30975,Molestiae 1L,Dairy & Breakfast,433.76,377.25,Borah-Sundaram,Kg,13.03,Normal
+30976,Cumque 500g,Snacks,1151.14,1116.13,Kara-Cherian,Kg,3.04,Normal
+30977,Cumque Box,Beverages,612.69,542.44,Unknown,g,11.47,Normal
+30978,Voluptatibus 1L,Dairy & Breakfast,673.26,671.79,Suri-Parmar,Kg,0.22,Normal
+30979,Expedita Box,Atta Rice & Dal,971.1,718.96,Ramesh Group,PC,25.96,Normal
+30980,Quia 1L,Household,1199.69,1083.95,Padmanabhan-De,PC,9.65,Normal
+30981,Magnam Pack,Snacks,70.62,57.05,Reddy-Rattan,Kg,19.22,Normal
+30982,Quia 500g,Pet Supplies,489.03,422.25,Unknown,PC,13.66,Normal
+30983,Nobis Pack,Bakery,338.99,306.35,Radhakrishnan Inc,PC,9.63,Normal
+30984,Nemo Box,Atta Rice & Dal,647.56,642.69,"Palan, Banik and Wadhwa",PC,0.75,Normal
+30985,Corrupti Combo,Bakery,960.85,820.93,Anand Group,L,14.56,Normal
+30986,Vitae 500g,Snacks,767.99,767.95,"Naik, Borde and Edwin",g,0.01,Normal
+30987,Culpa Pack,Atta Rice & Dal,1090.01,781.35,Kibe and Sons,g,28.32,Normal
+30988,Dicta 1L,Pet Supplies,712.16,548.07,Dewan and Sons,Kg,23.04,Normal
+30989,Sint 500g,Meat & Seafood,883.95,808.06,Nadkarni-Pingle,g,8.59,Normal
+30990,Totam Pack,Snacks,743.24,656.33,Unknown,Kg,11.69,Normal
+30991,Tempora Pack,Meat & Seafood,768.05,578.21,"Kata, Borra and Batta",ml,24.72,Normal
+30992,Tempora Pack,Beverages,968.31,820.51,Kapadia LLC,PC,15.26,Normal
+30993,Quia Combo,Instant Food,905.55,732.98,Prasad-Mall,PC,19.06,Normal
+30994,Reiciendis Jar,Dairy & Breakfast,725.16,589.63,Dugar Inc,ml,18.69,Normal
+30995,Saepe Pack,Atta Rice & Dal,1190.68,948.11,Mishra Ltd,L,20.37,Normal
+30996,Et Box,Household,389.45,379.34,Mutti-Date,Kg,2.6,Normal
+30997,Architecto Combo,Fruits & Vegetables,602.09,499.44,Pant-Sangha,L,17.05,Normal
+30998,Recusandae Pack,Fruits & Vegetables,130.84,105.91,"Khatri, Sahota and Sekhon",Kg,19.05,Normal
+30999,Provident Pack,Meat & Seafood,1051.17,837.16,"Amble, Yadav and Sankaran",L,20.36,Normal
+31000,Assumenda 1L,Fruits & Vegetables,869.14,612.28,"Mandal, Nagarajan and Anne",PC,29.55,Normal
+31001,Aspernatur Box,Baby Care,537.81,447.84,"Choudhary, Handa and Srinivasan",PC,16.73,Normal
+31002,Assumenda 1L,Personal Care,587.78,481.55,Mistry Group,g,18.07,Normal
+31003,Veritatis 500g,Personal Care,417.17,376.61,Mannan Inc,g,9.72,Normal
+31004,Neque 1L,Meat & Seafood,661.59,470.46,Andra-Goswami,Kg,28.89,Normal
+31005,Quaerat 1L,Bakery,637.16,600.49,Narula Ltd,PC,5.76,Normal
+31006,Earum Combo,Instant Food,875.81,766.76,Unknown,Kg,12.45,Normal
+31007,Deleniti Jar,Atta Rice & Dal,394.44,350.39,Gandhi Inc,Kg,11.17,Normal
+31008,At 1L,Pet Supplies,944.72,682.24,"Pillay, Shere and Badami",g,27.78,Normal
+31009,Vel 500g,Atta Rice & Dal,803.16,674.7,"Cheema, Jain and Deol",L,15.99,Normal
+31010,Natus Pack,Pet Supplies,364.52,342.4,Pal PLC,L,6.07,Normal
+31011,Facilis Combo,Snacks,1030.44,1026.42,"Halder, Pai and Solanki",ml,0.39,Normal
+31012,Minima Pack,Personal Care,735.13,689.24,Butala LLC,g,6.24,Normal
+31013,At Combo,Pet Supplies,1019.09,918.22,Aurora Inc,Kg,9.9,Normal
+31014,Quasi 500g,Fruits & Vegetables,943.49,904.84,Mani-Srinivasan,Kg,4.1,Normal
+31015,Ullam Combo,Snacks,1165.41,1034.94,Srinivas Ltd,Kg,11.2,Normal
+31016,Totam Box,Fruits & Vegetables,408.61,360.31,Devi-Goel,Kg,11.82,Normal
+31017,Quae Jar,Baby Care,960.01,683.49,"Mangal, Bail and Desai",g,28.8,Normal
+31018,Esse Pack,Atta Rice & Dal,999.94,916.53,Sachar-Aggarwal,PC,8.34,Normal
+31019,Unde 1L,Atta Rice & Dal,1100.7,988.64,Sawhney PLC,Kg,10.18,Normal
+31020,Totam 1L,Dairy & Breakfast,427.99,334.96,Char-Chander,ml,21.74,Normal
+31021,Beatae 1L,Atta Rice & Dal,363.36,263.39,"Venkataraman, Dass and Tripathi",Kg,27.51,Normal
+31022,Similique Pack,Dairy & Breakfast,1176.6,1016.76,Srinivasan Group,PC,13.58,Normal
+31023,Numquam Combo,Personal Care,642.65,466.2,Murthy-Sodhi,Kg,27.46,Normal
+31024,Repudiandae 500g,Pet Supplies,428.8,318.27,Pal-Yogi,g,25.78,Normal
+31025,Quos Pack,Beverages,846.51,605.34,Unknown,PC,28.49,Normal
+31026,Dolore Pack,Atta Rice & Dal,474.99,374.46,Bhatti-Buch,Kg,21.16,Normal
+31027,Maiores 500g,Atta Rice & Dal,566.69,419.72,Kalita-Kothari,PC,25.93,Normal
+31028,Voluptatum Jar,Snacks,1030.04,1027.25,Bhargava PLC,PC,0.27,Normal
+31029,Corporis 500g,Fruits & Vegetables,821.37,676.63,"Muni, Ravi and Bobal",PC,17.62,Normal
+31030,Saepe Pack,Personal Care,1052.25,764.08,Merchant-Dora,Kg,27.39,Normal
+31031,Aliquam 1L,Fruits & Vegetables,587.05,536.56,Sehgal-Murthy,Kg,8.6,Normal
+31032,Vel Pack,Fruits & Vegetables,552.32,409.44,"Thakur, Kumar and Rai",ml,25.87,Normal
+31033,Dolorem Combo,Personal Care,999.34,885.4,Ahluwalia PLC,L,11.4,Normal
+31034,Dignissimos Jar,Atta Rice & Dal,1137.76,841.95,Ganesh-Saini,PC,26.0,Normal
+31035,Inventore Jar,Instant Food,1137.61,958.82,Samra-Sandal,Kg,15.72,Normal
+31036,Nesciunt 1L,Household,1020.0,951.93,Dugar Inc,PC,6.67,Normal
+31037,Eius Box,Pet Supplies,754.31,744.48,"Bansal, Tandon and Goswami",Kg,1.3,Normal
+31038,Perferendis 500g,Household,692.57,527.1,Unknown,g,23.89,Normal
+31039,Necessitatibus 500g,Household,663.88,606.36,Iyengar Inc,g,8.66,Normal
+31040,Sunt Pack,Instant Food,123.71,93.43,"Sharaf, Maharaj and Banerjee",PC,24.48,Normal
+31041,Esse Box,Snacks,542.92,401.74,Chander and Sons,ml,26.0,Normal
+31042,Vel Box,Instant Food,962.1,961.57,Mander-Radhakrishnan,Kg,0.06,Normal
+31043,Enim Box,Instant Food,1157.21,1015.34,Walla and Sons,PC,12.26,Normal
+31044,Saepe Pack,Household,162.74,154.79,Wali-Wali,g,4.89,Normal
+31045,Ipsa Box,Dairy & Breakfast,911.11,793.27,Unknown,ml,12.93,Normal
+31046,Possimus Box,Household,506.94,366.96,Doctor Group,Kg,27.61,Normal
+31047,Quidem Combo,Baby Care,83.86,68.31,Bahl PLC,PC,18.54,Normal
+31048,Nostrum Jar,Dairy & Breakfast,371.7,323.12,Bajaj-Vohra,L,13.07,Normal
+31049,Ad Box,Bakery,607.12,526.11,"Nath, Prakash and Luthra",Kg,13.34,Normal
+31050,Quo 500g,Personal Care,26.13,18.73,Shroff PLC,PC,28.32,Normal
+31051,Esse 1L,Baby Care,968.56,913.17,Dada Inc,ml,5.72,Normal
+31052,Suscipit Jar,Beverages,421.13,405.12,Dora-Lal,Kg,3.8,Normal
+31053,Unde Jar,Atta Rice & Dal,503.86,364.65,Dewan-Kumer,PC,27.63,Normal
+31054,Numquam Pack,Bakery,837.11,821.08,Ahluwalia-Dutt,ml,1.91,Normal
+31055,Ipsa Pack,Bakery,490.64,380.67,Choudhury-Din,Kg,22.41,Normal
+31056,Unde Jar,Atta Rice & Dal,971.55,749.78,Kade-Baria,Kg,22.83,Normal
+31057,Unde Pack,Beverages,640.4,614.94,Khanna and Sons,Kg,3.98,Normal
+31058,Possimus Jar,Personal Care,1179.24,979.12,Chaudhari Ltd,g,16.97,Normal
+31059,Dolorem Jar,Fruits & Vegetables,847.34,628.29,"Batra, Chandra and Kapoor",g,25.85,Normal
+31060,Officia Pack,Baby Care,1128.05,963.21,Ramachandran-Hans,Kg,14.61,Normal
+31061,Ipsam 1L,Bakery,543.91,539.32,"Wali, Bose and Mallick",Kg,0.84,Normal
+31062,Iste Pack,Personal Care,413.36,409.05,"Rana, Bumb and Swamy",Kg,1.04,Normal
+31063,Id 500g,Snacks,192.89,167.18,Singhal-Chaudhari,g,13.33,Normal
+31064,Itaque Pack,Bakery,472.81,394.6,Unknown,ml,16.54,Normal
+31065,Assumenda 1L,Baby Care,300.14,246.44,"Bhalla, Agate and Dugal",PC,17.89,Normal
+31066,Quis 1L,Beverages,190.45,159.92,"Tiwari, Pathak and Sangha",Kg,16.03,Normal
+31067,Expedita Jar,Dairy & Breakfast,139.15,121.5,Suresh-Mall,PC,12.68,Normal
+31068,Cum 500g,Baby Care,752.12,736.84,Ramesh PLC,PC,2.03,Normal
+31069,Ad Jar,Baby Care,620.78,514.67,Rajagopal-Bail,g,17.09,Normal
+31070,Quas Combo,Personal Care,954.79,932.16,Gade-Nori,Kg,2.37,Normal
+31071,Autem 1L,Fruits & Vegetables,346.86,298.35,"Lad, Wali and Ahluwalia",ml,13.99,Normal
+31072,Incidunt Combo,Meat & Seafood,542.3,396.14,Raja-Sahota,Kg,26.95,Normal
+31073,Quisquam Jar,Bakery,892.01,744.46,"Nayar, Deshpande and Vaidya",Kg,16.54,Normal
+31074,Pariatur 500g,Pet Supplies,491.42,444.55,"Bajaj, Salvi and Pathak",PC,9.54,Normal
+31075,Veniam 500g,Snacks,743.22,698.87,Mallick-Shukla,Kg,5.97,Normal
+31076,Ratione Combo,Baby Care,432.94,352.42,Halder and Sons,Kg,18.6,Normal
+31077,Laudantium Box,Bakery,1008.82,948.27,Deo-Natt,L,6.0,Normal
+31078,Numquam 500g,Bakery,749.27,724.5,Gupta Group,PC,3.31,Normal
+31079,Odit Box,Personal Care,285.59,269.12,Bhandari-Jayaraman,Kg,5.77,Normal
+31080,Dignissimos Pack,Meat & Seafood,737.54,587.27,"Panchal, Patla and Ahluwalia",PC,20.37,Normal
+31081,Facilis Jar,Beverages,1012.62,913.98,"Kapoor, Patel and Choudhury",Kg,9.74,Normal
+31082,Ullam Pack,Beverages,798.35,676.49,Bobal-Bhattacharyya,Kg,15.26,Normal
+31083,Vero 1L,Fruits & Vegetables,790.19,751.61,"Acharya, Puri and Acharya",PC,4.88,Normal
+31084,Assumenda Jar,Pet Supplies,1175.6,1149.33,"Vyas, Edwin and Mohan",Kg,2.23,Normal
+31085,Modi 1L,Instant Food,688.34,609.17,Dada-Char,Kg,11.5,Normal
+31086,Laboriosam Pack,Bakery,865.97,829.28,Garg Inc,g,4.24,Normal
+31087,Alias Combo,Baby Care,437.03,392.66,"Mohanty, Uppal and Dhillon",Kg,10.15,Normal
+31088,Unde Combo,Dairy & Breakfast,690.62,601.3,"Gour, Shan and Magar",L,12.93,Normal
+31089,Corporis Box,Pet Supplies,909.34,789.32,"Badal, Date and Solanki",PC,13.2,Normal
+31090,Similique Combo,Instant Food,1108.76,996.19,Palla-Hayer,Kg,10.15,Normal
+31091,Similique Pack,Beverages,724.07,656.78,"Gera, Parmer and Tank",g,9.29,Normal
+31092,Cum 1L,Snacks,834.52,761.12,Rege-Panchal,ml,8.8,Normal
+31093,Corporis 1L,Personal Care,1089.0,881.05,Gole-Rama,PC,19.1,Normal
+31094,Consequuntur 1L,Snacks,557.08,420.52,"Saran, Gopal and Nagar",PC,24.51,Normal
+31095,Distinctio Combo,Meat & Seafood,839.15,722.82,Narayanan PLC,L,13.86,Normal
+31096,Possimus Box,Snacks,883.46,640.35,"Borah, Bhattacharyya and Vyas",g,27.52,Normal
+31097,Possimus 500g,Dairy & Breakfast,1003.79,836.93,Unknown,Kg,16.62,Normal
+31098,Ratione Pack,Dairy & Breakfast,390.8,383.63,"Kapoor, Bhagat and Singhal",PC,1.83,Normal
+31099,Molestias Combo,Household,982.8,799.47,"Saha, Deo and Misra",Kg,18.65,Normal
+31100,A 1L,Bakery,1094.78,1007.14,Khalsa-Bhatti,Kg,8.01,Normal
+31101,Aliquid 1L,Pet Supplies,761.7,628.93,Pandey Group,ml,17.43,Normal
+31102,Tempore Box,Pet Supplies,455.63,398.68,"Kalla, Barman and Wali",Kg,12.5,Normal
+31103,Ducimus Combo,Bakery,252.65,210.86,Oommen Group,ml,16.54,Normal
+31104,Esse 500g,Instant Food,1020.54,746.59,"Chawla, Chanda and Kashyap",g,26.84,Normal
+31105,Odio 1L,Household,204.71,156.59,Jaggi PLC,ml,23.51,Normal
+31106,Tenetur 500g,Beverages,1019.99,772.61,"Balasubramanian, Parekh and Bakshi",Kg,24.25,Normal
+31107,Alias 1L,Pet Supplies,584.23,577.55,Pau Inc,g,1.14,Normal
+31108,Esse 1L,Snacks,600.1,562.3,Srivastava-Shanker,L,6.3,Normal
+31109,In Pack,Meat & Seafood,961.47,818.6,Sachdeva-Tandon,Kg,14.86,Normal
+31110,Tenetur 500g,Meat & Seafood,249.06,248.34,Bahl-Chakrabarti,ml,0.29,Normal
+31111,Quasi 1L,Bakery,175.39,127.63,"Venkatesh, Sem and Bhandari",L,27.23,Normal
+31112,Dolorem Box,Household,159.21,152.58,Krish Group,PC,4.16,Normal
+31113,Eveniet Combo,Pet Supplies,996.0,980.65,Ganesh Ltd,L,1.54,Normal
+31114,Cumque Combo,Atta Rice & Dal,808.39,681.2,Khanna Inc,Kg,15.73,Normal
+31115,Excepturi Pack,Snacks,1062.67,757.18,Shukla PLC,g,28.75,Normal
+31116,Deleniti Pack,Snacks,998.27,963.8,"Sinha, Sidhu and Sheth",L,3.45,Normal
+31117,Dolor 500g,Beverages,408.76,408.71,Sinha-Gola,L,0.01,Normal
+31118,Occaecati 1L,Beverages,448.52,383.08,Apte Group,Kg,14.59,Normal
+31119,Quis Combo,Pet Supplies,894.8,739.08,Roy Inc,PC,17.4,Normal
+31120,Magnam Pack,Meat & Seafood,1184.44,1025.65,Prakash-Nagi,PC,13.41,Normal
+31121,Reprehenderit Box,Instant Food,830.08,784.23,"Choudhry, Mani and Deshmukh",ml,5.52,Normal
+31122,Aliquam Pack,Baby Care,551.5,496.02,Barad-Subramaniam,PC,10.06,Normal
+31123,Asperiores Jar,Pet Supplies,156.41,152.04,Master Group,Kg,2.79,Normal
+31124,Natus Box,Pet Supplies,159.21,152.38,Rau and Sons,Kg,4.29,Normal
+31125,Fugit Combo,Dairy & Breakfast,637.34,525.43,Bajaj PLC,PC,17.56,Normal
+31126,Cum 500g,Snacks,1026.64,854.28,Hari-Gokhale,ml,16.79,Normal
+31127,Dolorem 500g,Fruits & Vegetables,927.46,690.07,Bahl-Sidhu,ml,25.6,Normal
+31128,Quas Jar,Fruits & Vegetables,473.42,464.53,"Sehgal, Chandra and Sethi",Kg,1.88,Normal
+31129,Earum Combo,Beverages,708.02,695.46,"Bora, Devi and Murty",L,1.77,Normal
+31130,Sapiente Jar,Dairy & Breakfast,260.3,250.42,Unknown,PC,3.8,Normal
+31131,Sint 1L,Personal Care,129.31,112.79,Parekh-Das,PC,12.78,Normal
+31132,Ab Jar,Dairy & Breakfast,447.98,361.21,"Banerjee, Subramaniam and Pau",L,19.37,Normal
+31133,Dicta Box,Fruits & Vegetables,450.74,377.68,"Naik, Krish and Chaudry",L,16.21,Normal
+31134,Nisi Jar,Dairy & Breakfast,673.04,665.54,Varghese-Jaggi,PC,1.11,Normal
+31135,Ut Pack,Household,1020.75,916.28,"Tandon, Dugar and Gupta",Kg,10.23,Normal
+31136,Veritatis 1L,Fruits & Vegetables,729.98,701.69,"Baral, Pillai and Sachar",PC,3.88,Normal
+31137,Reiciendis Jar,Meat & Seafood,642.83,540.28,"Grover, Dugar and Rege",Kg,15.95,Normal
+31138,Veniam Jar,Bakery,669.89,507.5,Natt Ltd,Kg,24.24,Normal
+31139,Quam 1L,Household,483.58,471.55,Madan and Sons,Kg,2.49,Normal
+31140,Quasi 500g,Meat & Seafood,354.01,248.51,Bail-Rajagopalan,g,29.8,Normal
+31141,Illo 1L,Beverages,113.81,94.15,"Mitra, Chahal and Dara",L,17.27,Normal
+31142,Ullam Pack,Dairy & Breakfast,1182.21,1179.64,"Chokshi, Gulati and Varty",PC,0.22,Normal
+31143,Iusto Combo,Instant Food,664.53,650.79,"Panchal, Kala and Mangal",L,2.07,Normal
+31144,Quas 500g,Dairy & Breakfast,382.84,381.12,"Mani, Divan and Basu",Kg,0.45,Normal
+31145,Incidunt Jar,Meat & Seafood,990.02,967.56,"Chandran, Konda and More",L,2.27,Normal
+31146,Eum 1L,Bakery,1130.94,1043.08,Agrawal-Mandal,ml,7.77,Normal
+31147,Tempora Pack,Personal Care,928.12,918.11,"Varghese, Nadkarni and Rao",g,1.08,Normal
+31148,Magnam 500g,Snacks,190.4,137.29,Gupta-Madan,Kg,27.89,Normal
+31149,Neque Box,Household,1176.68,978.43,"Kari, Bobal and Kala",g,16.85,Normal
+31150,Nostrum 500g,Fruits & Vegetables,836.69,763.39,"Shetty, Sagar and Prashad",ml,8.76,Normal
+31151,Repellendus 1L,Fruits & Vegetables,137.76,100.17,Kadakia-Nagi,g,27.29,Normal
+31152,Ullam 500g,Beverages,570.1,478.61,Nagarajan Ltd,PC,16.05,Normal
+31153,Porro Jar,Pet Supplies,199.26,161.97,Luthra and Sons,Kg,18.71,Normal
+31154,Cum Jar,Pet Supplies,1162.77,857.67,"Wadhwa, Padmanabhan and Doshi",L,26.24,Normal
+31155,Doloribus Combo,Atta Rice & Dal,633.77,488.69,Ratta PLC,L,22.89,Normal
+31156,Sed Pack,Instant Food,284.94,201.64,Manda-Bansal,PC,29.23,Normal
+31157,Saepe Box,Fruits & Vegetables,285.17,237.1,Mukherjee-Shah,PC,16.86,Normal
+31158,Dolore Pack,Personal Care,828.38,641.76,Shankar-Viswanathan,L,22.53,Normal
+31159,Explicabo Pack,Instant Food,879.42,618.76,Agarwal Ltd,PC,29.64,Normal
+31160,Quibusdam 500g,Dairy & Breakfast,411.61,332.33,Thaker LLC,PC,19.26,Normal
+31161,Facilis 1L,Bakery,699.63,697.99,"Rastogi, Sarkar and Chander",PC,0.23,Normal
+31162,Amet Box,Household,465.47,387.84,"Wason, Muni and Agate",Kg,16.68,Normal
+31163,Qui Box,Beverages,531.89,453.66,Chandran Group,PC,14.71,Normal
+31164,Accusantium Pack,Personal Care,176.13,127.96,Sarna PLC,g,27.35,Normal
+31165,Laborum 1L,Household,1055.03,825.66,Dave-Varghese,g,21.74,Normal
+31166,Optio Pack,Dairy & Breakfast,1052.29,818.8,Kale-Ram,g,22.19,Normal
+31167,Nihil Pack,Pet Supplies,836.24,793.47,"Koshy, Divan and Venkataraman",PC,5.11,Normal
+31168,Repudiandae Jar,Personal Care,352.36,287.64,Unknown,L,18.37,Normal
+31169,Fugiat 1L,Fruits & Vegetables,430.47,332.68,Krishnamurthy Inc,PC,22.72,Normal
+31170,Minus 1L,Beverages,821.24,800.64,"Puri, Ramakrishnan and Vasa",ml,2.51,Normal
+31171,Pariatur Box,Beverages,749.1,527.31,Unknown,Kg,29.61,Normal
+31172,Provident Box,Beverages,1032.78,988.99,Unknown,L,4.24,Normal
+31173,Recusandae Jar,Instant Food,370.24,284.92,Bhattacharyya Ltd,ml,23.04,Normal
+31174,Commodi Jar,Fruits & Vegetables,897.75,897.38,Nair-Brar,PC,0.04,Normal
+31175,Quam Box,Fruits & Vegetables,1093.64,927.75,Jain-Gola,PC,15.17,Normal
+31176,Debitis 1L,Personal Care,355.53,302.14,"Rout, Ahluwalia and Murty",Kg,15.02,Normal
+31177,Nihil Combo,Bakery,795.37,585.57,Ranganathan-Bahri,Kg,26.38,Normal
+31178,Quisquam 500g,Pet Supplies,630.52,585.88,Aurora-Venkatesh,PC,7.08,Normal
+31179,Ipsum Pack,Snacks,550.34,463.98,Suresh Group,PC,15.69,Normal
+31180,Voluptatem 1L,Atta Rice & Dal,1189.94,1182.61,Shan-Basak,Kg,0.62,Normal
+31181,Libero 500g,Snacks,1076.23,1023.4,Samra Inc,L,4.91,Normal
+31182,Rerum 1L,Snacks,498.18,366.9,Unknown,PC,26.35,Normal
+31183,Veritatis Pack,Atta Rice & Dal,1020.03,833.75,Mohanty-Thakur,PC,18.26,Normal
+31184,Repellendus 1L,Personal Care,256.13,224.59,"Kunda, Dhingra and Bumb",ml,12.31,Normal
+31185,Odit 500g,Meat & Seafood,876.07,811.86,Lalla-Barad,PC,7.33,Normal
+31186,Enim Box,Personal Care,886.27,775.75,Unknown,L,12.47,Normal
+31187,Vitae Pack,Personal Care,163.94,121.39,"Sandhu, Seshadri and Desai",Kg,25.95,Normal
+31188,At 500g,Snacks,169.99,137.74,Rajagopalan LLC,Kg,18.97,Normal
+31189,Unde Combo,Personal Care,392.3,333.39,Modi-Kibe,PC,15.02,Normal
+31190,Illo Box,Personal Care,1146.93,974.07,Pandya-Deshpande,PC,15.07,Normal
+31191,Eligendi 500g,Baby Care,721.95,519.01,Ray and Sons,PC,28.11,Normal
+31192,Maxime Box,Snacks,844.86,838.02,Ramachandran Inc,PC,0.81,Normal
+31193,Nihil Jar,Instant Food,1052.4,854.9,Unknown,g,18.77,Normal
+31194,Dolore 500g,Household,909.29,750.57,Nath-Kari,Kg,17.46,Normal
+31195,Laboriosam Pack,Household,772.1,615.17,Samra-Aurora,PC,20.33,Normal
+31196,Non 500g,Bakery,553.44,389.12,Misra-Jayaraman,L,29.69,Normal
+31197,Excepturi Combo,Personal Care,1171.98,1165.51,Bath PLC,g,0.55,Normal
+31198,Atque Jar,Dairy & Breakfast,702.76,614.68,"Kala, Jain and Ray",Kg,12.53,Normal
+31199,Nemo 500g,Fruits & Vegetables,248.56,197.33,"Rajagopal, Naidu and Bhandari",Kg,20.61,Normal
+31200,Doloribus Jar,Household,618.57,537.28,"Minhas, Rajagopalan and Pillai",PC,13.14,Normal
+31201,Iste Combo,Beverages,601.37,516.65,Upadhyay LLC,Kg,14.09,Normal
+31202,Vitae Jar,Meat & Seafood,50.43,46.58,Thakur-Mittal,PC,7.63,Normal
+31203,Earum 500g,Fruits & Vegetables,510.13,423.16,"Bhattacharyya, Wali and Suresh",PC,17.05,Normal
+31204,Earum 1L,Meat & Seafood,288.94,261.03,Borde-Patla,ml,9.66,Normal
+31205,Quae Combo,Fruits & Vegetables,322.53,287.67,"Kalla, Amble and Panchal",ml,10.81,Normal
+31206,Iure 1L,Household,643.94,469.5,Unknown,PC,27.09,Normal
+31207,Nihil Combo,Bakery,461.75,382.77,Dyal-Warrior,ml,17.1,Normal
+31208,Consequuntur Box,Meat & Seafood,765.29,756.78,Sahota-Mandal,Kg,1.11,Normal
+31209,Officia Box,Household,340.91,242.18,Unknown,g,28.96,Normal
+31210,Repudiandae Combo,Atta Rice & Dal,128.62,117.86,Sani-Kalla,Kg,8.37,Normal
+31211,Soluta 1L,Instant Food,228.01,222.93,Walla-Chhabra,Kg,2.23,Normal
+31212,Officia 500g,Meat & Seafood,262.98,188.14,Patla-Sankaran,PC,28.46,Normal
+31213,Rem Combo,Baby Care,586.83,492.89,Sampath and Sons,L,16.01,Normal
+31214,Iure Pack,Bakery,883.73,636.1,Basu-Krish,Kg,28.02,Normal
+31215,Deleniti Box,Snacks,1068.68,807.15,"Chandra, Bajaj and Seth",Kg,24.47,Normal
+31216,Enim 1L,Beverages,855.32,819.45,"Yogi, Majumdar and Batta",PC,4.19,Normal
+31217,Earum Jar,Household,468.65,466.5,Buch Group,L,0.46,Normal
+31218,Ea Jar,Meat & Seafood,176.16,149.98,Saraf-Naidu,PC,14.86,Normal
+31219,Autem Combo,Dairy & Breakfast,1004.97,820.39,Sahni-Ratta,L,18.37,Normal
+31220,Voluptatem Pack,Pet Supplies,374.25,364.58,"Bhavsar, Parekh and Bhattacharyya",g,2.58,Normal
+31221,Dolor Box,Baby Care,503.24,414.16,Mistry-Chand,Kg,17.7,Normal
+31222,Ad 1L,Bakery,348.58,345.31,Bandi-Barad,Kg,0.94,Normal
+31223,Ad Box,Atta Rice & Dal,511.64,412.49,"Iyengar, Chanda and Garg",L,19.38,Normal
+31224,Asperiores Pack,Dairy & Breakfast,1096.7,981.03,"Palla, Badal and Soni",ml,10.55,Normal
+31225,Sequi Jar,Baby Care,906.95,842.31,Samra-Walia,Kg,7.13,Normal
+31226,Consectetur 1L,Baby Care,436.92,311.72,"Agarwal, Boase and Basak",g,28.66,Normal
+31227,Perferendis Box,Atta Rice & Dal,531.16,479.34,Koshy-Ramaswamy,g,9.76,Normal
+31228,Esse Pack,Atta Rice & Dal,931.7,869.64,"Ganguly, Magar and Palan",L,6.66,Normal
+31229,Aliquam 500g,Instant Food,972.11,684.11,"Chadha, Som and Shere",L,29.63,Normal
+31230,Delectus Jar,Beverages,906.04,686.01,Patla-Dua,g,24.28,Normal
+31231,Sit 1L,Beverages,480.14,458.33,Borde-Buch,g,4.54,Normal
+31232,Inventore Combo,Beverages,568.55,481.77,Lal-Murthy,ml,15.26,Normal
+31233,Repudiandae Combo,Beverages,102.42,91.2,"Rajagopal, Basu and Dada",L,10.95,Normal
+31234,Tempore Box,Snacks,293.01,292.43,"Natt, Vaidya and Morar",Kg,0.2,Normal
+31235,Architecto Combo,Instant Food,810.76,581.01,Sekhon-Bhatnagar,Kg,28.34,Normal
+31236,Ullam Combo,Instant Food,770.5,766.24,Kuruvilla-Chand,Kg,0.55,Normal
+31237,Repudiandae Box,Personal Care,116.81,82.15,"Shankar, Lanka and Buch",PC,29.67,Normal
+31238,Doloribus 1L,Meat & Seafood,245.12,222.97,Shah-Mittal,Kg,9.04,Normal
+31239,Veniam Box,Pet Supplies,993.3,886.79,Walia-Das,PC,10.72,Normal
+31240,Nulla 1L,Instant Food,1156.44,936.06,Johal and Sons,L,19.06,Normal
+31241,Ullam 1L,Household,961.32,799.36,Ganesh Ltd,L,16.85,Normal
+31242,Amet Jar,Meat & Seafood,737.79,734.81,"Aggarwal, Chahal and Varty",Kg,0.4,Normal
+31243,Fugiat Jar,Baby Care,236.04,196.55,Anand Inc,L,16.73,Normal
+31244,Facilis 500g,Bakery,193.48,147.85,Pant-Raja,g,23.58,Normal
+31245,Aperiam 500g,Personal Care,940.07,799.42,Edwin-More,Kg,14.96,Normal
+31246,Incidunt Combo,Personal Care,1016.94,864.23,Sanghvi-Dave,g,15.02,Normal
+31247,Inventore Box,Snacks,292.39,237.34,Sandal-Naidu,Kg,18.83,Normal
+31248,Quam Box,Baby Care,977.78,859.6,"Purohit, Garg and Sathe",L,12.09,Normal
+31249,Quidem Pack,Pet Supplies,898.92,853.67,Mangat Group,ml,5.03,Normal
+31250,Voluptates 1L,Pet Supplies,634.3,537.42,"Goda, Ratta and Bhatt",ml,15.27,Normal
+31251,Molestias Jar,Dairy & Breakfast,718.12,548.0,Chowdhury-Sha,g,23.69,Normal
+31252,Voluptates Jar,Bakery,552.58,429.25,"Buch, Pillay and Toor",L,22.32,Normal
+31253,Neque 500g,Atta Rice & Dal,698.73,563.11,"Pall, Chad and Wagle",ml,19.41,Normal
+31254,Ratione 500g,Fruits & Vegetables,605.6,593.89,"Mallick, Kalita and Mitra",PC,1.93,Normal
+31255,Beatae 500g,Atta Rice & Dal,774.59,727.57,Karan Inc,Kg,6.07,Normal
+31256,Voluptates Combo,Atta Rice & Dal,1089.38,1049.14,Krish-Sur,PC,3.69,Normal
+31257,Reprehenderit Combo,Personal Care,321.28,317.36,Unknown,g,1.22,Normal
+31258,Et 500g,Snacks,149.15,124.11,"Das, Bala and Jain",PC,16.79,Normal
+31259,Dignissimos 500g,Baby Care,81.4,60.62,Unknown,L,25.53,Normal
+31260,Nemo Combo,Baby Care,684.28,625.73,Unknown,g,8.56,Normal
+31261,Ut Box,Snacks,954.96,934.42,Char-Lala,g,2.15,Normal
+31262,Perspiciatis Box,Fruits & Vegetables,1090.86,1045.94,"Raja, Ramaswamy and Cherian",L,4.12,Normal
+31263,Quod Pack,Bakery,584.96,436.98,Som and Sons,g,25.3,Normal
+31264,Officiis 1L,Household,896.02,703.66,"Date, Chawla and Savant",Kg,21.47,Normal
+31265,Quasi Box,Fruits & Vegetables,770.31,560.66,Pal and Sons,L,27.22,Normal
+31266,Aspernatur Box,Pet Supplies,335.31,267.36,Devan-Tank,PC,20.26,Normal
+31267,Odio Combo,Dairy & Breakfast,938.72,757.59,Sekhon Group,ml,19.3,Normal
+31268,Accusantium Box,Atta Rice & Dal,722.57,570.28,Kakar-Kannan,PC,21.08,Normal
+31269,Amet Jar,Bakery,780.35,665.19,More PLC,g,14.76,Normal
+31270,Eos Box,Pet Supplies,202.23,145.42,Yohannan Inc,ml,28.09,Normal
+31271,Voluptatibus Pack,Household,1072.83,1013.53,Prabhakar-Chokshi,Kg,5.53,Normal
+31272,Tempore 1L,Fruits & Vegetables,587.32,581.8,Bansal-Subramaniam,Kg,0.94,Normal
+31273,Beatae 1L,Personal Care,793.02,686.41,Doctor-Dua,Kg,13.44,Normal
+31274,Deleniti Combo,Meat & Seafood,101.55,82.75,"Tara, Dyal and Walia",Kg,18.51,Normal
+31275,Molestias Jar,Fruits & Vegetables,1010.45,840.32,"Brar, Wason and Vala",PC,16.84,Normal
+31276,Doloribus Box,Personal Care,152.51,118.35,"Varghese, Chander and Bains",Kg,22.4,Normal
+31277,Voluptate 1L,Instant Food,387.11,353.34,Sami-Sangha,PC,8.72,Normal
+31278,Totam 1L,Meat & Seafood,1042.27,959.29,"Walla, Raval and Nayar",PC,7.96,Normal
+31279,Pariatur Jar,Dairy & Breakfast,186.83,134.16,Sawhney-Anne,L,28.19,Normal
+31280,Adipisci Jar,Household,952.38,890.64,"Konda, Mahajan and Oak",g,6.48,Normal
+31281,Explicabo 500g,Pet Supplies,68.89,56.68,"Varma, Soni and Gokhale",Kg,17.72,Normal
+31282,Quisquam 500g,Personal Care,461.68,327.64,Char-Singh,PC,29.03,Normal
+31283,Animi Jar,Instant Food,510.72,459.28,Mand-Raval,Kg,10.07,Normal
+31284,Incidunt Box,Personal Care,721.88,613.48,Unknown,ml,15.02,Normal
+31285,Nostrum Box,Fruits & Vegetables,373.53,308.35,Sem LLC,Kg,17.45,Normal
+31286,Consequatur Box,Atta Rice & Dal,747.02,630.28,"Andra, Krishna and Sachdeva",PC,15.63,Normal
+31287,Commodi Jar,Beverages,1187.13,946.73,Bala-Lall,Kg,20.25,Normal
+31288,Sint Pack,Bakery,880.93,783.96,Krishnamurthy Inc,ml,11.01,Normal
+31289,Error Jar,Beverages,118.92,85.17,Patil and Sons,L,28.38,Normal
+31290,A Pack,Instant Food,162.93,114.37,Dani-Comar,ml,29.8,Normal
+31291,Distinctio 500g,Bakery,869.78,666.96,Shenoy-Walla,L,23.32,Normal
+31292,Reprehenderit 500g,Meat & Seafood,1146.94,941.71,Dass Inc,Kg,17.89,Normal
+31293,Molestiae Combo,Beverages,98.32,86.88,Varughese-Muni,Kg,11.64,Normal
+31294,Neque 500g,Beverages,1182.18,1075.67,Ratta Ltd,PC,9.01,Normal
+31295,Quaerat Jar,Snacks,787.36,655.18,"Palla, Nazareth and Dyal",Kg,16.79,Normal
+31296,Et Pack,Beverages,594.14,581.3,Balan Group,Kg,2.16,Normal
+31297,Harum Pack,Fruits & Vegetables,209.51,196.0,"Sani, Desai and Bassi",L,6.45,Normal
+31298,Illo Pack,Snacks,618.39,512.41,Unknown,g,17.14,Normal
+31299,Ab Pack,Beverages,372.07,282.06,Bath-De,Kg,24.19,Normal
+31300,Ipsam Combo,Beverages,1083.89,872.93,Lalla Group,ml,19.46,Normal
+31301,Deserunt Box,Instant Food,565.58,451.82,Jha Inc,ml,20.11,Normal
+31302,Sed 1L,Snacks,419.2,360.12,Mane-Sant,L,14.09,Normal
+31303,Quas 1L,Baby Care,421.17,335.72,Suresh Ltd,PC,20.29,Normal
+31304,Itaque 500g,Personal Care,397.28,299.52,Savant-Dani,Kg,24.61,Normal
+31305,Beatae Box,Snacks,753.66,673.02,"Sem, Lata and Mahajan",Kg,10.7,Normal
+31306,Dicta Combo,Bakery,747.68,568.92,Chadha-Radhakrishnan,ml,23.91,Normal
+31307,Explicabo 1L,Instant Food,268.67,217.47,Mallick-Mani,Kg,19.06,Normal
+31308,Quam Jar,Fruits & Vegetables,239.35,199.98,Lall-Sunder,ml,16.45,Normal
+31309,Et 1L,Dairy & Breakfast,665.04,472.84,Shroff-Subramanian,PC,28.9,Normal
+31310,Exercitationem Pack,Pet Supplies,1080.33,940.58,Padmanabhan-Sampath,Kg,12.94,Normal
+31311,Esse 500g,Instant Food,697.43,585.06,Unknown,L,16.11,Normal
+31312,Dolor 1L,Household,25.96,18.75,"Bhardwaj, Gaba and Cherian",PC,27.77,Normal
+31313,Ex Pack,Personal Care,177.3,153.24,Hora and Sons,PC,13.57,Normal
+31314,Quaerat 500g,Personal Care,961.28,923.51,Unknown,Kg,3.93,Normal
+31315,Itaque Box,Fruits & Vegetables,1062.37,788.59,Borah PLC,g,25.77,Normal
+31316,Facere 500g,Instant Food,557.91,392.07,Gara-Bhatt,PC,29.73,Normal
+31317,Magni Combo,Pet Supplies,1105.68,936.8,Gour Group,Kg,15.27,Normal
+31318,Doloribus Jar,Snacks,573.24,506.13,Lall PLC,PC,11.71,Normal
+31319,Alias 1L,Meat & Seafood,519.45,442.26,Mander-Aurora,PC,14.86,Normal
+31320,Porro Pack,Snacks,538.99,454.32,"Malhotra, Dixit and Chada",L,15.71,Normal
+31321,Nemo 500g,Pet Supplies,1131.59,1033.63,Anand-Naik,Kg,8.66,Normal
+31322,Explicabo 500g,Household,922.41,786.67,Baria-Bahri,g,14.72,Normal
+31323,Vero Jar,Instant Food,568.57,426.35,Shanker-Oza,L,25.01,Normal
+31324,Esse Pack,Atta Rice & Dal,682.52,645.52,"Chahal, Konda and Ratta",Kg,5.42,Normal
+31325,Aliquam 500g,Dairy & Breakfast,402.92,291.59,"Sem, Natarajan and Lad",Kg,27.63,Normal
+31326,Id 500g,Pet Supplies,691.87,614.37,Ratta LLC,Kg,11.2,Normal
+31327,Omnis Combo,Atta Rice & Dal,306.34,236.72,Unknown,PC,22.73,Normal
+31328,Optio Box,Household,293.68,251.86,Dugar and Sons,PC,14.24,Normal
+31329,Explicabo Combo,Instant Food,98.88,77.63,Sarna PLC,Kg,21.49,Normal
+31330,Nisi Combo,Beverages,1028.61,821.4,Nadkarni PLC,Kg,20.14,Normal
+31331,Cupiditate Box,Beverages,386.54,310.42,Nayak-Lall,ml,19.69,Normal
+31332,Aut Box,Dairy & Breakfast,121.77,97.69,Ramachandran LLC,Kg,19.77,Normal
+31333,Porro Pack,Instant Food,987.14,944.2,Jani Inc,ml,4.35,Normal
+31334,Animi 500g,Bakery,650.27,500.63,Khalsa-Sura,PC,23.01,Normal
+31335,Maiores 1L,Personal Care,289.2,236.4,Thaman-Sridhar,Kg,18.26,Normal
+31336,Ea Box,Pet Supplies,761.89,645.52,Toor-Tailor,PC,15.27,Normal
+31337,Perferendis Jar,Dairy & Breakfast,339.89,320.23,"Varma, Agarwal and Tiwari",Kg,5.78,Normal
+31338,Odit 500g,Baby Care,43.42,40.27,Khanna Ltd,Kg,7.25,Normal
+31339,Adipisci Box,Fruits & Vegetables,772.94,615.42,Unknown,Kg,20.38,Normal
+31340,Recusandae Jar,Instant Food,33.28,28.87,"Chander, Mohan and Dewan",Kg,13.25,Normal
+31341,Ipsa Jar,Baby Care,978.23,898.58,Rai Group,Kg,8.14,Normal
+31342,Repellat Box,Instant Food,329.45,256.96,"Jani, Morar and Nanda",Kg,22.0,Normal
+31343,Ex 500g,Beverages,965.29,890.98,Dora-Sankaran,ml,7.7,Normal
+31344,A 1L,Meat & Seafood,345.43,245.05,Nayak and Sons,ml,29.06,Normal
+31345,Architecto 500g,Instant Food,405.48,299.64,"Tiwari, Dash and Bawa",ml,26.1,Normal
+31346,Commodi Jar,Instant Food,466.7,403.4,"Kunda, Srinivasan and Sagar",Kg,13.56,Normal
+31347,Consequatur Pack,Dairy & Breakfast,547.53,390.17,Mohan Ltd,PC,28.74,Normal
+31348,Doloremque Jar,Pet Supplies,81.56,64.61,Wadhwa-Chahal,PC,20.78,Normal
+31349,Omnis Jar,Atta Rice & Dal,430.49,327.69,Tak-Buch,g,23.88,Normal
+31350,Quia 1L,Pet Supplies,758.49,703.76,Madan Inc,L,7.22,Normal
+31351,Dolorem Jar,Household,584.8,481.96,"Chhabra, Sundaram and Roy",Kg,17.59,Normal
+31352,Sit Jar,Atta Rice & Dal,317.89,283.53,"Mallick, Sankar and Walla",Kg,10.81,Normal
+31353,Quo Combo,Dairy & Breakfast,67.51,55.67,Sanghvi and Sons,PC,17.54,Normal
+31354,Maiores Jar,Beverages,463.55,397.45,"Narula, Prabhu and Dhingra",ml,14.26,Normal
+31355,Architecto Box,Instant Food,117.25,91.37,"Shroff, Bhattacharyya and Pai",PC,22.07,Normal
+31356,Vel Combo,Household,907.78,639.4,Wali-Chahal,g,29.56,Normal
+31357,Voluptas Combo,Beverages,769.55,611.57,Agarwal-Walla,g,20.53,Normal
+31358,Ipsa Box,Atta Rice & Dal,26.32,24.98,Krishnamurthy-Toor,PC,5.09,Normal
+31359,Repellat Box,Baby Care,736.92,659.95,"Das, Talwar and Iyengar",ml,10.44,Normal
+31360,Hic Box,Dairy & Breakfast,811.6,795.91,Kurian PLC,Kg,1.93,Normal
+31361,Corrupti Jar,Baby Care,833.23,602.36,Khurana Group,Kg,27.71,Normal
+31362,Esse Jar,Bakery,287.24,205.29,Dayal-Hora,L,28.53,Normal
+31363,Sapiente 500g,Personal Care,791.3,692.07,"Kata, Suresh and Maharaj",ml,12.54,Normal
+31364,Amet Pack,Household,755.75,584.88,Sagar-Shanker,Kg,22.61,Normal
+31365,Veritatis Combo,Personal Care,860.37,699.59,Gaba-Ramaswamy,ml,18.69,Normal
+31366,Amet 1L,Bakery,522.76,413.0,Unknown,PC,21.0,Normal
+31367,Non 500g,Pet Supplies,1173.55,921.45,Misra and Sons,Kg,21.48,Normal
+31368,Tempore Pack,Instant Food,367.99,329.47,"Narayanan, Bath and Subramaniam",PC,10.47,Normal
+31369,Velit Box,Snacks,279.88,268.57,Dara Group,g,4.04,Normal
+31370,Possimus Pack,Atta Rice & Dal,429.86,382.05,Tiwari-Pandey,Kg,11.12,Normal
+31371,Iusto 500g,Beverages,754.15,690.11,Unknown,g,8.49,Normal
+31372,Ullam Jar,Pet Supplies,490.82,433.77,Unknown,PC,11.62,Normal
+31373,Saepe 1L,Baby Care,455.87,445.43,"Khurana, Buch and Karnik",ml,2.29,Normal
+31374,Iste Pack,Bakery,821.8,741.85,"Agarwal, Nanda and Iyer",PC,9.73,Normal
+31375,Optio 500g,Baby Care,398.57,309.59,"Apte, Sunder and Magar",L,22.32,Normal
+31376,Assumenda Jar,Dairy & Breakfast,879.06,765.36,"Mall, Dar and Badal",g,12.93,Normal
+31377,Adipisci Jar,Bakery,1148.66,1083.9,Mand Group,ml,5.64,Normal
+31378,Nesciunt Jar,Bakery,482.52,402.71,Balakrishnan-Sachar,g,16.54,Normal
+31379,Dolore Box,Beverages,673.39,471.96,"Sarin, Ramesh and Chander",L,29.91,Normal
+31380,Nisi Box,Pet Supplies,451.62,398.48,Arya-Dara,PC,11.77,Normal
+31381,Pariatur 500g,Atta Rice & Dal,840.14,727.73,Reddy and Sons,g,13.38,Normal
+31382,Accusantium Jar,Baby Care,716.38,596.54,Prasad-Trivedi,PC,16.73,Normal
+31383,Saepe 1L,Meat & Seafood,291.55,225.7,Bakshi-Prabhu,Kg,22.59,Normal
+31384,Sit Pack,Meat & Seafood,248.65,221.45,"Keer, Jhaveri and Mahajan",Kg,10.94,Normal
+31385,Fugit Box,Atta Rice & Dal,119.72,117.55,Unknown,Kg,1.81,Normal
+31386,Quasi Pack,Beverages,518.69,470.96,Khosla LLC,Kg,9.2,Normal
+31387,Eligendi Pack,Beverages,770.46,621.38,"Bhatt, Prabhu and Chaudhry",PC,19.35,Normal
+31388,A Combo,Baby Care,987.81,822.56,Khalsa-Bath,PC,16.73,Normal
+31389,Inventore Box,Household,1139.81,904.55,De PLC,PC,20.64,Normal
+31390,Fugiat Jar,Personal Care,467.35,380.88,Ram-Varma,Kg,18.5,Normal
+31391,Modi 500g,Snacks,819.5,656.81,Shere-Sarkar,L,19.85,Normal
+31392,Maxime 500g,Instant Food,740.22,548.38,Sandhu-Balasubramanian,PC,25.92,Normal
+31393,Libero Box,Personal Care,1175.42,972.45,"Chhabra, Kant and Parikh",Kg,17.27,Normal
+31394,Hic 1L,Baby Care,947.94,759.4,"Parsa, Dani and Gaba",ml,19.89,Normal
+31395,Dolor 500g,Snacks,428.01,329.86,Nigam and Sons,Kg,22.93,Normal
+31396,Vel Pack,Bakery,972.21,704.63,"Loke, Sane and Sunder",ml,27.52,Normal
+31397,Libero Pack,Dairy & Breakfast,719.92,718.54,Menon Group,ml,0.19,Normal
+31398,Iste 500g,Baby Care,989.46,963.54,Bhatt Group,Kg,2.62,Normal
+31399,Blanditiis Jar,Bakery,176.63,129.64,Ganesan-Mukherjee,Kg,26.6,Normal
+31400,Laudantium Combo,Fruits & Vegetables,607.2,475.99,Kade-Saraf,PC,21.61,Normal
+31401,Tempore 500g,Baby Care,296.78,212.51,"Dora, Hayer and Karan",PC,28.39,Normal
+31402,Odit Box,Fruits & Vegetables,836.69,694.04,"Khatri, Radhakrishnan and Kari",Kg,17.05,Normal
+31403,Sequi 1L,Household,1004.04,859.22,Gera Group,L,14.42,Normal
+31404,Nesciunt 500g,Snacks,55.7,40.59,Borra PLC,PC,27.13,Normal
+31405,Ipsa 1L,Baby Care,1146.9,804.39,Maharaj and Sons,ml,29.86,Normal
+31406,Ad Box,Fruits & Vegetables,689.77,540.8,Unknown,PC,21.6,Normal
+31407,Atque Jar,Household,875.44,625.25,Hans-Khatri,PC,28.58,Normal
+31408,Impedit Jar,Beverages,665.6,569.66,"Lad, Rai and Balan",Kg,14.41,Normal
+31409,Quos Jar,Pet Supplies,674.19,563.93,Vohra Ltd,L,16.35,Normal
+31410,Error Jar,Household,253.29,180.91,Vohra-Din,Kg,28.58,Normal
+31411,Quisquam Pack,Atta Rice & Dal,539.52,487.04,"Mukhopadhyay, Shukla and Agarwal",PC,9.73,Normal
+31412,Asperiores 500g,Household,1082.62,1045.31,Bhatnagar-Sundaram,L,3.45,Normal
+31413,Placeat Combo,Dairy & Breakfast,146.08,140.51,Sood-Menon,Kg,3.81,Normal
+31414,Delectus 1L,Meat & Seafood,433.28,311.44,"Seth, Deep and Narasimhan",g,28.12,Normal
+31415,Aspernatur 1L,Atta Rice & Dal,1128.58,857.94,"Kibe, Chawla and Din",L,23.98,Normal
+31416,Nulla Box,Fruits & Vegetables,959.82,899.54,"Guha, Divan and Buch",L,6.28,Normal
+31417,Debitis Box,Atta Rice & Dal,322.99,227.28,Dua Inc,Kg,29.63,Normal
+31418,Quos 500g,Personal Care,1075.32,936.06,"Bora, Sen and Nanda",ml,12.95,Normal
+31419,Ipsam 500g,Household,265.35,188.94,"Ganesan, Bobal and Sawhney",ml,28.8,Normal
+31420,Omnis Jar,Household,517.06,427.12,Nagar Group,Kg,17.39,Normal
+31421,Ea Combo,Bakery,989.55,780.19,Cheema-Yohannan,Kg,21.16,Normal
+31422,Doloribus Pack,Personal Care,1011.79,980.02,Aurora-Zachariah,Kg,3.14,Normal
+31423,Modi Box,Baby Care,320.36,234.75,"Viswanathan, Magar and Gour",PC,26.72,Normal
+31424,Vel 1L,Bakery,911.63,656.72,Jha-Sinha,ml,27.96,Normal
+31425,Reprehenderit Pack,Pet Supplies,273.2,202.72,Krishnamurthy-Krish,L,25.8,Normal
+31426,Perferendis 500g,Fruits & Vegetables,273.95,246.46,Lal PLC,L,10.03,Normal
+31427,Voluptas 500g,Atta Rice & Dal,1124.57,988.88,"Kohli, Deo and Dada",PC,12.07,Normal
+31428,Quisquam Jar,Bakery,599.12,500.02,Seshadri-Barad,L,16.54,Normal
+31429,Explicabo Pack,Household,1015.87,784.59,Vaidya-Sagar,L,22.77,Normal
+31430,Praesentium 500g,Personal Care,252.1,205.61,"Padmanabhan, Iyengar and Singhal",PC,18.44,Normal
+31431,Ipsum Pack,Beverages,1028.96,942.48,Atwal Ltd,g,8.4,Normal
+31432,Quam Box,Instant Food,492.3,484.72,Raj-Gandhi,g,1.54,Normal
+31433,Ducimus Box,Personal Care,108.14,91.9,"Iyer, Bakshi and Kata",PC,15.02,Normal
+31434,Quam Box,Atta Rice & Dal,185.21,183.71,Peri Ltd,g,0.81,Normal
+31435,Modi 500g,Bakery,584.1,413.31,"Nazareth, Dani and Nadkarni",Kg,29.24,Normal
+31436,Consequatur Box,Dairy & Breakfast,477.88,468.17,Mittal-Natt,Kg,2.03,Normal
+31437,Dicta Pack,Pet Supplies,661.11,659.63,Rege and Sons,Kg,0.22,Normal
+31438,Temporibus Combo,Pet Supplies,783.9,637.9,"Sekhon, Radhakrishnan and Gole",ml,18.62,Normal
+31439,Laboriosam Pack,Snacks,383.76,271.63,"Manda, Bains and Sen",Kg,29.22,Normal
+31440,Delectus Combo,Household,812.7,658.1,Sengupta-Krishnamurthy,Kg,19.02,Normal
+31441,Deleniti 1L,Atta Rice & Dal,1050.46,892.17,Nadkarni PLC,Kg,15.07,Normal
+31442,Saepe Combo,Atta Rice & Dal,707.47,671.62,"Borra, Bajaj and Bhardwaj",ml,5.07,Normal
+31443,Unde 500g,Baby Care,877.61,819.02,Agarwal-Badami,Kg,6.68,Normal
+31444,Totam 500g,Personal Care,661.91,502.9,Kaur Ltd,ml,24.02,Normal
+31445,Ut Box,Meat & Seafood,370.07,341.89,Unknown,g,7.61,Normal
+31446,Quibusdam Box,Atta Rice & Dal,279.21,220.01,Ben and Sons,PC,21.2,Normal
+31447,Tempora Combo,Pet Supplies,40.16,31.66,"Bahl, Mandal and Mammen",L,21.17,Normal
+31448,Facere Jar,Fruits & Vegetables,350.07,256.12,"Kala, Setty and Kaur",PC,26.84,Normal
+31449,Aperiam Box,Meat & Seafood,896.78,793.5,Jani LLC,Kg,11.52,Normal
+31450,Praesentium 500g,Bakery,551.07,423.87,Ram and Sons,L,23.08,Normal
+31451,Et Combo,Baby Care,530.3,499.01,Bala-Jayaraman,PC,5.9,Normal
+31452,Illo Jar,Bakery,296.55,296.29,Choudhary Ltd,Kg,0.09,Normal
+31453,Ea Box,Fruits & Vegetables,979.56,709.5,Shenoy-Karnik,Kg,27.57,Normal
+31454,Ipsam Box,Beverages,227.28,171.26,"Dutta, Sodhi and Chakraborty",PC,24.65,Normal
+31455,Perspiciatis 500g,Personal Care,111.19,105.19,"Pillay, Ganesan and Joshi",ml,5.4,Normal
+31456,Sit 500g,Dairy & Breakfast,960.43,836.21,Patel-Oza,Kg,12.93,Normal
+31457,Culpa Pack,Atta Rice & Dal,1048.51,929.01,"Chadha, Dave and Arya",PC,11.4,Normal
+31458,Repudiandae Combo,Fruits & Vegetables,826.45,633.0,Bera PLC,PC,23.41,Normal
+31459,Ab 1L,Personal Care,1102.7,967.6,"Kalita, Dey and Chadha",ml,12.25,Normal
+31460,Praesentium 1L,Baby Care,575.49,542.37,Dugal-Mall,g,5.76,Normal
+31461,Blanditiis Pack,Beverages,91.36,87.16,Garg-Murthy,ml,4.6,Normal
+31462,Ad Pack,Beverages,834.33,603.8,"Dass, Vora and Nanda",PC,27.63,Normal
+31463,Cumque 1L,Baby Care,779.88,649.41,Garde-Ravel,Kg,16.73,Normal
+31464,Reiciendis Combo,Atta Rice & Dal,413.41,399.02,Unknown,Kg,3.48,Normal
+31465,Saepe Jar,Beverages,1102.97,1099.53,Rama-Mander,Kg,0.31,Normal
+31466,Hic 500g,Baby Care,1091.51,908.91,"Garde, Nadkarni and Swaminathan",g,16.73,Normal
+31467,Dolorem Pack,Meat & Seafood,229.3,195.23,Bedi Ltd,Kg,14.86,Normal
+31468,Ipsum Box,Pet Supplies,382.27,336.0,"Verma, Kari and Lalla",PC,12.1,Normal
+31469,Cum Pack,Pet Supplies,119.14,86.01,"Pau, Jhaveri and Srivastava",PC,27.81,Normal
+31470,Eaque Box,Baby Care,768.92,595.4,Vaidya-Arora,Kg,22.57,Normal
+31471,Suscipit 500g,Snacks,513.09,395.39,Mahal-Pandey,g,22.94,Normal
+31472,Quo 1L,Baby Care,780.69,572.1,"Dasgupta, Shah and Arora",g,26.72,Normal
+31473,Rerum 500g,Baby Care,1092.15,909.44,Sarma-Seth,ml,16.73,Normal
+31474,Nam Combo,Pet Supplies,999.44,834.21,Suri-Mahal,PC,16.53,Normal
+31475,Quaerat 500g,Baby Care,759.07,742.64,Keer Group,PC,2.16,Normal
+31476,Accusantium Jar,Household,850.09,644.03,Batra-Ganesan,g,24.24,Normal
+31477,Veritatis Pack,Household,1014.49,966.35,Pandya Ltd,Kg,4.75,Normal
+31478,Debitis Pack,Fruits & Vegetables,341.82,305.25,"Patla, Saran and Kuruvilla",PC,10.7,Normal
+31479,Neque Combo,Personal Care,894.94,760.55,Kulkarni-Sheth,g,15.02,Normal
+31480,Omnis Jar,Fruits & Vegetables,226.66,212.77,Gupta-Setty,Kg,6.13,Normal
+31481,Quisquam 500g,Snacks,197.68,164.65,"Anne, Manda and Salvi",g,16.71,Normal
+31482,Nostrum 500g,Bakery,114.06,95.19,"Mand, Kohli and Shan",PC,16.54,Normal
+31483,Temporibus 500g,Fruits & Vegetables,554.63,421.21,"Sethi, Wable and Natt",PC,24.06,Normal
+31484,Error Box,Baby Care,834.95,608.71,"Ganesh, Dutta and Bhatia",ml,27.1,Normal
+31485,Libero 500g,Pet Supplies,811.59,736.73,Malhotra-Sahota,g,9.22,Normal
+31486,Tempora Pack,Instant Food,517.61,409.1,Chander-Lall,PC,20.96,Normal
+31487,Nobis Pack,Meat & Seafood,288.14,257.68,"Kaul, Madan and Lanka",ml,10.57,Normal
+31488,Ex Pack,Snacks,1029.14,803.5,"Puri, Bhardwaj and Chaudhari",g,21.93,Normal
+31489,Aliquid Box,Household,467.34,379.09,Bobal-Devi,g,18.88,Normal
+31490,Odit 500g,Instant Food,43.15,32.1,Bera LLC,Kg,25.61,Normal
+31491,Quo Jar,Instant Food,194.02,154.26,Chaudry-Gole,Kg,20.49,Normal
+31492,Voluptas 1L,Personal Care,1000.6,980.39,"Wali, Pradhan and Pingle",L,2.02,Normal
+31493,Modi 1L,Beverages,897.17,841.34,Dua-Mohanty,ml,6.22,Normal
+31494,Voluptate 500g,Meat & Seafood,22.27,18.63,Kale-Shah,Kg,16.34,Normal
+31495,Recusandae 500g,Bakery,494.56,383.27,Baral Ltd,Kg,22.5,Normal
+31496,Facilis Jar,Snacks,1168.98,987.12,"Khanna, Mall and Sengupta",g,15.56,Normal
+31497,Distinctio Combo,Meat & Seafood,306.54,249.07,"Palla, Sridhar and Raman",g,18.75,Normal
+31498,Atque Pack,Household,1065.37,832.89,"Cheema, Subramaniam and Arora",g,21.82,Normal
+31499,Facilis Combo,Bakery,700.75,631.44,Rattan Group,g,9.89,Normal
+31500,Optio Pack,Instant Food,62.26,49.15,Radhakrishnan-Bali,ml,21.06,Normal
