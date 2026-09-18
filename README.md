@@ -55,7 +55,6 @@ Raw CSV
 
 Live Demo:
 [Open Streamlit Dashboard]([YOUR_STREAMLIT_URL](https://quick-commerce-analytics.streamlit.app/))
-
 ## Project Documentation
 
 See the project report in the `docs/` folder.
