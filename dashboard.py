@@ -63,20 +63,42 @@ if not os.path.exists(DATABASE_PATH):
     )
     st.stop()
 
-
 # ============================================================
-# STEP 4: SQLITE CONNECTION
+# STEP 4: CREATE A WRITABLE RUNTIME DATABASE
 # ============================================================
+# Keep the repository database unchanged.
+# Load a complete copy into an in-memory SQLite database so the
+# dashboard can safely create views and helper columns at runtime.
 
 @st.cache_resource
-def get_connection():
-    return sqlite3.connect(
-        DATABASE_PATH,
+def get_connection(source_database_path):
+
+    source_connection = sqlite3.connect(
+        source_database_path,
         check_same_thread=False,
     )
 
+    runtime_connection = sqlite3.connect(
+        ":memory:",
+        check_same_thread=False,
+    )
 
-conn = get_connection()
+    source_connection.backup(
+        runtime_connection
+    )
+
+    source_connection.close()
+
+    return runtime_connection
+
+
+# ============================================================
+# STEP 5: SQLITE CONNECTION
+# ============================================================
+
+conn = get_connection(
+    DATABASE_PATH
+)
 
 
 @st.cache_data(ttl=300, show_spinner=False)
@@ -216,10 +238,48 @@ conn.commit()
 # ============================================================
 # STEP 6: CREATE SAFE P&L VIEW
 # ============================================================
+# The object name may already exist as a table or a view because
+# the SQLite database is rebuilt by the analysis scripts.
+# Detect the existing object type and remove it safely before
+# creating the finalized view.
 
-conn.execute(
-    "DROP VIEW IF EXISTS pnl_monthly_safe"
-)
+existing_pnl_object = conn.execute(
+    """
+    SELECT type
+    FROM sqlite_master
+    WHERE name = 'pnl_monthly_safe'
+    """
+).fetchone()
+
+
+if existing_pnl_object:
+
+    existing_object_type = existing_pnl_object[0]
+
+    if existing_object_type == "view":
+
+        conn.execute(
+            "DROP VIEW pnl_monthly_safe"
+        )
+
+    elif existing_object_type == "table":
+
+        conn.execute(
+            "DROP TABLE pnl_monthly_safe"
+        )
+
+    elif existing_object_type == "index":
+
+        conn.execute(
+            "DROP INDEX pnl_monthly_safe"
+        )
+
+    elif existing_object_type == "trigger":
+
+        conn.execute(
+            "DROP TRIGGER pnl_monthly_safe"
+        )
+
 
 conn.execute(
     """
