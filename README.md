@@ -1,12 +1,12 @@
 # Quick Commerce Analytics Command Center
 
-An end-to-end Data Analytics solution for analyzing
+An end-to-end Data Analytics solution for analyzing  
 Zepto, Blinkit, Swiggy Instamart and BigBasket.
 
 ## Business Objective
 
-The project consolidates commercial, customer, store,
-product, order, inventory, logistics and profitability
+The project consolidates commercial, customer, store,  
+product, order, inventory, logistics and profitability  
 data into a centralized analytics solution.
 
 ## Technology Stack
@@ -35,13 +35,13 @@ data into a centralized analytics solution.
 
 ## Architecture
 
-Raw CSV
-→ Python Cleaning
-→ Cleaned CSV
-→ SQLite
-→ SQL Analytics
-→ KPI Framework
-→ Streamlit Dashboard
+Raw CSV  
+→ Python Cleaning  
+→ Cleaned CSV  
+→ SQLite  
+→ SQL Analytics  
+→ KPI Framework  
+→ Streamlit Dashboard  
 → Business Insights
 
 ## Platforms
@@ -54,7 +54,9 @@ Raw CSV
 ## Dashboard
 
 Live Demo:
-[Open Streamlit Dashboard]([YOUR_STREAMLIT_URL](https://quick-commerce-analytics.streamlit.app/))
+
+[Open Streamlit Dashboard](https://quick-commerce-analytics.streamlit.app/)
+
 ## Project Documentation
 
 See the project report in the `docs/` folder.
