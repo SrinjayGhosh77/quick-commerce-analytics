@@ -2028,9 +2028,9 @@ def format_kpi_value(df, title):
 
 
 def show_kpi_cards(results, titles):
-    columns = st.columns(5)
+    columns = st.columns(len(results))
 
-    for index in range(5):
+    for index in range(len(results)):
         with columns[index]:
             st.metric(
                 label=titles[index],
@@ -2184,7 +2184,7 @@ def render_zepto_overview():
     )
 
     # --------------------------------------------------------
-    # FIVE BUSINESS-QUESTION CHARTS
+    # FOUR BUSINESS-QUESTION CHARTS
     # --------------------------------------------------------
 
     # Question 1: How is Zepto performing overall compared with the other platforms?
@@ -2835,66 +2835,6 @@ def render_zepto_employee():
         horizontal=True,
     )
 
-    # Question 2: Which stores have too few employees relative to their order volume?
-    show_question(2, "Which stores have too few employees relative to their order volume?")
-
-    query = """
-    WITH store_orders AS (
-            SELECT
-                store_id,
-                COUNT(*) AS orders
-            FROM orders
-            WHERE platform_id = ?
-            GROUP BY store_id
-        ), store_employees AS (
-            SELECT
-                e.store_id,
-                COUNT(*) AS employees
-            FROM employees e
-            JOIN dark_stores ds
-                ON e.store_id = ds.store_id
-            WHERE ds.platform_id = ?
-              AND e.work_status = 'Currently Working'
-            GROUP BY e.store_id
-        )
-        SELECT
-            ds.store_id,
-            ds.city,
-            COALESCE(so.orders, 0) AS orders,
-            COALESCE(se.employees, 0) AS employees,
-            ROUND(
-                COALESCE(so.orders, 0) * 1.0
-                / NULLIF(COALESCE(se.employees, 0), 0),
-                2
-            ) AS orders_per_employee
-        FROM dark_stores ds
-        LEFT JOIN store_orders so
-            ON ds.store_id = so.store_id
-        LEFT JOIN store_employees se
-            ON ds.store_id = se.store_id
-        WHERE ds.platform_id = ?
-          AND COALESCE(so.orders, 0) > 0
-        ORDER BY orders_per_employee DESC
-        LIMIT 15
-    """
-    question_2_result = fetch_data(
-        query,
-        [selected_platform_id] * 3,
-    )
-
-    question_2_result = apply_dashboard_filters(
-        question_2_result
-    )
-
-    # CHART TYPE: BAR CHART
-    draw_bar_chart(
-        question_2_result,
-        "store_name",
-        "orders_per_employee",
-        "Which stores have too few employees relative to their order volume?",
-        horizontal=True,
-    )
-
     # Question 3: Which roles have the highest salary cost?
     show_question(3, "Which roles have the highest salary cost?")
 
@@ -3100,39 +3040,18 @@ def render_zepto_product():
         [selected_platform_id],
     )
 
-    # KPI 5: Outlier Product Count
-    query = """
-    SELECT COUNT(*) AS outlier_product_count
-        FROM products p
-        JOIN (
-            SELECT DISTINCT oi.product_id
-            FROM order_items oi
-            JOIN orders o
-                ON oi.order_id = o.order_id
-            WHERE o.platform_id = ?
-        ) z
-            ON p.product_id = z.product_id
-        WHERE p.price_status = 'Outlier'
-    """
-    kpi_5_result = fetch_data(
-        query,
-        [selected_platform_id],
-    )
-
     show_kpi_cards(
         [
             kpi_1_result,
             kpi_2_result,
             kpi_3_result,
             kpi_4_result,
-            kpi_5_result,
         ],
         [
             "Number of Products",
             "Average Selling Price",
             "Average Discount %",
             "Product Category Count",
-            "Outlier Product Count",
         ],
     )
 
@@ -3251,42 +3170,6 @@ def render_zepto_product():
         horizontal=True,
     )
 
-    # Question 4: Which brands dominate Zepto's catalogue?
-    show_question(4, "Which brands dominate Zepto's catalogue?")
-
-    query = """
-    SELECT
-            COALESCE(p.brand, 'Unknown') AS brand,
-            COUNT(DISTINCT p.product_id) AS products,
-            SUM(COALESCE(oi.quantity, 0)) AS units_sold,
-            ROUND(SUM(COALESCE(oi.line_total_inr, 0)), 2) AS item_revenue
-        FROM products p
-        JOIN order_items oi
-            ON p.product_id = oi.product_id
-        JOIN orders o
-            ON oi.order_id = o.order_id
-        WHERE o.platform_id = ?
-        GROUP BY COALESCE(p.brand, 'Unknown')
-        ORDER BY products DESC, item_revenue DESC
-        LIMIT 15
-    """
-    question_4_result = fetch_data(
-        query,
-        [selected_platform_id],
-    )
-
-    question_4_result = apply_dashboard_filters(
-        question_4_result
-    )
-
-    # CHART TYPE: BAR CHART
-    draw_bar_chart(
-        question_4_result,
-        "brand",
-        "product_count",
-        "Which brands dominate Zepto's catalogue?",
-        horizontal=True,
-    )
 
 def render_zepto_customer():
 
@@ -3537,152 +3420,6 @@ def render_zepto_customer():
         horizontal=True,
     )
 
-    # Question 3: Which signup platform contributes the most customers?
-    show_question(3, "Which signup platform contributes the most customers?")
-
-    query = """
-    SELECT
-            COALESCE(signup_platform, 'Unknown') AS signup_platform,
-            COUNT(DISTINCT customer_id) AS customers
-        FROM customers
-        GROUP BY COALESCE(signup_platform, 'Unknown')
-        ORDER BY customers DESC
-        LIMIT 1
-    """
-    question_3_result = fetch_data(
-        query,
-        [],
-    )
-
-    question_3_result = apply_dashboard_filters(
-        question_3_result
-    )
-
-    # CHART TYPE: BAR CHART
-    draw_bar_chart(
-        question_3_result,
-        "signup_platform",
-        "customers",
-        "Which signup platform contributes the most customers?",
-        horizontal=True,
-    )
-
-    # Question 4: Which cities have high customers but low order activity?
-    show_question(4, "Which cities have high customers but low order activity?")
-
-    query = """
-    WITH customer_city AS (
-            SELECT
-                c.city,
-                COUNT(DISTINCT c.customer_id) AS customers
-            FROM customers c
-            JOIN (
-                SELECT DISTINCT customer_id
-                FROM orders
-                WHERE platform_id = ?
-            ) z
-                ON c.customer_id = z.customer_id
-            GROUP BY c.city
-        ), city_orders AS (
-            SELECT
-                ds.city,
-                COUNT(o.order_id) AS orders
-            FROM orders o
-            JOIN dark_stores ds
-                ON o.store_id = ds.store_id
-            WHERE o.platform_id = ?
-            GROUP BY ds.city
-        )
-        SELECT
-            cc.city,
-            cc.customers,
-            COALESCE(co.orders, 0) AS orders,
-            ROUND(
-                COALESCE(co.orders, 0) * 1.0 / NULLIF(cc.customers, 0),
-                2
-            ) AS orders_per_customer
-        FROM customer_city cc
-        LEFT JOIN city_orders co
-            ON cc.city = co.city
-        ORDER BY orders_per_customer ASC
-        LIMIT 15
-    """
-    question_4_result = fetch_data(
-        query,
-        [selected_platform_id] * 2,
-    )
-
-    question_4_result = apply_dashboard_filters(
-        question_4_result
-    )
-
-    # CHART TYPE: SCATTER CHART
-    # High customers + low orders appear as points far to the right and low on the y-axis.
-    draw_scatter_chart(
-        question_4_result,
-        "customers",
-        "orders",
-        "High Customer Base vs Low Order Activity",
-    )
-
-    # Question 5: How does customer growth compare with order growth?
-    show_question(5, "How does customer growth compare with order growth?")
-
-    query = """
-    WITH yearly_customers AS (
-            SELECT
-                SUBSTR(c.signup_date, 7, 4) AS year,
-                COUNT(DISTINCT c.customer_id) AS new_customers
-            FROM customers c
-            WHERE LOWER(TRIM(c.signup_platform)) = 'zepto'
-              AND c.signup_date IS NOT NULL
-            GROUP BY SUBSTR(c.signup_date, 7, 4)
-        ), yearly_orders AS (
-            SELECT
-                SUBSTR(order_datetime, 1, 4) AS year,
-                COUNT(*) AS orders
-            FROM orders
-            WHERE platform_id = ?
-            GROUP BY SUBSTR(order_datetime, 1, 4)
-        )
-        SELECT
-            yc.year,
-            yc.new_customers,
-            COALESCE(yo.orders, 0) AS orders
-        FROM yearly_customers yc
-        LEFT JOIN yearly_orders yo
-            ON yc.year = yo.year
-
-        UNION
-
-        SELECT
-            yo.year,
-            COALESCE(yc.new_customers, 0) AS new_customers,
-            yo.orders
-        FROM yearly_orders yo
-        LEFT JOIN yearly_customers yc
-            ON yo.year = yc.year
-        WHERE yc.year IS NULL
-
-        ORDER BY 1
-    """
-    question_5_result = fetch_data(
-        query,
-        [selected_platform_id],
-    )
-
-    question_5_result = apply_dashboard_filters(
-        question_5_result
-    )
-
-    # CHART TYPE: SCATTER CHART
-    draw_scatter_chart(
-        question_5_result,
-        "customers",
-        "orders",
-        "How does customer growth compare with order growth?",
-    )
-
 
 def render_zepto_orders():
 
@@ -3788,8 +3525,8 @@ def render_zepto_orders():
     # FIVE BUSINESS-QUESTION CHARTS
     # --------------------------------------------------------
 
-    # Question 1: Which cities have the highest order volumes?
-    show_question(1, "Which cities have the highest order volumes?")
+    # Question 1: Which cities have the highest order volume?
+    show_question(1, "Which cities have the highest order volume?")
 
     query = """
     SELECT
@@ -3816,7 +3553,7 @@ def render_zepto_orders():
         question_1_result,
         "city",
         "total_orders",
-        "Which cities have the highest order volumes?",
+        "Which cities have the highest order volume?",
         horizontal=True,
     )
 
@@ -3857,49 +3594,8 @@ def render_zepto_orders():
         horizontal=True,
     )
 
-    # Question 3: Which stores generate high orders but also high cancellations?
-    show_question(3, "Which stores generate high orders but also high cancellations?")
-
-    query = """
-    SELECT
-            o.store_id,
-            ds.city,
-            COUNT(o.order_id) AS orders,
-            SUM(CASE WHEN LOWER(o.order_status) = 'cancelled' THEN 1 ELSE 0 END) AS cancelled_orders,
-            ROUND(
-                SUM(CASE WHEN LOWER(o.order_status) = 'cancelled' THEN 1 ELSE 0 END)
-                * 100.0 / NULLIF(COUNT(o.order_id), 0),
-                2
-            ) AS cancellation_rate_percent
-        FROM orders o
-        JOIN dark_stores ds
-            ON o.store_id = ds.store_id
-        WHERE o.platform_id = ?
-        GROUP BY o.store_id, ds.city
-        HAVING COUNT(o.order_id) >= 10
-        ORDER BY cancellation_rate_percent DESC, orders DESC
-        LIMIT 15
-    """
-    question_3_result = fetch_data(
-        query,
-        [selected_platform_id],
-    )
-
-    question_3_result = apply_dashboard_filters(
-        question_3_result
-    )
-
-    # CHART TYPE: BAR CHART
-    draw_bar_chart(
-        question_3_result,
-        "store_name",
-        "total_orders",
-        "Which stores generate high orders but also high cancellations?",
-        horizontal=True,
-    )
-
-    # Question 4: How is Zepto's AOV changing over time?
-    show_question(4, "How is Zepto's AOV changing over time?")
+    # Question 3: How is Zepto's AOV changing over time?
+    show_question(3, "How is Zepto's AOV changing over time?")
 
     query = """
     SELECT
@@ -3912,28 +3608,28 @@ def render_zepto_orders():
         GROUP BY SUBSTR(order_datetime, 1, 7)
         ORDER BY month
     """
-    question_4_result = fetch_data(
+    question_3_result = fetch_data(
         query,
         [selected_platform_id],
     )
 
-    question_4_result = apply_dashboard_filters(
-        question_4_result
+    question_3_result = apply_dashboard_filters(
+        question_3_result
     )
 
     # CHART TYPE: LINE CHART
     color_column = None
 
     draw_line_chart(
-        question_4_result,
+        question_3_result,
         "month",
         "aov",
         "How is Zepto's AOV changing over time?",
         color_column=color_column,
     )
 
-    # Question 5: Where should Zepto focus to improve order completion?
-    show_question(5, "Where should Zepto focus to improve order completion?")
+    # Question 4: Where should Zepto focus to improve?
+    show_question(4, "Where should Zepto focus to improve?")
 
     query = """
     SELECT
@@ -3953,21 +3649,21 @@ def render_zepto_orders():
         GROUP BY ds.city
         ORDER BY completion_rate_percent ASC, total_orders DESC
     """
-    question_5_result = fetch_data(
+    question_4_result = fetch_data(
         query,
         [selected_platform_id],
     )
 
-    question_5_result = apply_dashboard_filters(
-        question_5_result
+    question_4_result = apply_dashboard_filters(
+        question_4_result
     )
 
     # CHART TYPE: DONUT / PIE CHART
     draw_pie_chart(
-        question_5_result,
+        question_4_result,
         "payment_mode",
         "order_share_percent",
-        "Where should Zepto focus to improve order completion?",
+        "Where should Zepto focus to improve?",
     )
 
 
@@ -4409,7 +4105,7 @@ def render_zepto_inventory():
     )
 
     # --------------------------------------------------------
-    # FIVE BUSINESS-QUESTION CHARTS
+    # THREE BUSINESS-QUESTION CHARTS
     # --------------------------------------------------------
 
     # Question 1: Lowest inventory stores
@@ -4457,57 +4153,8 @@ def render_zepto_inventory():
         top_n=8,
     )
 
-    # Question 2: Products below reorder level
+    # Question 2: Excessive stock
     show_question(2,
-        "Which products are below reorder level?",
-    )
-
-    query = """
-    SELECT
-        i.product_id,
-        p.product_name,
-        ds.store_id,
-        ds.city,
-        ROUND(i.stock_units, 2) AS stock_units,
-        ROUND(i.reorder_level, 2) AS reorder_level,
-        ROUND(
-            i.reorder_level - i.stock_units,
-            2
-        ) AS stock_shortage
-    FROM inventory i
-    JOIN dark_stores ds
-        ON i.store_id = ds.store_id
-    JOIN products p
-        ON i.product_id = p.product_id
-    WHERE ds.platform_id = ?
-      AND COALESCE(i.stock_units, 0)
-          < COALESCE(i.reorder_level, 0)
-    ORDER BY stock_shortage DESC
-    LIMIT 20
-    """
-
-    question_2_result = fetch_data(
-        query,
-        [selected_platform_id],
-    )
-
-    question_2_result = apply_dashboard_filters(
-        question_2_result,
-    )
-
-    # CHART TYPE: GROUPED HORIZONTAL BAR CHART
-    draw_metric_comparison(
-        question_2_result,
-        "product_name",
-        [
-            "stock_units",
-            "reorder_level",
-        ],
-        "Products Below Reorder Level — Stock vs Reorder Level",
-    )
-
-    # Question 3: Excessive stock
-    show_question(3,
         "Which stores have excessive stock?",
     )
 
@@ -4543,19 +4190,19 @@ def render_zepto_inventory():
     LIMIT 15
     """
 
-    question_3_result = fetch_data(
+    question_2_result = fetch_data(
         query,
         [selected_platform_id],
     )
 
-    question_3_result = apply_dashboard_filters(
-        question_3_result,
+    question_2_result = apply_dashboard_filters(
+        question_2_result,
     )
 
     # CHART TYPE: GROUPED HORIZONTAL BAR CHART
     # Directly compares available stock against reorder requirement.
     draw_metric_comparison(
-        question_3_result,
+        question_2_result,
         "store_id",
         [
             "stock_units",
@@ -4564,8 +4211,8 @@ def render_zepto_inventory():
         "Stores With Excessive Stock — Stock vs Reorder Level",
     )
 
-    # Question 4: Expiry risk
-    show_question(4,
+    # Question 3: Expiry risk
+    show_question(3,
         "Which products are at risk of expiry?",
     )
 
@@ -4593,76 +4240,21 @@ def render_zepto_inventory():
     LIMIT 20
     """
 
-    question_4_result = fetch_data(
+    question_3_result = fetch_data(
         query,
         [selected_platform_id],
     )
 
-    question_4_result = apply_dashboard_filters(
-        question_4_result,
+    question_3_result = apply_dashboard_filters(
+        question_3_result,
     )
 
     # CHART TYPE: HORIZONTAL BAR CHART
     draw_bar_chart(
-        question_4_result,
+        question_3_result,
         "product_name",
         "stock_units",
         "Products at Risk of Expiry — Stock Units",
-        horizontal=True,
-        top_n=10,
-    )
-
-    # Question 5: Working capital tied up
-    show_question(5,
-        "Where is working capital potentially tied up in excess inventory?",
-    )
-
-    query = """
-    SELECT
-        ds.store_id,
-        ds.city,
-        ROUND(
-            SUM(
-                CASE
-                    WHEN COALESCE(i.stock_units, 0)
-                         > COALESCE(i.reorder_level, 0)
-                    THEN
-                        (i.stock_units - i.reorder_level)
-                        * COALESCE(p.selling_price, 0)
-                    ELSE 0
-                END
-            ),
-            2
-        ) AS excess_inventory_value
-    FROM inventory i
-    JOIN dark_stores ds
-        ON i.store_id = ds.store_id
-    JOIN products p
-        ON i.product_id = p.product_id
-    WHERE ds.platform_id = ?
-    GROUP BY
-        ds.store_id,
-        ds.city
-    ORDER BY excess_inventory_value DESC
-    LIMIT 15
-    """
-
-    question_5_result = fetch_data(
-        query,
-        [selected_platform_id],
-    )
-
-    question_5_result = apply_dashboard_filters(
-        question_5_result,
-    )
-
-    # CHART TYPE: HORIZONTAL BAR CHART
-    # Shows where the greatest potential excess-stock value sits.
-    draw_bar_chart(
-        question_5_result,
-        "store_id",
-        "excess_inventory_value",
-        "Working Capital Potentially Tied Up in Excess Inventory",
         horizontal=True,
         top_n=10,
     )
@@ -4785,40 +4377,8 @@ def render_zepto_logistics():
     # FIVE BUSINESS-QUESTION CHARTS
     # --------------------------------------------------------
 
-    # Question 1: What percentage of Zepto deliveries are delayed?
-    show_question(1, "What percentage of Zepto deliveries are delayed?")
-
-    query = """
-    SELECT ROUND(
-            SUM(CASE WHEN LOWER(l.delay_flag) IN ('yes', 'y') THEN 1 ELSE 0 END)
-            * 100.0 / NULLIF(COUNT(*), 0),
-            2
-        ) AS delayed_delivery_percent
-        FROM logistics l
-        JOIN orders o
-            ON l.order_id = o.order_id
-        WHERE o.platform_id = ?
-    """
-    question_1_result = fetch_data(
-        query,
-        [selected_platform_id],
-    )
-
-    question_1_result = apply_dashboard_filters(
-        question_1_result
-    )
-
-    # CHART TYPE: BAR CHART
-    draw_bar_chart(
-        question_1_result,
-        "city",
-        "delay_rate_percent",
-        "What percentage of Zepto deliveries are delayed?",
-        horizontal=True,
-    )
-
-    # Question 2: Which cities experience the highest delay rate?
-    show_question(2, "Which cities experience the highest delay rate?")
+    # Question 1: Which cities experience the highest delay rate?
+    show_question(1, "Which cities experience the highest delay rate?")
 
     query = """
     SELECT
@@ -4838,26 +4398,26 @@ def render_zepto_logistics():
         GROUP BY ds.city
         ORDER BY delay_rate_percent DESC
     """
-    question_2_result = fetch_data(
+    question_1_result = fetch_data(
         query,
         [selected_platform_id],
     )
 
-    question_2_result = apply_dashboard_filters(
-        question_2_result
+    question_1_result = apply_dashboard_filters(
+        question_1_result
     )
 
     # CHART TYPE: BAR CHART
     draw_bar_chart(
-        question_2_result,
+        question_1_result,
         "vehicle_type",
         "delay_rate_percent",
         "Which cities experience the highest delay rate?",
         horizontal=True,
     )
 
-    # Question 3: Which vehicle types perform best?
-    show_question(3, "Which vehicle types perform best?")
+    # Question 2: Which vehicle types perform best?
+    show_question(2, "Which vehicle types perform best?")
 
     query = """
     SELECT
@@ -4877,26 +4437,26 @@ def render_zepto_logistics():
         GROUP BY l.vehicle_type
         ORDER BY delay_rate_percent ASC, average_rating DESC
     """
-    question_3_result = fetch_data(
+    question_2_result = fetch_data(
         query,
         [selected_platform_id],
     )
 
-    question_3_result = apply_dashboard_filters(
-        question_3_result
+    question_2_result = apply_dashboard_filters(
+        question_2_result
     )
 
     # CHART TYPE: BAR CHART
     draw_bar_chart(
-        question_3_result,
+        question_2_result,
         "distance_band",
         "delay_rate_percent",
         "Which vehicle types perform best?",
         horizontal=False,
     )
 
-    # Question 4: Does longer delivery distance increase delays?
-    show_question(4, "Does longer delivery distance increase delays?")
+    # Question 3: Does longer delivery distance increase delays?
+    show_question(3, "Does longer delivery distance increase delays?")
 
     query = """
     SELECT
@@ -4926,78 +4486,23 @@ def render_zepto_logistics():
                 ELSE 4
             END
     """
-    question_4_result = fetch_data(
+    question_3_result = fetch_data(
         query,
         [selected_platform_id],
     )
 
-    question_4_result = apply_dashboard_filters(
-        question_4_result
+    question_3_result = apply_dashboard_filters(
+        question_3_result
     )
 
     # CHART TYPE: BAR CHART
     draw_bar_chart(
-        question_4_result,
+        question_3_result,
         "city",
         "average_rating",
         "Does longer delivery distance increase delays?",
         horizontal=True,
     )
-
-    # Question 5: How strongly are delivery delays associated with customer ratings?
-    show_question(5, "How strongly are delivery delays associated with customer ratings?")
-
-    query = """
-    SELECT
-            CASE
-                WHEN LOWER(l.delay_flag) IN ('yes', 'y') THEN 'Delayed'
-                ELSE 'On Time'
-            END AS delivery_status,
-            COUNT(*) AS deliveries,
-            ROUND(AVG(l.delivery_rating), 2) AS average_rating
-        FROM logistics l
-        JOIN orders o
-            ON l.order_id = o.order_id
-        WHERE o.platform_id = ?
-          AND l.delivery_rating IS NOT NULL
-        GROUP BY delivery_status
-        ORDER BY delivery_status
-    """
-    question_5_result = fetch_data(
-        query,
-        [selected_platform_id],
-    )
-
-    question_5_result = apply_dashboard_filters(
-        question_5_result
-    )
-
-    # CHART TYPE: BAR CHART FOR CITY + VEHICLE COMBINATIONS
-    logistics_chart = question_5_result.copy()
-
-    if (
-        not logistics_chart.empty
-        and "city" in logistics_chart.columns
-        and "vehicle_type" in logistics_chart.columns
-    ):
-        logistics_chart["city_vehicle"] = (
-            logistics_chart["city"].astype(str)
-            + " — "
-            + logistics_chart["vehicle_type"].astype(str)
-        )
-    elif not logistics_chart.empty:
-        logistics_chart["city_vehicle"] = (
-            logistics_chart.index.astype(str)
-        )
-
-    draw_bar_chart(
-        logistics_chart,
-        "city_vehicle",
-        "delay_rate_percent",
-        "How strongly are delivery delays associated with customer ratings?",
-        horizontal=True,
-    )
-
 
 def render_zepto_monthly_p_l():
 
