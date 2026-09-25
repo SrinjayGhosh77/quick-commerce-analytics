@@ -2596,94 +2596,6 @@ def render_zepto_store():
         horizontal=True,
     )
 
-    # Question 4: Which stores generate high orders with a relatively small footprint?
-    show_question(4, "Which stores generate high orders with a relatively small footprint?")
-
-    query = """
-    SELECT
-            ds.store_id,
-            COALESCE(ds.store_name_clean, ds.store_name) AS store_name,
-            ds.city,
-            ROUND(ds.sqft_area, 2) AS sqft_area,
-            COUNT(o.order_id) AS orders,
-            ROUND(
-                COUNT(o.order_id) * 1.0 / NULLIF(ds.sqft_area, 0),
-                4
-            ) AS orders_per_sqft
-        FROM dark_stores ds
-        LEFT JOIN orders o
-            ON ds.store_id = o.store_id
-           AND o.platform_id = ?
-        WHERE ds.platform_id = ?
-          AND ds.sqft_area IS NOT NULL
-        GROUP BY ds.store_id, store_name, ds.city, ds.sqft_area
-        ORDER BY orders_per_sqft DESC
-        LIMIT 15
-    """
-    question_4_result = fetch_data(
-        query,
-        [selected_platform_id] * 2,
-    )
-
-    question_4_result = apply_dashboard_filters(
-        question_4_result
-    )
-
-    # CHART TYPE: SCATTER CHART
-    draw_scatter_chart(
-        question_4_result,
-        "sqft_area",
-        "orders",
-        "Which stores generate high orders with a relatively small footprint?",
-    )
-
-    # Question 5: Which Zepto stores are the biggest operational opportunities?
-    show_question(5, "Which Zepto stores are the biggest operational opportunities?")
-
-    query = """
-    SELECT
-            ds.store_id,
-            COALESCE(ds.store_name_clean, ds.store_name) AS store_name,
-            ds.city,
-            ROUND(ds.sqft_area, 2) AS sqft_area,
-            COUNT(o.order_id) AS orders,
-            ROUND(SUM(COALESCE(o.order_value_inr, 0)), 2) AS revenue,
-            CASE
-                WHEN COUNT(o.order_id) = 0 THEN 'Immediate Attention'
-                WHEN COUNT(o.order_id) * 1.0 / NULLIF(ds.sqft_area, 0) < 0.50
-                    THEN 'Underutilized'
-                WHEN COUNT(o.order_id) * 1.0 / NULLIF(ds.sqft_area, 0) < 1.00
-                    THEN 'Optimization Opportunity'
-                ELSE 'Strong Performer'
-            END AS operational_status
-        FROM dark_stores ds
-        LEFT JOIN orders o
-            ON ds.store_id = o.store_id
-           AND o.platform_id = ?
-        WHERE ds.platform_id = ?
-        GROUP BY ds.store_id, store_name, ds.city, ds.sqft_area
-        ORDER BY orders ASC
-        LIMIT 20
-    """
-    question_5_result = fetch_data(
-        query,
-        [selected_platform_id] * 2,
-    )
-
-    question_5_result = apply_dashboard_filters(
-        question_5_result
-    )
-
-    # CHART TYPE: BAR CHART
-    draw_bar_chart(
-        question_5_result,
-        "store_name",
-        "orders_per_sqft",
-        "Which Zepto stores are the biggest operational opportunities?",
-        horizontal=True,
-    )
-
-
 def render_zepto_employee():
 
     # ========================================================
@@ -2801,42 +2713,8 @@ def render_zepto_employee():
     # FIVE BUSINESS-QUESTION CHARTS
     # --------------------------------------------------------
 
-    # Question 1: Which Zepto stores have the largest employee workforce?
-    show_question(1, "Which Zepto stores have the largest employee workforce?")
-
-    query = """
-    SELECT
-            ds.store_id,
-            ds.city,
-            COUNT(e.employee_id) AS employees
-        FROM dark_stores ds
-        LEFT JOIN employees e
-            ON ds.store_id = e.store_id
-        WHERE ds.platform_id = ?
-        GROUP BY ds.store_id, ds.city
-        ORDER BY employees DESC
-        LIMIT 15
-    """
-    question_1_result = fetch_data(
-        query,
-        [selected_platform_id],
-    )
-
-    question_1_result = apply_dashboard_filters(
-        question_1_result
-    )
-
-    # CHART TYPE: BAR CHART
-    draw_bar_chart(
-        question_1_result,
-        "store_name",
-        "employee_count",
-        "Which Zepto stores have the largest employee workforce?",
-        horizontal=True,
-    )
-
-    # Question 3: Which roles have the highest salary cost?
-    show_question(3, "Which roles have the highest salary cost?")
+    # Question 1: Which roles have the highest salary cost?
+    show_question(1, "Which roles have the highest salary cost?")
 
     query = """
     SELECT
@@ -2868,8 +2746,8 @@ def render_zepto_employee():
         horizontal=True,
     )
 
-    # Question 4: Which cities have the highest workforce cost?
-    show_question(4, "Which cities have the highest workforce cost?")
+    # Question 2: Which cities have the highest workforce cost?
+    show_question(2, "Which cities have the highest workforce cost?")
 
     query = """
     SELECT
@@ -2901,8 +2779,8 @@ def render_zepto_employee():
         horizontal=True,
     )
 
-    # Question 5: How does employee productivity vary across Zepto cities?
-    show_question(5, "How does employee productivity vary across Zepto cities?")
+    # Question 3: How does employee productivity vary across Zepto cities?
+    show_question(3, "How does employee productivity vary across Zepto cities?")
 
     query = """
     WITH city_employees AS (
@@ -3628,45 +3506,6 @@ def render_zepto_orders():
         color_column=color_column,
     )
 
-    # Question 4: Where should Zepto focus to improve?
-    show_question(4, "Where should Zepto focus to improve?")
-
-    query = """
-    SELECT
-            ds.city,
-            COUNT(o.order_id) AS total_orders,
-            SUM(CASE WHEN LOWER(o.order_status) = 'delivered' THEN 1 ELSE 0 END) AS completed_orders,
-            SUM(CASE WHEN LOWER(o.order_status) IN ('cancelled', 'returned') THEN 1 ELSE 0 END) AS failed_orders,
-            ROUND(
-                SUM(CASE WHEN LOWER(o.order_status) = 'delivered' THEN 1 ELSE 0 END)
-                * 100.0 / NULLIF(COUNT(o.order_id), 0),
-                2
-            ) AS completion_rate_percent
-        FROM orders o
-        JOIN dark_stores ds
-            ON o.store_id = ds.store_id
-        WHERE o.platform_id = ?
-        GROUP BY ds.city
-        ORDER BY completion_rate_percent ASC, total_orders DESC
-    """
-    question_4_result = fetch_data(
-        query,
-        [selected_platform_id],
-    )
-
-    question_4_result = apply_dashboard_filters(
-        question_4_result
-    )
-
-    # CHART TYPE: DONUT / PIE CHART
-    draw_pie_chart(
-        question_4_result,
-        "payment_mode",
-        "order_share_percent",
-        "Where should Zepto focus to improve?",
-    )
-
-
 def render_zepto_order_items():
 
     # ========================================================
@@ -3789,44 +3628,8 @@ def render_zepto_order_items():
     # FIVE BUSINESS-QUESTION CHARTS
     # --------------------------------------------------------
 
-    # Question 1: Which products are purchased most frequently?
-    show_question(1, "Which products are purchased most frequently?")
-
-    query = """
-    SELECT
-            p.product_id,
-            p.product_name,
-            SUM(COALESCE(oi.quantity, 0)) AS units_sold
-        FROM order_items oi
-        JOIN orders o
-            ON oi.order_id = o.order_id
-        JOIN products p
-            ON oi.product_id = p.product_id
-        WHERE o.platform_id = ?
-        GROUP BY p.product_id, p.product_name
-        ORDER BY units_sold DESC
-        LIMIT 15
-    """
-    question_1_result = fetch_data(
-        query,
-        [selected_platform_id],
-    )
-
-    question_1_result = apply_dashboard_filters(
-        question_1_result
-    )
-
-    # CHART TYPE: BAR CHART
-    draw_bar_chart(
-        question_1_result,
-        "product_name",
-        "units_sold",
-        "Which products are purchased most frequently?",
-        horizontal=True,
-    )
-
-    # Question 2: Which categories generate the most units?
-    show_question(2, "Which categories generate the most units?")
+    # Question 1: Which categories generate the most units?
+    show_question(1, "Which categories generate the most units?")
 
     query = """
     SELECT
@@ -3859,8 +3662,8 @@ def render_zepto_order_items():
         horizontal=True,
     )
 
-    # Question 3: Which products contribute the most item revenue?
-    show_question(3, "Which products contribute the most item revenue?")
+    # Question 2: Which products contribute the most item revenue?
+    show_question(2, "Which products contribute the most item revenue?")
 
     query = """
     SELECT
@@ -3894,8 +3697,8 @@ def render_zepto_order_items():
         "Which products contribute the most item revenue?",
     )
 
-    # Question 4: Which products have high quantity but low value?
-    show_question(4, "Which products have high quantity but low value?")
+    # Question 3: Which products have high quantity but low value?
+    show_question(3, "Which products have high quantity but low value?")
 
     query = """
     SELECT
@@ -3938,53 +3741,6 @@ def render_zepto_order_items():
         horizontal=True,
         top_n=10,
     )
-
-    # Question 5: Which products are critical to Zepto's customer basket?
-    show_question(5, "Which products are critical to Zepto's customer basket?")
-
-    query = """
-    WITH product_sales AS (
-            SELECT
-                p.product_id,
-                p.product_name,
-                COUNT(DISTINCT oi.order_id) AS orders_containing_product,
-                SUM(COALESCE(oi.quantity, 0)) AS units_sold,
-                SUM(COALESCE(oi.line_total_inr, 0)) AS revenue
-            FROM order_items oi
-            JOIN orders o
-                ON oi.order_id = o.order_id
-            JOIN products p
-                ON oi.product_id = p.product_id
-            WHERE o.platform_id = ?
-            GROUP BY p.product_id, p.product_name
-        )
-        SELECT
-            product_id,
-            product_name,
-            orders_containing_product,
-            units_sold,
-            ROUND(revenue, 2) AS revenue
-        FROM product_sales
-        ORDER BY orders_containing_product DESC, revenue DESC
-        LIMIT 15
-    """
-    question_5_result = fetch_data(
-        query,
-        [selected_platform_id],
-    )
-
-    question_5_result = apply_dashboard_filters(
-        question_5_result
-    )
-
-    # CHART TYPE: SCATTER CHART
-    draw_scatter_chart(
-        question_5_result,
-        "units_sold",
-        "item_value",
-        "Which products are critical to Zepto's customer basket?",
-    )
-
 
 def render_zepto_inventory():
 
@@ -4607,46 +4363,8 @@ def render_zepto_monthly_p_l():
     # FIVE BUSINESS-QUESTION CHARTS
     # --------------------------------------------------------
 
-    # Question 1: Is Zepto profitable?
-    show_question(1, "Is Zepto profitable?")
-
-    query = """
-    SELECT
-            ROUND(SUM(revenue_inr), 2) AS revenue,
-            ROUND(SUM(profit_inr), 2) AS profit,
-            ROUND(
-                SUM(profit_inr) * 100.0
-                / NULLIF(SUM(revenue_inr), 0),
-                2
-            ) AS profit_margin_percent,
-            CASE
-                WHEN SUM(profit_inr) > 0 THEN 'Profitable'
-                WHEN SUM(profit_inr) < 0 THEN 'Loss Making'
-                ELSE 'Break Even'
-            END AS profitability_status
-        FROM pnl_monthly_safe
-        WHERE platform_id = ?
-    """
-    question_1_result = fetch_data(
-        query,
-        [selected_platform_id],
-    )
-
-    question_1_result = apply_dashboard_filters(
-        question_1_result
-    )
-
-    # CHART TYPE: BAR CHART
-    draw_bar_chart(
-        question_1_result,
-        "city",
-        "revenue",
-        "Is Zepto profitable?",
-        horizontal=True,
-    )
-
-    # Question 2: Which cities generate the highest revenue?
-    show_question(2, "Which cities generate the highest revenue?")
+    # Question 1: Which cities generate the highest revenue?
+    show_question(1, "Which cities generate the highest revenue?")
 
     query = """
     SELECT
@@ -4675,8 +4393,8 @@ def render_zepto_monthly_p_l():
         horizontal=True,
     )
 
-    # Question 3: Which cities generate revenue but remain unprofitable?
-    show_question(3, "Which cities generate revenue but remain unprofitable?")
+    # Question 2: Which cities generate revenue but remain unprofitable?
+    show_question(2, "Which cities generate revenue but remain unprofitable?")
 
     query = """
     SELECT
@@ -4712,36 +4430,8 @@ def render_zepto_monthly_p_l():
         horizontal=True,
     )
 
-    # Question 4: Which cost category hurts Zepto's margins the most?
-    show_question(4, "Which cost category hurts Zepto's margins the most?")
-
-    query = """
-    SELECT
-            ROUND(SUM(cogs_inr), 2) AS cogs,
-            ROUND(SUM(delivery_cost_inr), 2) AS delivery_cost,
-            ROUND(SUM(marketing_spend_inr), 2) AS marketing_spend,
-            ROUND(SUM(employee_cost_inr), 2) AS employee_cost,
-            ROUND(SUM(other_opex_inr), 2) AS other_opex
-        FROM pnl_monthly_safe
-        WHERE platform_id = ?
-    """
-    question_4_result = fetch_data(
-        query,
-        [selected_platform_id],
-    )
-
-    question_4_result = apply_dashboard_filters(
-        question_4_result
-    )
-
-    # CHART TYPE: BAR CHART FOR COST CATEGORIES
-    draw_cost_chart(
-        question_4_result,
-        "Which cost category hurts Zepto's margins the most?",
-    )
-
-    # Question 5: How is Zepto's profit changing month by month?
-    show_question(5, "How is Zepto's profit changing month by month?")
+    # Question 3: How is Zepto's profit changing month by month?
+    show_question(3, "How is Zepto's profit changing month by month?")
 
     query = """
     SELECT
@@ -5001,136 +4691,6 @@ def render_blinkit_overview():
         horizontal=True,
     )
 
-    # Question 4: Which operational area is causing the largest performance gap?
-    show_question(4, "Which operational area is causing the largest performance gap?")
-
-    query = """
-    WITH platform_operations AS (
-            SELECT
-                'Cancellation Rate' AS operational_area,
-                ROUND(
-                    SUM(CASE WHEN order_status = 'Cancelled' THEN 1 ELSE 0 END) * 100.0 /
-                    NULLIF(COUNT(*), 0),
-                    2
-                ) AS issue_rate
-            FROM orders
-            WHERE platform_id = ?
-
-            UNION ALL
-
-            SELECT
-                'Return Rate' AS operational_area,
-                ROUND(
-                    SUM(CASE WHEN order_status = 'Returned' THEN 1 ELSE 0 END) * 100.0 /
-                    NULLIF(COUNT(*), 0),
-                    2
-                ) AS issue_rate
-            FROM orders
-            WHERE platform_id = ?
-
-            UNION ALL
-
-            SELECT
-                'Delivery Delay Rate' AS operational_area,
-                ROUND(
-                    SUM(CASE WHEN l.delay_flag = 'Yes' THEN 1 ELSE 0 END) * 100.0 /
-                    NULLIF(COUNT(*), 0),
-                    2
-                ) AS issue_rate
-            FROM logistics l
-            JOIN orders o ON l.order_id = o.order_id
-            WHERE o.platform_id = ?
-        )
-        SELECT operational_area, issue_rate
-        FROM platform_operations
-        ORDER BY issue_rate DESC
-    """
-    question_4_result = fetch_data(
-        query,
-        [selected_platform_id] * 3,
-    )
-
-    question_4_result = apply_dashboard_filters(
-        question_4_result
-    )
-
-    # CHART TYPE: LINE CHART
-    color_column = None
-
-    draw_line_chart(
-        question_4_result,
-        "month",
-        "discount_rate_percent",
-        "Which operational area is causing the largest performance gap?",
-        color_column=color_column,
-    )
-
-    # Question 5: What is the single biggest improvement opportunity for Blinkit?
-    show_question(5, "What is the single biggest improvement opportunity for Blinkit?")
-
-    query = """
-    WITH metrics AS (
-            SELECT
-                'Cancellation Rate' AS opportunity,
-                ROUND(
-                    SUM(CASE WHEN order_status = 'Cancelled' THEN 1 ELSE 0 END) * 100.0 /
-                    NULLIF(COUNT(*), 0),
-                    2
-                ) AS current_value
-            FROM orders
-            WHERE platform_id = ?
-
-            UNION ALL
-
-            SELECT
-                'Return Rate',
-                ROUND(
-                    SUM(CASE WHEN order_status = 'Returned' THEN 1 ELSE 0 END) * 100.0 /
-                    NULLIF(COUNT(*), 0),
-                    2
-                )
-            FROM orders
-            WHERE platform_id = ?
-
-            UNION ALL
-
-            SELECT
-                'Delivery Delay Rate',
-                ROUND(
-                    SUM(CASE WHEN l.delay_flag = 'Yes' THEN 1 ELSE 0 END) * 100.0 /
-                    NULLIF(COUNT(*), 0),
-                    2
-                )
-            FROM logistics l
-            JOIN orders o ON l.order_id = o.order_id
-            WHERE o.platform_id = ?
-        )
-        SELECT opportunity, current_value
-        FROM metrics
-        ORDER BY current_value DESC
-        LIMIT 1
-    """
-    question_5_result = fetch_data(
-        query,
-        [selected_platform_id] * 3,
-    )
-
-    question_5_result = apply_dashboard_filters(
-        question_5_result
-    )
-
-    # CHART TYPE: LINE CHART
-    color_column = None
-
-    draw_line_chart(
-        question_5_result,
-        "month",
-        "profit_margin_percent",
-        "What is the single biggest improvement opportunity for Blinkit?",
-        color_column=color_column,
-    )
-
-
 def render_blinkit_store():
 
     # ========================================================
@@ -5372,117 +4932,6 @@ def render_blinkit_store():
         horizontal=True,
     )
 
-    # Question 4: Which Blinkit stores are large but underproductive?
-    show_question(4, "Which Blinkit stores are large but underproductive?")
-
-    query = """
-    WITH store_metrics AS (
-            SELECT
-                ds.store_id,
-                ds.store_name_clean AS store_name,
-                ds.city,
-                ds.sqft_area,
-                COUNT(o.order_id) AS orders,
-                COUNT(o.order_id) * 1.0 / NULLIF(ds.sqft_area, 0) AS orders_per_sqft
-            FROM dark_stores ds
-            LEFT JOIN orders o
-                ON ds.store_id = o.store_id
-                AND o.platform_id = ?
-            WHERE ds.platform_id = ?
-            GROUP BY ds.store_id, ds.store_name_clean, ds.city, ds.sqft_area
-        ),
-        benchmarks AS (
-            SELECT
-                AVG(sqft_area) AS avg_sqft,
-                AVG(orders_per_sqft) AS avg_productivity
-            FROM store_metrics
-        )
-        SELECT
-            store_id,
-            store_name,
-            city,
-            sqft_area,
-            orders,
-            ROUND(orders_per_sqft, 4) AS orders_per_sqft
-        FROM store_metrics, benchmarks
-        WHERE sqft_area > avg_sqft
-          AND orders_per_sqft < avg_productivity
-        ORDER BY sqft_area DESC
-        LIMIT 15
-    """
-    question_4_result = fetch_data(
-        query,
-        [selected_platform_id] * 2,
-    )
-
-    question_4_result = apply_dashboard_filters(
-        question_4_result
-    )
-
-    # CHART TYPE: SCATTER CHART
-    draw_scatter_chart(
-        question_4_result,
-        "sqft_area",
-        "orders",
-        "Which Blinkit stores are large but underproductive?",
-    )
-
-    # Question 5: Which Blinkit store is the biggest operational opportunity?
-    show_question(5, "Which Blinkit store is the biggest operational opportunity?")
-
-    query = """
-    WITH store_metrics AS (
-            SELECT
-                ds.store_id,
-                ds.store_name_clean AS store_name,
-                ds.city,
-                ds.sqft_area,
-                COUNT(o.order_id) AS orders,
-                COUNT(o.order_id) * 1.0 / NULLIF(ds.sqft_area, 0) AS orders_per_sqft
-            FROM dark_stores ds
-            LEFT JOIN orders o
-                ON ds.store_id = o.store_id
-                AND o.platform_id = ?
-            WHERE ds.platform_id = ?
-            GROUP BY ds.store_id, ds.store_name_clean, ds.city, ds.sqft_area
-        ),
-        ranked AS (
-            SELECT *,
-                   ROW_NUMBER() OVER (
-                       ORDER BY orders_per_sqft ASC, sqft_area DESC
-                   ) AS rank_position
-            FROM store_metrics
-            WHERE orders_per_sqft IS NOT NULL
-        )
-        SELECT
-            store_id,
-            store_name,
-            city,
-            sqft_area,
-            orders,
-            ROUND(orders_per_sqft, 4) AS orders_per_sqft
-        FROM ranked
-        WHERE rank_position = 1
-    """
-    question_5_result = fetch_data(
-        query,
-        [selected_platform_id] * 2,
-    )
-
-    question_5_result = apply_dashboard_filters(
-        question_5_result
-    )
-
-    # CHART TYPE: BAR CHART
-    draw_bar_chart(
-        question_5_result,
-        "store_name",
-        "orders_per_sqft",
-        "Which Blinkit store is the biggest operational opportunity?",
-        horizontal=True,
-    )
-
-
 def render_blinkit_employee():
 
     # ========================================================
@@ -5722,78 +5171,6 @@ def render_blinkit_employee():
         horizontal=True,
     )
 
-    # Question 4: Which city has the highest workforce expense?
-    show_question(4, "Which city has the highest workforce expense?")
-
-    query = """
-    SELECT
-            ds.city,
-            COUNT(e.employee_id) AS employee_count,
-            ROUND(COALESCE(SUM(e.monthly_salary_inr), 0), 2) AS workforce_expense
-        FROM employees e
-        JOIN dark_stores ds ON e.store_id = ds.store_id
-        WHERE ds.platform_id = ?
-        GROUP BY ds.city
-        ORDER BY workforce_expense DESC
-    """
-    question_4_result = fetch_data(
-        query,
-        [selected_platform_id],
-    )
-
-    question_4_result = apply_dashboard_filters(
-        question_4_result
-    )
-
-    # CHART TYPE: BAR CHART
-    draw_bar_chart(
-        question_4_result,
-        "city",
-        "monthly_employee_cost",
-        "Which city has the highest workforce expense?",
-        horizontal=True,
-    )
-
-    # Question 5: How does employee productivity vary by city?
-    show_question(5, "How does employee productivity vary by city?")
-
-    query = """
-    SELECT
-            ds.city,
-            COUNT(DISTINCT e.employee_id) AS employees,
-            COUNT(DISTINCT o.order_id) AS orders,
-            ROUND(
-                COUNT(DISTINCT o.order_id) * 1.0 /
-                NULLIF(COUNT(DISTINCT e.employee_id), 0),
-                2
-            ) AS orders_per_employee
-        FROM dark_stores ds
-        LEFT JOIN employees e ON ds.store_id = e.store_id
-        LEFT JOIN orders o
-            ON ds.store_id = o.store_id
-            AND o.platform_id = ?
-        WHERE ds.platform_id = ?
-        GROUP BY ds.city
-        ORDER BY orders_per_employee DESC
-    """
-    question_5_result = fetch_data(
-        query,
-        [selected_platform_id] * 2,
-    )
-
-    question_5_result = apply_dashboard_filters(
-        question_5_result
-    )
-
-    # CHART TYPE: SCATTER CHART
-    draw_scatter_chart(
-        question_5_result,
-        "employees",
-        "orders",
-        "How does employee productivity vary by city?",
-    )
-
-
 def render_blinkit_product():
 
     # ========================================================
@@ -6001,90 +5378,6 @@ def render_blinkit_product():
         "Which brands dominate Blinkit's assortment?",
         horizontal=True,
     )
-
-    # Question 4: Which products should Blinkit promote?
-    show_question(4, "Which products should Blinkit promote?")
-
-    query = """
-    SELECT
-            p.product_id,
-            p.product_name,
-            p.category,
-            SUM(COALESCE(oi.quantity, 0)) AS units_sold,
-            ROUND(COALESCE(SUM(oi.line_total_inr), 0), 2) AS item_revenue
-        FROM order_items oi
-        JOIN products p ON oi.product_id = p.product_id
-        JOIN orders o ON oi.order_id = o.order_id
-        WHERE o.platform_id = ?
-        GROUP BY p.product_id, p.product_name, p.category
-        ORDER BY units_sold DESC, item_revenue DESC
-        LIMIT 15
-    """
-    question_4_result = fetch_data(
-        query,
-        [selected_platform_id],
-    )
-
-    question_4_result = apply_dashboard_filters(
-        question_4_result
-    )
-
-    # CHART TYPE: BAR CHART
-    draw_bar_chart(
-        question_4_result,
-        "brand",
-        "product_count",
-        "Which products should Blinkit promote?",
-        horizontal=True,
-    )
-
-    # Question 5: Which products need pricing review?
-    show_question(5, "Which products need pricing review?")
-
-    query = """
-    SELECT
-            p.product_id,
-            p.product_name,
-            p.category,
-            ROUND(p.mrp, 2) AS mrp,
-            ROUND(p.selling_price, 2) AS selling_price,
-            ROUND(p.discount_percent, 2) AS discount_percent,
-            p.price_status,
-            COALESCE(SUM(oi.quantity), 0) AS units_sold
-        FROM products p
-        LEFT JOIN order_items oi ON p.product_id = oi.product_id
-        LEFT JOIN orders o
-            ON oi.order_id = o.order_id
-            AND o.platform_id = ?
-        WHERE p.price_status = 'Outlier'
-           OR p.discount_percent > (
-                SELECT AVG(discount_percent)
-                FROM products
-           )
-        GROUP BY
-            p.product_id, p.product_name, p.category,
-            p.mrp, p.selling_price, p.discount_percent, p.price_status
-        ORDER BY p.price_status = 'Outlier' DESC, p.discount_percent DESC
-        LIMIT 15
-    """
-    question_5_result = fetch_data(
-        query,
-        [selected_platform_id],
-    )
-
-    question_5_result = apply_dashboard_filters(
-        question_5_result
-    )
-
-    # CHART TYPE: BAR CHART
-    draw_bar_chart(
-        question_5_result,
-        "category",
-        "product_count",
-        "Which products need pricing review?",
-        horizontal=True,
-    )
-
 
 def render_blinkit_customer():
 
@@ -6361,111 +5654,6 @@ def render_blinkit_customer():
         horizontal=True,
     )
 
-    # Question 4: Which cities have large customer bases but weak orders?
-    show_question(4, "Which cities have large customer bases but weak orders?")
-
-    query = """
-    WITH customer_city AS (
-            SELECT
-                city,
-                COUNT(DISTINCT customer_id) AS customers
-            FROM customers
-            WHERE LOWER(TRIM(signup_platform)) = 'blinkit'
-            GROUP BY city
-        ),
-        order_city AS (
-            SELECT
-                ds.city,
-                COUNT(o.order_id) AS orders
-            FROM orders o
-            JOIN dark_stores ds ON o.store_id = ds.store_id
-            WHERE o.platform_id = ?
-            GROUP BY ds.city
-        )
-        SELECT
-            c.city,
-            c.customers,
-            COALESCE(o.orders, 0) AS orders,
-            ROUND(
-                COALESCE(o.orders, 0) * 1.0 / NULLIF(c.customers, 0),
-                2
-            ) AS orders_per_customer
-        FROM customer_city c
-        LEFT JOIN order_city o ON c.city = o.city
-        ORDER BY orders_per_customer ASC, c.customers DESC
-    """
-    question_4_result = fetch_data(
-        query,
-        [selected_platform_id],
-    )
-
-    question_4_result = apply_dashboard_filters(
-        question_4_result
-    )
-
-    # CHART TYPE: SCATTER CHART
-    draw_scatter_chart(
-        question_4_result,
-        "customers",
-        "orders",
-        "High Customer Base vs Weak Orders",
-    )
-
-    # Question 5: Is Blinkit's customer growth converting into order growth?
-    show_question(5, "Is Blinkit's customer growth converting into order growth?")
-
-    query = """
-    WITH monthly_customers AS (
-            SELECT
-                SUBSTR(signup_date, 1, 7) AS month,
-                COUNT(DISTINCT customer_id) AS new_customers
-            FROM customers
-            WHERE LOWER(TRIM(signup_platform)) = 'blinkit'
-            GROUP BY SUBSTR(signup_date, 1, 7)
-        ),
-        monthly_orders AS (
-            SELECT
-                SUBSTR(order_datetime, 1, 7) AS month,
-                COUNT(*) AS orders
-            FROM orders
-            WHERE platform_id = ?
-            GROUP BY SUBSTR(order_datetime, 1, 7)
-        )
-        SELECT
-            c.month,
-            c.new_customers,
-            COALESCE(o.orders, 0) AS orders
-        FROM monthly_customers c
-        LEFT JOIN monthly_orders o ON c.month = o.month
-
-        UNION ALL
-
-        SELECT
-            o.month,
-            0 AS new_customers,
-            o.orders
-        FROM monthly_orders o
-        WHERE o.month NOT IN (SELECT month FROM monthly_customers)
-        ORDER BY month
-    """
-    question_5_result = fetch_data(
-        query,
-        [selected_platform_id],
-    )
-
-    question_5_result = apply_dashboard_filters(
-        question_5_result
-    )
-
-    # CHART TYPE: SCATTER CHART
-    draw_scatter_chart(
-        question_5_result,
-        "customers",
-        "orders",
-        "Is Blinkit's customer growth converting into order growth?",
-    )
-
-
 def render_blinkit_orders():
 
     # ========================================================
@@ -6673,80 +5861,6 @@ def render_blinkit_orders():
         "Which cities have the most returned orders?",
         horizontal=True,
     )
-
-    # Question 4: How is Blinkit's AOV changing over time?
-    show_question(4, "How is Blinkit's AOV changing over time?")
-
-    query = """
-    SELECT
-            SUBSTR(order_datetime, 1, 7) AS month,
-            COUNT(*) AS orders,
-            ROUND(COALESCE(AVG(order_value_inr), 0), 2) AS aov
-        FROM orders
-        WHERE platform_id = ?
-        GROUP BY SUBSTR(order_datetime, 1, 7)
-        ORDER BY month
-    """
-    question_4_result = fetch_data(
-        query,
-        [selected_platform_id],
-    )
-
-    question_4_result = apply_dashboard_filters(
-        question_4_result
-    )
-
-    # CHART TYPE: LINE CHART
-    color_column = None
-
-    draw_line_chart(
-        question_4_result,
-        "month",
-        "aov",
-        "How is Blinkit's AOV changing over time?",
-        color_column=color_column,
-    )
-
-    # Question 5: Which cities need operational intervention?
-    show_question(5, "Which cities need operational intervention?")
-
-    query = """
-    SELECT
-            ds.city,
-            COUNT(*) AS orders,
-            ROUND(
-                SUM(CASE WHEN o.order_status = 'Cancelled' THEN 1 ELSE 0 END) * 100.0 /
-                NULLIF(COUNT(*), 0),
-                2
-            ) AS cancellation_rate,
-            ROUND(
-                SUM(CASE WHEN o.order_status = 'Returned' THEN 1 ELSE 0 END) * 100.0 /
-                NULLIF(COUNT(*), 0),
-                2
-            ) AS return_rate
-        FROM orders o
-        JOIN dark_stores ds ON o.store_id = ds.store_id
-        WHERE o.platform_id = ?
-        GROUP BY ds.city
-        ORDER BY cancellation_rate DESC, return_rate DESC
-    """
-    question_5_result = fetch_data(
-        query,
-        [selected_platform_id],
-    )
-
-    question_5_result = apply_dashboard_filters(
-        question_5_result
-    )
-
-    # CHART TYPE: DONUT / PIE CHART
-    draw_pie_chart(
-        question_5_result,
-        "payment_mode",
-        "order_share_percent",
-        "Which cities need operational intervention?",
-    )
-
 
 def render_blinkit_order_items():
 
@@ -6964,42 +6078,6 @@ def render_blinkit_order_items():
         "item_value",
         "Which products generate the most item revenue?",
     )
-
-    # Question 4: Which products are strategically critical to Blinkit's assortment?
-    show_question(4, "Which products are strategically critical to Blinkit's assortment?")
-
-    query = """
-    SELECT
-            p.product_id,
-            p.product_name,
-            p.category,
-            SUM(COALESCE(oi.quantity, 0)) AS units_sold,
-            ROUND(COALESCE(SUM(oi.line_total_inr), 0), 2) AS item_revenue
-        FROM order_items oi
-        JOIN orders o ON oi.order_id = o.order_id
-        JOIN products p ON oi.product_id = p.product_id
-        WHERE o.platform_id = ?
-        GROUP BY p.product_id, p.product_name, p.category
-        ORDER BY item_revenue DESC, units_sold DESC
-        LIMIT 15
-    """
-    question_5_result = fetch_data(
-        query,
-        [selected_platform_id],
-    )
-
-    question_5_result = apply_dashboard_filters(
-        question_5_result
-    )
-
-    # CHART TYPE: SCATTER CHART
-    draw_scatter_chart(
-        question_5_result,
-        "units_sold",
-        "item_value",
-        "Which products are strategically critical to Blinkit's assortment?",
-    )
-
 
 def render_blinkit_inventory():
 
@@ -7226,105 +6304,6 @@ def render_blinkit_inventory():
         ["total_stock", "average_reorder_level"],
         "Total Stock vs Reorder Level — Overstocked Products",
     )
-
-    # Question 4: Which products are close to expiry?
-    show_question(4, "Which products are close to expiry?")
-
-    query = """
-    SELECT
-            i.product_id,
-            p.product_name,
-            p.category,
-            ds.city,
-            i.stock_units,
-            i.last_restock_date,
-            i.expiry_date,
-            CAST(
-                julianday(i.expiry_date) - julianday(i.last_restock_date)
-                AS INTEGER
-            ) AS shelf_life_days
-        FROM inventory i
-        JOIN dark_stores ds ON i.store_id = ds.store_id
-        JOIN products p ON i.product_id = p.product_id
-        WHERE ds.platform_id = ?
-          AND i.expiry_date IS NOT NULL
-        ORDER BY shelf_life_days ASC, i.stock_units DESC
-        LIMIT 15
-    """
-    question_4_result = fetch_data(
-        query,
-        [selected_platform_id],
-    )
-
-    question_4_result = apply_dashboard_filters(
-        question_4_result
-    )
-
-    # CHART TYPE: BAR CHART
-    draw_bar_chart(
-        question_4_result,
-        "product_name",
-        "stock_units",
-        "Which products are close to expiry?",
-        horizontal=True,
-    )
-
-    # Question 5: How can Blinkit reduce stockouts without increasing excess stock?
-    show_question(5, "How can Blinkit reduce stockouts without increasing excess stock?")
-
-    query = """
-    WITH stock_metrics AS (
-            SELECT
-                p.product_id,
-                p.product_name,
-                p.category,
-                SUM(COALESCE(i.stock_units, 0)) AS stock_units,
-                SUM(COALESCE(i.reorder_level, 0)) AS reorder_units,
-                SUM(
-                    CASE
-                        WHEN COALESCE(i.stock_units, 0) <= COALESCE(i.reorder_level, 0)
-                        THEN 1 ELSE 0
-                    END
-                ) AS low_stock_locations
-            FROM inventory i
-            JOIN dark_stores ds ON i.store_id = ds.store_id
-            JOIN products p ON i.product_id = p.product_id
-            WHERE ds.platform_id = ?
-            GROUP BY p.product_id, p.product_name, p.category
-        )
-        SELECT
-            product_id,
-            product_name,
-            category,
-            stock_units,
-            reorder_units,
-            low_stock_locations,
-            ROUND(
-                stock_units * 1.0 / NULLIF(reorder_units, 0),
-                2
-            ) AS stock_to_reorder_ratio
-        FROM stock_metrics
-        WHERE low_stock_locations > 0
-        ORDER BY low_stock_locations DESC, stock_to_reorder_ratio ASC
-        LIMIT 15
-    """
-    question_5_result = fetch_data(
-        query,
-        [selected_platform_id],
-    )
-
-    question_5_result = apply_dashboard_filters(
-        question_5_result
-    )
-
-    # CHART TYPE: BAR CHART
-    draw_metric_comparison(
-        question_5_result,
-        "product_name",
-        ["stock_units", "reorder_units"],
-        "Stock vs Reorder Units — Reduce Stockouts",
-    )
-
 
 def render_blinkit_logistics():
 
@@ -8210,100 +7189,6 @@ def render_swiggy_instamart_overview():
         horizontal=True,
     )
 
-    # Question 4: How important are discounts to order generation?
-    show_question(4, "How important are discounts to order generation?")
-
-    query = """
-    SELECT
-            SUBSTR(order_datetime, 1, 7) AS month,
-            COUNT(*) AS orders,
-            ROUND(SUM(COALESCE(discount_inr, 0)), 2) AS total_discount,
-            ROUND(SUM(COALESCE(order_value_inr, 0)), 2) AS total_order_value,
-            ROUND(
-                SUM(COALESCE(discount_inr, 0)) * 100.0
-                / NULLIF(SUM(COALESCE(order_value_inr, 0)), 0),
-                2
-            ) AS discount_rate_percent
-        FROM orders
-        WHERE platform_id = ?
-        GROUP BY SUBSTR(order_datetime, 1, 7)
-        ORDER BY month
-    """
-    question_4_result = fetch_data(
-        query,
-        [selected_platform_id],
-    )
-
-    question_4_result = apply_dashboard_filters(
-        question_4_result
-    )
-
-    # CHART TYPE: LINE CHART
-    color_column = None
-
-    draw_line_chart(
-        question_4_result,
-        "month",
-        "discount_rate_percent",
-        "How important are discounts to order generation?",
-        color_column=color_column,
-    )
-
-    # Question 5: What is Instamart's largest business opportunity?
-    show_question(5, "What is Instamart's largest business opportunity?")
-
-    query = """
-    WITH city_performance AS (
-            SELECT
-                city,
-                SUM(revenue_inr) AS revenue,
-                SUM(profit_inr) AS profit
-            FROM pnl_monthly_safe
-            WHERE platform_id = ?
-            GROUP BY city
-        )
-        SELECT
-            city,
-            ROUND(revenue, 2) AS revenue,
-            ROUND(profit, 2) AS profit,
-            ROUND(
-                profit * 100.0 / NULLIF(revenue, 0),
-                2
-            ) AS profit_margin_percent,
-            CASE
-                WHEN profit < 0 THEN 'High Priority: Loss Making'
-                WHEN profit * 100.0 / NULLIF(revenue, 0) < 10
-                    THEN 'High Priority: Low Margin'
-                ELSE 'Stable'
-            END AS opportunity_status
-        FROM city_performance
-        ORDER BY
-            CASE WHEN profit < 0 THEN 0 ELSE 1 END,
-            profit_margin_percent ASC,
-            revenue DESC
-        LIMIT 10
-    """
-    question_5_result = fetch_data(
-        query,
-        [selected_platform_id],
-    )
-
-    question_5_result = apply_dashboard_filters(
-        question_5_result
-    )
-
-    # CHART TYPE: LINE CHART
-    color_column = None
-
-    draw_line_chart(
-        question_5_result,
-        "month",
-        "profit_margin_percent",
-        "What is Instamart's largest business opportunity?",
-        color_column=color_column,
-    )
-
-
 def render_swiggy_instamart_store():
 
     # ========================================================
@@ -8538,101 +7423,6 @@ def render_swiggy_instamart_store():
         "Which cities require more stores?",
         horizontal=True,
     )
-
-    # Question 4: Which stores are underutilized?
-    show_question(4, "Which stores are underutilized?")
-
-    query = """
-    SELECT
-            ds.store_id,
-            COALESCE(ds.store_name_clean, ds.store_name) AS store_name,
-            ds.city,
-            ROUND(ds.sqft_area, 2) AS sqft_area,
-            COUNT(o.order_id) AS orders,
-            ROUND(
-                COUNT(o.order_id) * 1.0
-                / NULLIF(ds.sqft_area, 0),
-                4
-            ) AS orders_per_sqft
-        FROM dark_stores ds
-        LEFT JOIN orders o
-            ON ds.store_id = o.store_id
-           AND o.platform_id = ?
-        WHERE ds.platform_id = ?
-          AND ds.sqft_area IS NOT NULL
-        GROUP BY ds.store_id, store_name, ds.city, ds.sqft_area
-        ORDER BY orders_per_sqft ASC
-        LIMIT 15
-    """
-    question_4_result = fetch_data(
-        query,
-        [selected_platform_id] * 2,
-    )
-
-    question_4_result = apply_dashboard_filters(
-        question_4_result
-    )
-
-    # CHART TYPE: SCATTER CHART
-    draw_scatter_chart(
-        question_4_result,
-        "sqft_area",
-        "orders",
-        "Which stores are underutilized?",
-    )
-
-    # Question 5: Which dark store is the largest source of inefficiency?
-    show_question(5, "Which dark store is the largest source of inefficiency?")
-
-    query = """
-    SELECT
-            ds.store_id,
-            COALESCE(ds.store_name_clean, ds.store_name) AS store_name,
-            ds.city,
-            ROUND(ds.sqft_area, 2) AS sqft_area,
-            COUNT(o.order_id) AS orders,
-            ROUND(
-                COUNT(o.order_id) * 1.0
-                / NULLIF(ds.sqft_area, 0),
-                4
-            ) AS orders_per_sqft,
-            CASE
-                WHEN COUNT(o.order_id) = 0 THEN 'Immediate Attention'
-                WHEN COUNT(o.order_id) * 1.0
-                     / NULLIF(ds.sqft_area, 0) < 0.50
-                    THEN 'High Inefficiency'
-                WHEN COUNT(o.order_id) * 1.0
-                     / NULLIF(ds.sqft_area, 0) < 1.00
-                    THEN 'Needs Optimization'
-                ELSE 'Normal'
-            END AS efficiency_status
-        FROM dark_stores ds
-        LEFT JOIN orders o
-            ON ds.store_id = o.store_id
-           AND o.platform_id = ?
-        WHERE ds.platform_id = ?
-        GROUP BY ds.store_id, store_name, ds.city, ds.sqft_area
-        ORDER BY orders_per_sqft ASC, sqft_area DESC
-        LIMIT 15
-    """
-    question_5_result = fetch_data(
-        query,
-        [selected_platform_id] * 2,
-    )
-
-    question_5_result = apply_dashboard_filters(
-        question_5_result
-    )
-
-    # CHART TYPE: BAR CHART
-    draw_bar_chart(
-        question_5_result,
-        "store_name",
-        "orders_per_sqft",
-        "Which dark store is the largest source of inefficiency?",
-        horizontal=True,
-    )
-
 
 def render_swiggy_instamart_employee():
 
@@ -8884,108 +7674,6 @@ def render_swiggy_instamart_employee():
         horizontal=True,
     )
 
-    # Question 4: Which cities have the highest employee cost?
-    show_question(4, "Which cities have the highest employee cost?")
-
-    query = """
-    SELECT
-            ds.city,
-            COUNT(e.employee_id) AS employees,
-            ROUND(
-                SUM(COALESCE(e.monthly_salary_inr, 0)),
-                2
-            ) AS workforce_cost
-        FROM employees e
-        JOIN dark_stores ds
-            ON e.store_id = ds.store_id
-        WHERE ds.platform_id = ?
-        GROUP BY ds.city
-        ORDER BY workforce_cost DESC
-    """
-    question_4_result = fetch_data(
-        query,
-        [selected_platform_id],
-    )
-
-    question_4_result = apply_dashboard_filters(
-        question_4_result
-    )
-
-    # CHART TYPE: BAR CHART
-    draw_bar_chart(
-        question_4_result,
-        "city",
-        "monthly_employee_cost",
-        "Which cities have the highest employee cost?",
-        horizontal=True,
-    )
-
-    # Question 5: Is staffing proportional to orders?
-    show_question(5, "Is staffing proportional to orders?")
-
-    query = """
-    WITH city_employees AS (
-            SELECT
-                ds.city,
-                COUNT(e.employee_id) AS active_employees
-            FROM employees e
-            JOIN dark_stores ds
-                ON e.store_id = ds.store_id
-            WHERE ds.platform_id = ?
-              AND e.work_status = 'Currently Working'
-            GROUP BY ds.city
-        ),
-        city_orders AS (
-            SELECT
-                ds.city,
-                COUNT(o.order_id) AS orders
-            FROM orders o
-            JOIN dark_stores ds
-                ON o.store_id = ds.store_id
-            WHERE o.platform_id = ?
-            GROUP BY ds.city
-        )
-        SELECT
-            ce.city,
-            ce.active_employees,
-            COALESCE(co.orders, 0) AS orders,
-            ROUND(
-                COALESCE(co.orders, 0) * 1.0
-                / NULLIF(ce.active_employees, 0),
-                2
-            ) AS orders_per_employee,
-            CASE
-                WHEN COALESCE(co.orders, 0) * 1.0
-                     / NULLIF(ce.active_employees, 0) > 1000
-                    THEN 'High Workload'
-                WHEN COALESCE(co.orders, 0) * 1.0
-                     / NULLIF(ce.active_employees, 0) < 500
-                    THEN 'Low Workload'
-                ELSE 'Balanced'
-            END AS staffing_status
-        FROM city_employees ce
-        LEFT JOIN city_orders co
-            ON ce.city = co.city
-        ORDER BY orders_per_employee DESC
-    """
-    question_5_result = fetch_data(
-        query,
-        [selected_platform_id] * 2,
-    )
-
-    question_5_result = apply_dashboard_filters(
-        question_5_result
-    )
-
-    # CHART TYPE: SCATTER CHART
-    draw_scatter_chart(
-        question_5_result,
-        "employees",
-        "orders",
-        "Is staffing proportional to orders?",
-    )
-
-
 def render_swiggy_instamart_product():
 
     # ========================================================
@@ -9229,87 +7917,6 @@ def render_swiggy_instamart_product():
         "Which products have unusually high prices?",
         horizontal=True,
     )
-
-    # Question 4: Which brands dominate Instamart?
-    show_question(4, "Which brands dominate Instamart?")
-
-    query = """
-    SELECT
-            COALESCE(p.brand, 'Unknown') AS brand,
-            COUNT(DISTINCT p.product_id) AS products,
-            SUM(COALESCE(oi.quantity, 0)) AS units_sold,
-            ROUND(SUM(COALESCE(oi.line_total_inr, 0)), 2) AS item_value
-        FROM products p
-        JOIN order_items oi
-            ON p.product_id = oi.product_id
-        JOIN orders o
-            ON oi.order_id = o.order_id
-        WHERE o.platform_id = ?
-        GROUP BY COALESCE(p.brand, 'Unknown')
-        ORDER BY products DESC, item_value DESC
-        LIMIT 15
-    """
-    question_4_result = fetch_data(
-        query,
-        [selected_platform_id],
-    )
-
-    question_4_result = apply_dashboard_filters(
-        question_4_result
-    )
-
-    # CHART TYPE: BAR CHART
-    draw_bar_chart(
-        question_4_result,
-        "brand",
-        "product_count",
-        "Which brands dominate Instamart?",
-        horizontal=True,
-    )
-
-    # Question 5: Which products drive basket value?
-    show_question(5, "Which products drive basket value?")
-
-    query = """
-    SELECT
-            p.product_id,
-            p.product_name,
-            p.category,
-            SUM(COALESCE(oi.quantity, 0)) AS units_sold,
-            ROUND(SUM(COALESCE(oi.line_total_inr, 0)), 2) AS item_value,
-            ROUND(
-                SUM(COALESCE(oi.line_total_inr, 0))
-                / NULLIF(SUM(COALESCE(oi.quantity, 0)), 0),
-                2
-            ) AS value_per_unit
-        FROM order_items oi
-        JOIN orders o
-            ON oi.order_id = o.order_id
-        JOIN products p
-            ON oi.product_id = p.product_id
-        WHERE o.platform_id = ?
-        GROUP BY p.product_id, p.product_name, p.category
-        ORDER BY item_value DESC
-        LIMIT 15
-    """
-    question_5_result = fetch_data(
-        query,
-        [selected_platform_id],
-    )
-
-    question_5_result = apply_dashboard_filters(
-        question_5_result
-    )
-
-    # CHART TYPE: BAR CHART
-    draw_bar_chart(
-        question_5_result,
-        "category",
-        "product_count",
-        "Which products drive basket value?",
-        horizontal=True,
-    )
-
 
 def render_swiggy_instamart_customer():
 
@@ -9599,125 +8206,6 @@ def render_swiggy_instamart_customer():
         horizontal=True,
     )
 
-    # Question 4: Which cities have high customers but low transaction activity?
-    show_question(4, "Which cities have high customers but low transaction activity?")
-
-    query = """
-    WITH city_customers AS (
-            SELECT
-                c.city,
-                COUNT(DISTINCT c.customer_id) AS customers
-            FROM customers c
-            JOIN (
-                SELECT DISTINCT customer_id
-                FROM orders
-                WHERE platform_id = ?
-            ) x
-                ON c.customer_id = x.customer_id
-            GROUP BY c.city
-        ),
-        city_orders AS (
-            SELECT
-                ds.city,
-                COUNT(o.order_id) AS orders
-            FROM orders o
-            JOIN dark_stores ds
-                ON o.store_id = ds.store_id
-            WHERE o.platform_id = ?
-            GROUP BY ds.city
-        )
-        SELECT
-            cc.city,
-            cc.customers,
-            COALESCE(co.orders, 0) AS orders,
-            ROUND(
-                COALESCE(co.orders, 0) * 1.0
-                / NULLIF(cc.customers, 0),
-                2
-            ) AS orders_per_customer
-        FROM city_customers cc
-        LEFT JOIN city_orders co
-            ON cc.city = co.city
-        ORDER BY orders_per_customer ASC
-        LIMIT 15
-    """
-    question_4_result = fetch_data(
-        query,
-        [selected_platform_id] * 2,
-    )
-
-    question_4_result = apply_dashboard_filters(
-        question_4_result
-    )
-
-    # CHART TYPE: SCATTER CHART
-    draw_scatter_chart(
-        question_4_result,
-        "customers",
-        "orders",
-        "High Customer Base vs Low Transaction Activity",
-    )
-
-    # Question 5: Is customer growth translating into order growth?
-    show_question(5, "Is customer growth translating into order growth?")
-
-    query = """
-    WITH yearly_customers AS (
-            SELECT
-                SUBSTR(c.signup_date, 7, 4) AS year,
-                COUNT(DISTINCT c.customer_id) AS new_customers
-            FROM customers c
-            WHERE LOWER(TRIM(c.signup_platform)) = 'swiggy instamart'
-              AND c.signup_date IS NOT NULL
-            GROUP BY SUBSTR(c.signup_date, 7, 4)
-        ),
-        yearly_orders AS (
-            SELECT
-                SUBSTR(order_datetime, 1, 4) AS year,
-                COUNT(*) AS orders
-            FROM orders
-            WHERE platform_id = ?
-            GROUP BY SUBSTR(order_datetime, 1, 4)
-        )
-        SELECT
-            yc.year,
-            yc.new_customers,
-            COALESCE(yo.orders, 0) AS orders
-        FROM yearly_customers yc
-        LEFT JOIN yearly_orders yo
-            ON yc.year = yo.year
-
-        UNION
-
-        SELECT
-            yo.year,
-            COALESCE(yc.new_customers, 0) AS new_customers,
-            yo.orders
-        FROM yearly_orders yo
-        LEFT JOIN yearly_customers yc
-            ON yo.year = yc.year
-        WHERE yc.year IS NULL
-
-        ORDER BY 1
-    """
-    question_5_result = fetch_data(
-        query,
-        [selected_platform_id],
-    )
-
-    question_5_result = apply_dashboard_filters(
-        question_5_result
-    )
-
-    # CHART TYPE: SCATTER CHART
-    draw_scatter_chart(
-        question_5_result,
-        "customers",
-        "orders",
-        "Is customer growth translating into order growth?",
-    )
-
-
 def render_swiggy_instamart_orders():
 
     # ========================================================
@@ -9941,90 +8429,6 @@ def render_swiggy_instamart_orders():
         "Where are returns highest?",
         horizontal=True,
     )
-
-    # Question 4: Which stores drive high order volume?
-    show_question(4, "Which stores drive high order volume?")
-
-    query = """
-    SELECT
-            o.store_id,
-            ds.city,
-            COUNT(o.order_id) AS orders,
-            ROUND(SUM(COALESCE(o.order_value_inr, 0)), 2) AS revenue
-        FROM orders o
-        JOIN dark_stores ds
-            ON o.store_id = ds.store_id
-        WHERE o.platform_id = ?
-        GROUP BY o.store_id, ds.city
-        ORDER BY orders DESC
-        LIMIT 15
-    """
-    question_4_result = fetch_data(
-        query,
-        [selected_platform_id],
-    )
-
-    question_4_result = apply_dashboard_filters(
-        question_4_result
-    )
-
-    # CHART TYPE: LINE CHART
-    color_column = None
-
-    draw_line_chart(
-        question_4_result,
-        "month",
-        "aov",
-        "Which stores drive high order volume?",
-        color_column=color_column,
-    )
-
-    # Question 5: What would most improve successful order completion?
-    show_question(5, "What would most improve successful order completion?")
-
-    query = """
-    SELECT
-            ds.city,
-            COUNT(o.order_id) AS total_orders,
-            SUM(
-                CASE WHEN LOWER(o.order_status) = 'delivered'
-                     THEN 1 ELSE 0 END
-            ) AS delivered_orders,
-            SUM(
-                CASE WHEN LOWER(o.order_status) IN ('cancelled', 'returned')
-                     THEN 1 ELSE 0 END
-            ) AS failed_orders,
-            ROUND(
-                SUM(
-                    CASE WHEN LOWER(o.order_status) = 'delivered'
-                         THEN 1 ELSE 0 END
-                ) * 100.0 / NULLIF(COUNT(o.order_id), 0),
-                2
-            ) AS completion_rate_percent
-        FROM orders o
-        JOIN dark_stores ds
-            ON o.store_id = ds.store_id
-        WHERE o.platform_id = ?
-        GROUP BY ds.city
-        ORDER BY completion_rate_percent ASC, total_orders DESC
-    """
-    question_5_result = fetch_data(
-        query,
-        [selected_platform_id],
-    )
-
-    question_5_result = apply_dashboard_filters(
-        question_5_result
-    )
-
-    # CHART TYPE: DONUT / PIE CHART
-    draw_pie_chart(
-        question_5_result,
-        "payment_mode",
-        "order_share_percent",
-        "What would most improve successful order completion?",
-    )
-
 
 def render_swiggy_instamart_order_items():
 
@@ -10260,49 +8664,6 @@ def render_swiggy_instamart_order_items():
         "item_value",
         "Which categories dominate customer baskets?",
     )
-
-    # Question 4: How can Instamart increase basket value?
-    show_question(4, "How can Instamart increase basket value?")
-
-    query = """
-    SELECT
-            p.category,
-            COUNT(DISTINCT oi.order_id) AS orders,
-            ROUND(
-                SUM(COALESCE(oi.line_total_inr, 0)),
-                2
-            ) AS item_value,
-            ROUND(
-                SUM(COALESCE(oi.line_total_inr, 0))
-                / NULLIF(COUNT(DISTINCT oi.order_id), 0),
-                2
-            ) AS value_per_order
-        FROM order_items oi
-        JOIN orders o
-            ON oi.order_id = o.order_id
-        JOIN products p
-            ON oi.product_id = p.product_id
-        WHERE o.platform_id = ?
-        GROUP BY p.category
-        ORDER BY value_per_order DESC
-    """
-    question_5_result = fetch_data(
-        query,
-        [selected_platform_id],
-    )
-
-    question_5_result = apply_dashboard_filters(
-        question_5_result
-    )
-
-    # CHART TYPE: SCATTER CHART
-    draw_scatter_chart(
-        question_5_result,
-        "units_sold",
-        "item_value",
-        "How can Instamart increase basket value?",
-    )
-
 
 def render_swiggy_instamart_inventory():
 
@@ -10555,96 +8916,6 @@ def render_swiggy_instamart_inventory():
         ["stock_units", "reorder_level"],
         "Stock vs Reorder Level — Excess Inventory",
     )
-
-    # Question 4: Which products face expiry risk?
-    show_question(4, "Which products face expiry risk?")
-
-    query = """
-    SELECT
-            i.product_id,
-            p.product_name,
-            ds.store_id,
-            ds.city,
-            ROUND(i.stock_units, 2) AS stock_units,
-            i.expiry_date
-        FROM inventory i
-        JOIN dark_stores ds
-            ON i.store_id = ds.store_id
-        JOIN products p
-            ON i.product_id = p.product_id
-        WHERE ds.platform_id = ?
-          AND i.expiry_date IS NOT NULL
-          AND DATE(i.expiry_date) <= DATE('now', '+30 day')
-          AND COALESCE(i.stock_units, 0) > 0
-        ORDER BY DATE(i.expiry_date) ASC, stock_units DESC
-        LIMIT 20
-    """
-    question_4_result = fetch_data(
-        query,
-        [selected_platform_id],
-    )
-
-    question_4_result = apply_dashboard_filters(
-        question_4_result
-    )
-
-    # CHART TYPE: BAR CHART
-    draw_bar_chart(
-        question_4_result,
-        "product_name",
-        "stock_units",
-        "Which products face expiry risk?",
-        horizontal=True,
-    )
-
-    # Question 5: Where is cash tied up in inventory?
-    show_question(5, "Where is cash tied up in inventory?")
-
-    query = """
-    SELECT
-            ds.store_id,
-            ds.city,
-            ROUND(
-                SUM(
-                    CASE
-                        WHEN COALESCE(i.stock_units, 0)
-                             > COALESCE(i.reorder_level, 0)
-                        THEN
-                            (i.stock_units - i.reorder_level)
-                            * COALESCE(p.selling_price, 0)
-                        ELSE 0
-                    END
-                ),
-                2
-            ) AS excess_inventory_value
-        FROM inventory i
-        JOIN dark_stores ds
-            ON i.store_id = ds.store_id
-        JOIN products p
-            ON i.product_id = p.product_id
-        WHERE ds.platform_id = ?
-        GROUP BY ds.store_id, ds.city
-        ORDER BY excess_inventory_value DESC
-        LIMIT 15
-    """
-    question_5_result = fetch_data(
-        query,
-        [selected_platform_id],
-    )
-
-    question_5_result = apply_dashboard_filters(
-        question_5_result
-    )
-
-    # CHART TYPE: BAR CHART
-    draw_bar_chart(
-        question_5_result,
-        "store_id",
-        "excess_inventory_value",
-        "Where is Cash Tied Up in Inventory?",
-        horizontal=True,
-    )
-
 
 def render_swiggy_instamart_logistics():
 
@@ -11450,58 +9721,6 @@ def render_bigbasket_overview():
         "Is Growth Driven More by Customers or Order Frequency?",
     )
 
-    # Question 4: How dependent is BigBasket on discounts?
-    show_question(4, "How dependent is BigBasket on discounts?")
-
-    query = """
-    SELECT ROUND(SUM(order_value_inr),2) AS net_order_value,
-    ROUND(SUM(discount_inr),2) AS total_discount,
-    ROUND(SUM(discount_inr)*100.0/NULLIF(SUM(order_value_inr)+SUM(discount_inr),0),2) AS discount_rate_percent
-    FROM orders WHERE platform_id=?
-    """
-    question_4_result = fetch_data(
-        query,
-        [selected_platform_id],
-    )
-
-    question_4_result = apply_dashboard_filters(
-        question_4_result
-    )
-
-    # CHART TYPE: BAR CHART
-    draw_cost_chart(
-        question_4_result,
-        "How Dependent is BigBasket on Discounts?",
-    )
-
-    # Question 5: Which cities generate the best profit margins?
-    show_question(5, "Which cities generate the best profit margins?")
-
-    query = """
-    SELECT city, ROUND(SUM(revenue_inr),2) AS revenue, ROUND(SUM(profit_inr),2) AS profit,
-    ROUND(SUM(profit_inr)*100.0/NULLIF(SUM(revenue_inr),0),2) AS profit_margin_percent
-    FROM pnl_monthly_safe WHERE platform_id=? GROUP BY city
-    ORDER BY profit_margin_percent DESC
-    """
-    question_5_result = fetch_data(
-        query,
-        [selected_platform_id],
-    )
-
-    question_5_result = apply_dashboard_filters(
-        question_5_result
-    )
-
-    # CHART TYPE: HORIZONTAL BAR CHART
-    draw_bar_chart(
-        question_5_result,
-        "city",
-        "profit_margin_percent",
-        "Which cities generate the best profit margins?",
-        horizontal=True,
-    )
-
-
 def render_bigbasket_store():
 
     # ========================================================
@@ -11674,60 +9893,6 @@ def render_bigbasket_store():
         "Which cities need more capacity?",
         horizontal=True,
     )
-
-    # Question 4: Does larger store size translate into higher order volume?
-    show_question(4, "Does larger store size translate into higher order volume?")
-
-    query = """
-    SELECT ds.store_id,ds.store_name,ds.city,ds.sqft_area,COUNT(o.order_id) AS orders
-    FROM dark_stores ds LEFT JOIN orders o ON ds.store_id=o.store_id AND o.platform_id=?
-    GROUP BY ds.store_id,ds.store_name,ds.city,ds.sqft_area ORDER BY ds.sqft_area DESC
-    """
-    question_4_result = fetch_data(
-        query,
-        [selected_platform_id],
-    )
-
-    question_4_result = apply_dashboard_filters(
-        question_4_result
-    )
-
-    # CHART TYPE: SCATTER CHART
-    draw_scatter_chart(
-        question_4_result,
-        "sqft_area",
-        "orders",
-        "Does larger store size translate into higher order volume?",
-    )
-
-    # Question 5: Which stores are underutilized?
-    show_question(5, "Which stores are underutilized?")
-
-    query = """
-    SELECT ds.store_id,ds.store_name,ds.city,ds.sqft_area,COUNT(o.order_id) AS orders,
-    ROUND(COUNT(o.order_id)*1.0/NULLIF(ds.sqft_area,0),4) AS orders_per_sqft
-    FROM dark_stores ds LEFT JOIN orders o ON ds.store_id=o.store_id AND o.platform_id=?
-    GROUP BY ds.store_id,ds.store_name,ds.city,ds.sqft_area
-    ORDER BY orders_per_sqft ASC,ds.sqft_area DESC
-    """
-    question_5_result = fetch_data(
-        query,
-        [selected_platform_id],
-    )
-
-    question_5_result = apply_dashboard_filters(
-        question_5_result
-    )
-
-    # CHART TYPE: BAR CHART
-    draw_bar_chart(
-        question_5_result,
-        "store_name",
-        "orders_per_sqft",
-        "Which stores are underutilized?",
-        horizontal=True,
-    )
-
 
 def render_bigbasket_employee():
 
@@ -11903,63 +10068,6 @@ def render_bigbasket_employee():
         horizontal=True,
     )
 
-    # Question 4: Which cities have expensive workforce structures?
-    show_question(4, "Which cities have expensive workforce structures?")
-
-    query = """
-    SELECT ds.city,COUNT(e.employee_id) AS employees,ROUND(SUM(e.monthly_salary_inr),2) AS monthly_employee_cost,
-    ROUND(AVG(e.monthly_salary_inr),2) AS avg_salary
-    FROM employees e JOIN dark_stores ds ON e.store_id=ds.store_id
-    WHERE e.store_id IN (SELECT DISTINCT store_id FROM orders WHERE platform_id=? )
-    GROUP BY ds.city ORDER BY monthly_employee_cost DESC
-    """
-    question_4_result = fetch_data(
-        query,
-        [selected_platform_id],
-    )
-
-    question_4_result = apply_dashboard_filters(
-        question_4_result
-    )
-
-    # CHART TYPE: BAR CHART
-    draw_bar_chart(
-        question_4_result,
-        "city",
-        "monthly_employee_cost",
-        "Which cities have expensive workforce structures?",
-        horizontal=True,
-    )
-
-    # Question 5: Is staffing aligned with order volume?
-    show_question(5, "Is staffing aligned with order volume?")
-
-    query = """
-    SELECT ds.store_id,ds.store_name,ds.city,COUNT(DISTINCT e.employee_id) AS employees,
-    COUNT(DISTINCT o.order_id) AS orders,
-    ROUND(COUNT(DISTINCT o.order_id)*1.0/NULLIF(COUNT(DISTINCT e.employee_id),0),2) AS orders_per_employee
-    FROM dark_stores ds LEFT JOIN employees e ON ds.store_id=e.store_id
-    LEFT JOIN orders o ON ds.store_id=o.store_id AND o.platform_id=?
-    GROUP BY ds.store_id,ds.store_name,ds.city ORDER BY orders DESC
-    """
-    question_5_result = fetch_data(
-        query,
-        [selected_platform_id],
-    )
-
-    question_5_result = apply_dashboard_filters(
-        question_5_result
-    )
-
-    # CHART TYPE: SCATTER CHART
-    draw_scatter_chart(
-        question_5_result,
-        "employees",
-        "orders",
-        "Is staffing aligned with order volume?",
-    )
-
-
 def render_bigbasket_product():
 
     # ========================================================
@@ -12122,57 +10230,6 @@ def render_bigbasket_product():
         "Which products have unusually high prices?",
         horizontal=True,
     )
-
-    # Question 4: Which brands dominate the assortment?
-    show_question(4, "Which brands dominate the assortment?")
-
-    query = """
-    SELECT brand,COUNT(product_id) AS product_count,COUNT(DISTINCT category) AS category_count
-    FROM products GROUP BY brand ORDER BY product_count DESC
-    """
-    question_4_result = fetch_data(
-        query,
-        [],
-    )
-
-    question_4_result = apply_dashboard_filters(
-        question_4_result
-    )
-
-    # CHART TYPE: BAR CHART
-    draw_bar_chart(
-        question_4_result,
-        "brand",
-        "product_count",
-        "Which brands dominate the assortment?",
-        horizontal=True,
-    )
-
-    # Question 5: Which categories are underrepresented?
-    show_question(5, "Which categories are underrepresented?")
-
-    query = """
-    SELECT category,COUNT(product_id) AS product_count FROM products
-    GROUP BY category ORDER BY product_count ASC
-    """
-    question_5_result = fetch_data(
-        query,
-        [],
-    )
-
-    question_5_result = apply_dashboard_filters(
-        question_5_result
-    )
-
-    # CHART TYPE: BAR CHART
-    draw_bar_chart(
-        question_5_result,
-        "category",
-        "product_count",
-        "Which categories are underrepresented?",
-        horizontal=True,
-    )
-
 
 def render_bigbasket_customer():
 
@@ -12472,58 +10529,6 @@ def render_bigbasket_customer():
         horizontal=True,
     )
 
-    # Question 4: Which signup platforms bring more users?
-    show_question(4, "Which signup platforms bring more users?")
-
-    query = """
-    SELECT signup_platform,COUNT(customer_id) AS customers FROM customers
-    GROUP BY signup_platform ORDER BY customers DESC
-    """
-    question_4_result = fetch_data(
-        query,
-        [],
-    )
-
-    question_4_result = apply_dashboard_filters(
-        question_4_result
-    )
-
-    # CHART TYPE: DONUT / PIE CHART
-    draw_pie_chart(
-        question_4_result,
-        "signup_platform",
-        "customers",
-        "Which signup platforms bring more users?",
-    )
-
-    # Question 5: Which cities have high customers but low orders?
-    show_question(5, "Which cities have high customers but low orders?")
-
-    query = """
-    SELECT c.city,COUNT(DISTINCT c.customer_id) AS customers,COUNT(DISTINCT o.order_id) AS orders,
-    ROUND(COUNT(DISTINCT o.order_id)*1.0/NULLIF(COUNT(DISTINCT c.customer_id),0),2) AS orders_per_customer
-    FROM customers c LEFT JOIN orders o ON c.customer_id=o.customer_id AND o.platform_id=?
-    WHERE LOWER(TRIM(signup_platform)) LIKE 'big basket%' OR LOWER(TRIM(signup_platform)) = 'bigbasket' GROUP BY c.city
-    ORDER BY customers DESC,orders_per_customer ASC
-    """
-    question_5_result = fetch_data(
-        query,
-        [selected_platform_id],
-    )
-
-    question_5_result = apply_dashboard_filters(
-        question_5_result
-    )
-
-    # CHART TYPE: SCATTER CHART
-    draw_scatter_chart(
-        question_5_result,
-        "customers",
-        "orders",
-        "Which cities have high customers but low orders?",
-    )
-
-
 def render_bigbasket_orders():
 
     # ========================================================
@@ -12684,61 +10689,6 @@ def render_bigbasket_orders():
         "Which stores generate the most orders?",
         horizontal=True,
     )
-
-    # Question 4: How is BigBasket AOV changing?
-    show_question(4, "How is BigBasket AOV changing?")
-
-    query = """
-    SELECT strftime('%Y-%m',order_datetime) AS month,COUNT(order_id) AS orders,
-    ROUND(AVG(order_value_inr),2) AS aov FROM orders
-    WHERE platform_id=? AND order_datetime IS NOT NULL
-    GROUP BY strftime('%Y-%m',order_datetime) ORDER BY month
-    """
-    question_4_result = fetch_data(
-        query,
-        [selected_platform_id],
-    )
-
-    question_4_result = apply_dashboard_filters(
-        question_4_result
-    )
-
-    # CHART TYPE: LINE CHART
-    color_column = None
-
-    draw_line_chart(
-        question_4_result,
-        "month",
-        "aov",
-        "How is BigBasket AOV changing?",
-        color_column=color_column,
-    )
-
-    # Question 5: Which payment method is preferred?
-    show_question(5, "Which payment method is preferred?")
-
-    query = """
-    SELECT payment_mode,COUNT(order_id) AS orders,
-    ROUND(COUNT(order_id)*100.0/NULLIF((SELECT COUNT(order_id) FROM orders WHERE platform_id=?),0),2) AS order_share_percent
-    FROM orders WHERE platform_id=? GROUP BY payment_mode ORDER BY orders DESC
-    """
-    question_5_result = fetch_data(
-        query,
-        [selected_platform_id] * 2,
-    )
-
-    question_5_result = apply_dashboard_filters(
-        question_5_result
-    )
-
-    # CHART TYPE: DONUT / PIE CHART
-    draw_pie_chart(
-        question_5_result,
-        "payment_mode",
-        "order_share_percent",
-        "Which payment method is preferred?",
-    )
-
 
 def render_bigbasket_order_items():
 
@@ -12901,92 +10851,6 @@ def render_bigbasket_order_items():
         "item_value",
         "Which categories dominate BigBasket baskets?",
     )
-
-    # Question 4: What is the typical BigBasket basket?
-    show_question(4, "What is the typical BigBasket basket?")
-
-    query = """
-    SELECT ROUND(AVG(order_units),2) AS average_units_per_order,
-    ROUND(AVG(distinct_items),2) AS average_distinct_items_per_order
-    FROM (
-        SELECT oi.order_id,SUM(oi.quantity) AS order_units,COUNT(DISTINCT oi.product_id) AS distinct_items
-        FROM order_items oi JOIN orders o ON oi.order_id=o.order_id
-        WHERE o.platform_id=? GROUP BY oi.order_id
-    )
-    """
-    question_4_result = fetch_data(
-        query,
-        [selected_platform_id],
-    )
-
-    question_4_result = apply_dashboard_filters(
-        question_4_result
-    )
-
-    # CHART TYPE: BAR CHART FOR BASKET METRICS
-    basket_row = (
-        question_4_result.iloc[0] if not question_4_result.empty else pd.Series()
-    )
-
-    basket_chart = pd.DataFrame(
-        {
-            "metric": [
-                "Units per Order",
-                "Distinct Items per Order",
-            ],
-            "value": [
-                basket_row.get(
-                    "average_items_per_order",
-                    basket_row.get(
-                        "units_per_order",
-                        0,
-                    ),
-                ),
-                basket_row.get(
-                    "average_distinct_items_per_order",
-                    basket_row.get(
-                        "distinct_items_per_order",
-                        0,
-                    ),
-                ),
-            ],
-        }
-    )
-
-    draw_bar_chart(
-        basket_chart,
-        "metric",
-        "value",
-        "Typical Basket Composition",
-    )
-
-    # Question 5: Which products are quantity-heavy versus value-heavy?
-    show_question(5, "Which products are quantity-heavy versus value-heavy?")
-
-    query = """
-    SELECT p.product_name,p.category,SUM(oi.quantity) AS units_sold,
-    ROUND(SUM(oi.line_total_inr),2) AS item_value,
-    ROUND(SUM(oi.line_total_inr)/NULLIF(SUM(oi.quantity),0),2) AS average_unit_value
-    FROM order_items oi JOIN products p ON oi.product_id=p.product_id JOIN orders o ON oi.order_id=o.order_id
-    WHERE o.platform_id=? GROUP BY p.product_name,p.category ORDER BY units_sold DESC LIMIT 20
-    """
-    question_5_result = fetch_data(
-        query,
-        [selected_platform_id],
-    )
-
-    question_5_result = apply_dashboard_filters(
-        question_5_result
-    )
-
-    # CHART TYPE: SCATTER CHART
-    draw_scatter_chart(
-        question_5_result,
-        "units_sold",
-        "item_value",
-        "Which products are quantity-heavy versus value-heavy?",
-    )
-
 
 def render_bigbasket_inventory():
 
@@ -13159,63 +11023,6 @@ def render_bigbasket_inventory():
         ["stock_units", "reorder_units"],
         "Actual Stock vs Reorder Units — Overstocked Stores",
     )
-
-    # Question 4: Which products are close to expiry?
-    show_question(4, "Which products are close to expiry?")
-
-    query = """
-    SELECT i.product_id,p.product_name,p.category,i.store_id,i.stock_units,i.expiry_date
-    FROM inventory i JOIN products p ON i.product_id=p.product_id
-    WHERE i.expiry_date IS NOT NULL AND date(i.expiry_date)<=date('now','+30 day')
-    AND i.store_id IN (SELECT DISTINCT store_id FROM orders WHERE platform_id=? )
-    ORDER BY i.expiry_date ASC
-    """
-    question_4_result = fetch_data(
-        query,
-        [selected_platform_id],
-    )
-
-    question_4_result = apply_dashboard_filters(
-        question_4_result
-    )
-
-    # CHART TYPE: BAR CHART
-    draw_bar_chart(
-        question_4_result,
-        "product_name",
-        "stock_units",
-        "Which products are close to expiry?",
-        horizontal=True,
-    )
-
-    # Question 5: Which products need urgent replenishment?
-    show_question(5, "Which products need urgent replenishment?")
-
-    query = """
-    SELECT i.product_id,p.product_name,p.category,
-    SUM(i.reorder_level-i.stock_units) AS replenishment_gap
-    FROM inventory i JOIN products p ON i.product_id=p.product_id
-    WHERE i.stock_units<i.reorder_level AND i.store_id IN (SELECT DISTINCT store_id FROM orders WHERE platform_id=? )
-    GROUP BY i.product_id,p.product_name,p.category ORDER BY replenishment_gap DESC
-    """
-    question_5_result = fetch_data(
-        query,
-        [selected_platform_id],
-    )
-
-    question_5_result = apply_dashboard_filters(
-        question_5_result
-    )
-
-    # CHART TYPE: BAR CHART
-    draw_bar_chart(
-        question_5_result,
-        "product_name",
-        "replenishment_gap",
-        "Which Products Need Urgent Replenishment?",
-        horizontal=True,
-    )
-
 
 def render_bigbasket_logistics():
 
